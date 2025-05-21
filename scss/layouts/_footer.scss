@@ -11,17 +11,22 @@ footer {
         .footer-menu {
             flex: 100%;
             margin-bottom: 30px;
+            list-style-type: none;
 
             @media (min-width: 768px) {
                 flex: 50%;
             }
 
-            @media (min-width: 992) {
+            @media (min-width: 992px) {
                 flex: 25%; 
             }
 
             @media (min-width: 1260px) {
                 margin-bottom: 40px;
+            }
+
+            a {
+                text-decoration: none;
             }
 
             h4 {
