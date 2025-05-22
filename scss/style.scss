@@ -1,2 +1,3 @@
-@import "layouts/index";
-@import "vendors/reset";
+@use "layouts";
+@use "utilities";
+@use "vendors";

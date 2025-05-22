@@ -1,12 +1,39 @@
+@use "../utilities" as *;
+@use "../vendors" as *;
+
 footer {
-    background-color: #323544;
-    color: #fff;
+    background-color: $background-primary;
+    color: $white;
     padding: 30px 0 0;
     position: relative;
+    margin-top: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    .footer-logo-box {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .footer-menu-box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex: 1;
+    }
+
+    .footer-social-logos svg {
+        height: 3em;
+        width: 3em;
+    }
 
     .footer-row {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 30%;
 
         .footer-menu {
             flex: 100%;
@@ -27,6 +54,10 @@ footer {
 
             a {
                 text-decoration: none;
+
+                &:hover {
+                   text-decoration: underline; 
+                }
             }
 
             h4 {

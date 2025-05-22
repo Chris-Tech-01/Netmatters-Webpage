@@ -1,9 +1,26 @@
+@use "../vendors";
+
 body {
     margin: 0;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.img {
+    min-width: 360px; 
+    height: auto;
+}
+
+h4 {
+   text-transform: uppercase;
+   font-size: 1rem;
+   margin-bottom: 26px;
+}
+
+.logo {
+    margin: 0px 7px 0px 0px;
 }
 
 .container {
