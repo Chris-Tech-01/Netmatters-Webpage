@@ -1,43 +1,74 @@
-@use "../vendors";
+@use "../vendors" as *;
 
 body {
-    margin: 0;
+    margin: 0; // Sets the top and bottom margins of an element to 0 and centers it horizontally within its parent element.
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; // Changes how an element's width and height are calculated. When set to border-box, the specified width and height include the element's content, padding, and borders.
 }
+
+* {
+    font-family: "Poppins", sans-serif; // Defines the fonts being used.
+    font-weight: 400; // The “value” placed on my font that will determine how bold or light my text will appear.
+    font-style: normal; // Sets whether a font should be styled with a normal, italic, or oblique face from its font-family
+}
+
+//////// Footer Layout ////////
+
+footer {
+    padding: 47px 0 0; // Creates space between its content and its border.
+}
+
+.footer-logo-box h4 {
+    margin-top: 24px; // The space around an element's border.
+    margin-bottom: 26px; // The space around an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+}
+
+.footer-menu h4 {
+    font-size: 1rem; // Sets the size of the font.
+    line-height: 18px; // Used to set the distance between lines of text.
+    margin-bottom: 26px; // The space around an element's border.
+    margin-top: 0; // The space around an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+}
+
+.footer-menu li {
+    font-size: .8125rem; // Sets the size of the font.
+    line-height: 1.375rem; // Used to set the distance between lines of text.
+} 
 
 .img {
     min-width: 360px; 
     height: auto;
 }
 
-h4 {
-   text-transform: uppercase;
-   font-size: 1rem;
-   margin-bottom: 26px;
+//////// Footer Bottom Layout ////////
+
+.footer-bottom {
+    font-size: .8125rem; // Sets the size of the font.
+    line-height: 1.42857142rem; // Used to set the distance between lines of text.
 }
 
-.logo {
-    margin: 0px 7px 0px 0px;
-}
+//////// Media Queries ////////
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-right: auto; // The space around an element's border.
+    margin-left: auto; // The space around an element's border.
+    margin-bottom: auto; // The space around an element's border.
+    padding-left: 15px; // Creates space between its content and its border.
+    padding-right: 15px; // Creates space between its content and its border.
 
     @media (min-width: 768px) {
-        width: 750px;
+        width: 750px; // Sets an element's width.
     }
 
     @media (min-width: 992px) {
-        width: 970px;
+        width: 970px; // Sets an element's width.
     }
 
     @media (min-width: 1260px) {
-        width: 1200px;
+        width: 1200px; // Sets an element's width.
     }
 }
