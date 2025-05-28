@@ -1,13 +1,16 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-// Bottom Footer styles //
+//// Footer Bottom ////
 
 .footer-bottom-box {
     display: flex; // Makes the flex items Block Level.
     justify-content: space-between; // Items will have space between them
     background-color: $background-secondary; // Sets the colour using a pre defined variable.
     color: $white; // Sets the colour using a pre defined variable.
+    font-size: .8125rem; // Sets the size of the font.
+    line-height: 1.42857142rem; // Used to set the distance between lines of text.
+    margin: 0;
     padding-top: 5px; // Creates space between its content and its border.
     padding-bottom: 10px; // Creates space between its content and its border.
 
@@ -20,6 +23,6 @@
     }
 }
 
-li {
+.footer-bottom-box li {
         list-style-type: "- "; // Changes the bullet point to a - within a list.
     }

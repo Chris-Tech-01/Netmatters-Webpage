@@ -1,0 +1,24 @@
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.middle {
+    display: flex;
+    background-color: $background-primary;
+    color: $white;
+}
+
+.middle a {
+    text-decoration: none; // Used to remove underline from a hyperlink.
+    color: $white;
+
+    &:hover {
+        text-decoration: underline; // Adds an underline.
+    }
+}
+
+

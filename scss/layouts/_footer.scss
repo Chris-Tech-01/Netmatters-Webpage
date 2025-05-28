@@ -1,81 +1,119 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
+@use "../base" as *;
 
-//////// Footer Styles ////////
+//////// Footer Styles & Layout ////////
 
 footer {
     background-color: $background-primary; // Sets the colour using a pre defined variable.
     color: $white; // Sets the colour using a pre defined variable.
     position: relative; // Positioned relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.
     margin-top: auto; // Defines the space between the top edge of an element and its surroundings.
+    padding: 47px 0 0; // Creates space between its content and its border.
+    margin: 0;
+}
 
-    li {
-        list-style-type: none; // Used to remove the bullet points.
-    }
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}
 
-    a {
-        text-decoration: none; // Used to remove underline from a hyperlink.
+.footer-logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer-menu-box {
+    display: flex; // Makes the flex items Block Level.
+    flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
+    justify-content: center; // Horizontal centering.
+    width: 100%;
+    flex: 1; // Allows a flex item to take up all available space within the flex container.
+}
+
+footer li {
+    list-style-type: none; // Used to remove the bullet points.
+}
+
+footer a {
+    text-decoration: none; // Used to remove underline from a hyperlink.
 
     &:hover {
         text-decoration: underline; // Adds an underline.
     }
 }
 
-    .footer-social-logos {
-        display: flex; // Makes the flex items Block Level.
-        flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-        justify-content: flex-start; // Properties starting from the left.
-    }
+.footer-menu li {
+    font-size: .8125rem; // Sets the size of the font.
+    line-height: 1.375rem; // Used to set the distance between lines of text.
+} 
 
-    .logo-button {
-        display: inline-flex; // Flex container to center icon.
-        align-items: center; // Vertical centering.
-        justify-content: center; // Horizontal centering.
-        background-color: $background-secondary; // Dark blue background.
-        height: 4.25em; // Sets button height.
-        width: 4.25em; // Makes button square.
-        margin: 0 10px 10px 0;
-        padding: 0; // Remove padding so button size is consistent.
-        text-decoration: none; // Removes underline from <a>.
-    }
+.footer-menu h4 {
+    font-size: 1rem; // Sets the size of the font.
+    line-height: 18px; // Used to set the distance between lines of text.
+    margin-bottom: 26px; // The space around an element's border.
+    margin-top: 0; // The space around an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+}
 
-    .logo-icon {
-        width: 60%; // Prevents the icon from stretching too large.
-        height: auto; // Maintains the correct aspect ratio.
-        fill: $white; // Sets icon color.
-        display: block; // Removes extra spacing.
-    }
+.footer-social-logos {
+    display: flex; // Makes the flex items Block Level.
+    flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
+    justify-content: flex-start; // Properties starting from the left.
+}
 
-    .footer-menu-box {
-        display: flex; // Makes the flex items Block Level.
-        flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-        justify-content: center; // Horizontal centering.
-        width: 100%;
-        flex: 1; // Allows a flex item to take up all available space within the flex container.
-    }
+.footer-logo-box h4 {
+    margin-top: 24px; // The space around an element's border.
+    margin-bottom: 26px; // The space around an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+}
 
-    .footer-row {
-        display: flex; // Makes the flex items Block Level.
-        flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-        flex-direction: row; // Row is the default value and arranges flex items horizontally.
-        margin-bottom: 30%; // Sets the margin area on the bottom of an element.
-        
+.logo-button {
+    display: inline-flex; // Makes it behave like an inline element but still a flex container.
+    align-items: center; // Vertical centering.
+    justify-content: center; // Horizontal centering.
+    background-color: $background-secondary; // Dark blue background.
+    height: 4.25em; // Sets button height.
+    width: 4.25em; // Makes button square.
+    margin: 0 10px 10px 0;
+    padding: 0; // Remove padding so button size is consistent.
+    text-decoration: none; // Removes underline from <a>.
+}
 
-        .footer-menu {
-            flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
-            margin-bottom: 30px; // Sets the margin area on the bottom of an element.
+.logo-icon {
+    width: 60%; // Prevents the icon from stretching too large.
+    height: auto; // Maintains the correct aspect ratio.
+    fill: $white; // Sets icon color.
+    display: block; // Removes extra spacing.
+}
 
-            @media (min-width: 768px) {
-                flex: 50%; // An element should initially have a size of 50% of its container's main size before any remaining space is distributed.
-            }
+.img {
+    min-width: 360px; // Defines the minimum width of an element.
+    height: auto; // This automatically adjusts an element's height based on its content.
+}
 
-            @media (min-width: 992px) {
-                flex: 25%; // An element should initially have a size of 25% of its container's main size before any remaining space is distributed.
-            }
+.footer-row {
+    display: flex; // Makes the flex items Block Level.
+    flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
+    flex-direction: row; // Row is the default value and arranges flex items horizontally.
+    
 
-            @media (min-width: 1260px) {
-                margin-bottom: 40px; // Sets the margin area on the bottom of an element.
-            }
+    .footer-menu {
+        flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
+        margin-bottom: 30px; // Sets the margin area on the bottom of an element.
+
+        @media (min-width: 768px) {
+            flex: 50%; // An element should initially have a size of 50% of its container's main size before any remaining space is distributed.
+        }
+
+        @media (min-width: 992px) {
+            flex: 25%; // An element should initially have a size of 25% of its container's main size before any remaining space is distributed.
+        }
+
+        @media (min-width: 1260px) {
+            margin-bottom: 40px; // Sets the margin area on the bottom of an element.
         }
     }
 }
