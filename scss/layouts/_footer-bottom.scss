@@ -1,11 +1,10 @@
+@use "../base" as *;
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-//// Footer Bottom ////
+//// Footer Bottom Layouts ////
 
 .footer-bottom-box {
-    display: flex; // Makes the flex items Block Level.
-    justify-content: space-between; // Items will have space between them
     background-color: $background-secondary; // Sets the colour using a pre defined variable.
     color: $white; // Sets the colour using a pre defined variable.
     font-size: .8125rem; // Sets the size of the font.
@@ -13,7 +12,51 @@
     margin: 0;
     padding-top: 5px; // Creates space between its content and its border.
     padding-bottom: 10px; // Creates space between its content and its border.
+    
+    ul {
+        padding-left: 0;
+    }
 
+    .license-3 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+//// Footer Bottom FlexBox ////
+
+.footer-bottom-box {
+    display: flex; // Makes the flex items Block Level.
+
+    .row {
+      align-items: center;  
+    }
+}
+
+.license-1 {
+    display:flex;
+}
+
+.license-2 {
+    display:flex;
+}
+
+.license-3 {
+    display:flex;
+}
+
+.license-4 {
+    display:flex;
+}
+
+//// Links ////
+
+.footer-bottom-box li {
+    list-style-type: none; // Removes the Bullet Point.
+}
+
+.license-4 {
+ 
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
 
@@ -22,7 +65,3 @@
         }
     }
 }
-
-.footer-bottom-box li {
-        list-style-type: "- "; // Changes the bullet point to a - within a list.
-    }

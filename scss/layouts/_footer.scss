@@ -1,6 +1,7 @@
+@use "../base" as *;
 @use "../utilities" as *;
 @use "../vendors" as *;
-@use "../base" as *;
+
 
 //////// Footer Styles & Layout ////////
 
@@ -13,25 +14,89 @@ footer {
     margin: 0;
 }
 
-.footer-row {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0;
+.footer-logo-box h4 {
+    margin-top: 24px; // The space around an element's border.
+    margin-bottom: 26px; // The space around an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+}   
+
+.footer-menu {
+    flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
+    margin-bottom: 30px; // Sets the margin area on the bottom of an element.
+
+    li {
+        font-size: .8125rem; // Sets the size of the font.
+        line-height: 1.375rem; // Used to set the distance between lines of text.
+    } 
+
+    h4 {
+        font-size: 1rem; // Sets the size of the font.
+        line-height: 18px; // Used to set the distance between lines of text.
+        margin-bottom: 26px; // The space around an element's border.
+        margin-top: 0; // The space around an element's border.
+        text-transform: uppercase; // Transforms text to uppercase.
+    }
+
+    @media (min-width: 768px) {
+        flex: 50%; // An element should initially have a size of 50% of its container's main size before any remaining space is distributed.
+    }
+
+    @media (min-width: 992px) {
+        flex: 25%; // An element should initially have a size of 25% of its container's main size before any remaining space is distributed.
+    }
+
+    @media (min-width: 1260px) {
+        margin-bottom: 40px; // Sets the margin area on the bottom of an element.
+    }
 }
 
-.footer-logo-box {
+//// Footer FlexBox ////
+
+.footer-flex-container {
+    display: flex;
+
+    @include queries(s) {
+        flex-direction: column;
+    }
+}
+
+.footer-logo-box { // Flex Item
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    flex: 1;
+
+    @include queries(s) {
+
+    }
 }
 
-.footer-menu-box {
+.footer-social-logos { // Flex Item
     display: flex; // Makes the flex items Block Level.
     flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-    justify-content: center; // Horizontal centering.
-    width: 100%;
-    flex: 1; // Allows a flex item to take up all available space within the flex container.
+    justify-content: flex-start; // Properties starting from the left.
+
+    @include queries(s) {
+        margin-bottom: 30px;
+    }
 }
+
+.footer-menu-box { // Flex Item
+    display: flex; // Makes the flex items Block Level.
+    // flex: 1;
+
+    @include queries(xs) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: auto;
+    }
+
+    @include queries(l) {
+        flex-direction: row;
+    }
+}
+
+//// Links ////
 
 footer li {
     list-style-type: none; // Used to remove the bullet points.
@@ -41,34 +106,11 @@ footer a {
     text-decoration: none; // Used to remove underline from a hyperlink.
 
     &:hover {
-        text-decoration: underline; // Adds an underline.
+        text-decoration: underline; // Adds an underline while hovering.
     }
 }
 
-.footer-menu li {
-    font-size: .8125rem; // Sets the size of the font.
-    line-height: 1.375rem; // Used to set the distance between lines of text.
-} 
-
-.footer-menu h4 {
-    font-size: 1rem; // Sets the size of the font.
-    line-height: 18px; // Used to set the distance between lines of text.
-    margin-bottom: 26px; // The space around an element's border.
-    margin-top: 0; // The space around an element's border.
-    text-transform: uppercase; // Transforms text to uppercase.
-}
-
-.footer-social-logos {
-    display: flex; // Makes the flex items Block Level.
-    flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-    justify-content: flex-start; // Properties starting from the left.
-}
-
-.footer-logo-box h4 {
-    margin-top: 24px; // The space around an element's border.
-    margin-bottom: 26px; // The space around an element's border.
-    text-transform: uppercase; // Transforms text to uppercase.
-}
+//// Logos & Buttons ////
 
 .logo-button {
     display: inline-flex; // Makes it behave like an inline element but still a flex container.
@@ -90,30 +132,20 @@ footer a {
 }
 
 .img {
-    min-width: 360px; // Defines the minimum width of an element.
-    height: auto; // This automatically adjusts an element's height based on its content.
-}
-
-.footer-row {
-    display: flex; // Makes the flex items Block Level.
-    flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
-    flex-direction: row; // Row is the default value and arranges flex items horizontally.
     
-
-    .footer-menu {
-        flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
-        margin-bottom: 30px; // Sets the margin area on the bottom of an element.
-
-        @media (min-width: 768px) {
-            flex: 50%; // An element should initially have a size of 50% of its container's main size before any remaining space is distributed.
-        }
-
-        @media (min-width: 992px) {
-            flex: 25%; // An element should initially have a size of 25% of its container's main size before any remaining space is distributed.
-        }
-
-        @media (min-width: 1260px) {
-            margin-bottom: 40px; // Sets the margin area on the bottom of an element.
-        }
+    @include queries(null) {
+        min-width: 250px; // Defines the minimum width of an element.
+        min-height: 51.25px;
     }
-}
+
+    @include queries(s) {
+        min-width: 250px; // Defines the minimum width of an element.
+        min-height: 51.25px;
+    }
+
+    @include queries (xs) {
+        width: 320px; // Defines the minimum width of an element.
+        width: 320px; // Defines the maximum width of an element.
+        height: 65.59; // This automatically adjusts an element's height based on its content.
+    }
+} 

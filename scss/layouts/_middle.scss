@@ -1,24 +1,28 @@
+@use "../base" as *;
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
 .middle {
     display: flex;
+    flex: 1;
     background-color: $background-primary;
-    color: $white;
-}
+    color: $white;  
 
-.middle a {
-    text-decoration: none; // Used to remove underline from a hyperlink.
-    color: $white;
+    a {
+        text-decoration: none; // Used to remove underline from a hyperlink.
+        color: $white;
 
-    &:hover {
-        text-decoration: underline; // Adds an underline.
+        &:hover {
+            text-decoration: underline; // Adds an underline.
+        }
     }
 }
 
+.strong-title {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
 
+.middle-paragraph {
+    font-weight: bolder;
+}

@@ -1,0 +1,25 @@
+@use "sass:map"; // Required for map.has-key() and map.get()
+
+//// Maps ////
+
+$breakpoints: ( // Creates variables to be used. 
+    null : 1px,
+    xs   : 413px,
+    s    : 480px,
+    m    : 768px,
+    l    : 992px,
+    xl   : 1260px
+);
+
+//// mixins ////
+
+@mixin queries($size) { // I’m creating a mixin named queries, and it will take one input value. I’m calling that input $size.
+    @if map.has-key($breakpoints, $size) { // Checks if the provided $size exists as a key in the $breakpoints map.
+        $breakpoint-value: map.get($breakpoints, $size); // If the key exists, retrieve the pixel value associated with that key.
+        @media (min-width: $breakpoint-value) { // Start a media query using the retrieved breakpoint value.
+        @content; // The @content directive allows me to inject CSS where this mixin is used.
+        }
+    } @else { // If the provided $size doesn't exist in the $breakpoints map, show a warning.
+        @warn "No value found for breakpoint '#{$size}'."; // Output of warning.
+    }
+}

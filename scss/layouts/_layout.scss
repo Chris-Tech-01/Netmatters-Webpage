@@ -1,6 +1,29 @@
 @use "../vendors" as *;
 @use "../base" as *;
 
+//// Debug Testing ////
+
+// * {
+//   outline: 1px solid red; // Visualise every element's box
+// }
+
+// .middle {
+//   border: 2px solid blue;
+// }
+
+// .container {
+//   border: 2px solid green;
+// }
+
+// body, html {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// html, body {
+//   height: 100%;
+// }
+
 //// Global layout ////
 
 * {
@@ -10,7 +33,14 @@
 //// Layout ////
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0; // Sets the top and bottom margins of an element to 0 and centers it horizontally within its parent element.
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
 }
 
 //////// Media Queries ////////
