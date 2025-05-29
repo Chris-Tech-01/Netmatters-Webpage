@@ -2,27 +2,163 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-.middle {
-    display: flex;
-    flex: 1;
-    background-color: $background-primary;
-    color: $white;  
+//////// Container Layout ////////
+
+.middle { // flex 1 was used on here to get rid of white space.
+    display: flex; // Makes it into a flex container.
+    flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
+    background-color: $background-primary; // Created a colour using a pre defined variable.
+    color: $white; // Created a colour using a pre defined variable.
+
+    h2 {
+        margin-bottom: 40px; // Sets the margin area on the bottom of an element.
+    }
 
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
-        color: $white;
-
-        &:hover {
-            text-decoration: underline; // Adds an underline.
-        }
+        color: $white; // Created a colour using a pre defined variable.
     }
 }
 
+// .middle-row {
+//     max-width: 100%
+// }
+
+//////// Item Layout & Styles ///////
+
+p {
+    line-height: 1.875rem; // Used to set the distance between lines of text.
+    margin-bottom: 25px; // Sets the margin area on the bottom of an element.
+}
+
+.middle-row {
+    padding: 50px 0;
+}
+
 .strong-title {
-        font-size: 2.25rem;
-        font-weight: 600;
+        font-size: 2.25rem; // Sets the size of the font.
+        font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
     }
 
-.middle-paragraph {
-    font-weight: bolder;
+.strong-paragraph {
+    font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
+}
+
+.mid-col-1 {
+    p {
+        font-size: 14px; // Sets the size of the font.
+    }
+}
+
+.client-quote {
+    font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
+    font-size: 1.3rem; // Sets the size of the font.
+    font-style: italic; // To show content/text in italic style
+}
+
+.client-quote-author {
+    font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
+    color: $client; // Created a colour using a pre defined variable.
+}
+
+.client {
+   font-weight: 600; 
+}
+
+//////// Buttons ////////
+
+.mid-btn {
+    display: inline-flex; // Makes it behave like an inline element but still a flex container.
+    font-size: 20px; // Sets the size of the font.
+    padding: 10px 30px; // Creates extra space within an element.
+    border-radius: 6px; // Rounds the corners of an element's outer border edge.
+    border: 1px solid transparent; // Allow me to specify the style, width, and color of an element's border.
+    text-align: center; // Center the text inside an element.
+    text-transform: uppercase; // Transforms text to uppercase.
+
+}
+
+.middle-buttons a:first-child {
+    width: 270.17px; // Sets an element's width.
+    height: 57px; // Sets an element's height.
+    margin-bottom: 17px; // Sets the margin area on the bottom of an element.
+}
+
+.mid-btn-1 {
+    width: 225.86px; // Sets an element's width.
+    height: 57px; // Sets an element's height.
+    margin-bottom: 50px; // Sets the margin area on the bottom of an element.
+    background-color: $background-button; // Created a colour using a pre defined variable.
+
+    &:hover {
+        background-color: $darkest-blue; // Created a colour using a pre defined variable.
+    }
+}
+
+.mid-btn-2 {
+    width: 263.19px; // Sets an element's width.
+    height: 55px; // Sets an element's height.
+    margin-top: 20px; // Sets the margin area on the top of an element.
+    margin-right: 8px; // Sets the margin area on the right of an element.
+    background-color: $blue; // Created a colour using a pre defined variable.
+
+    &:hover {
+        background-color: $hover-blue; // Created a colour using a pre defined variable.
+    }
+}
+
+.mid-btn-3 {
+    width: 294.05px; // Sets an element's width.
+    height: 55px; // Sets an element's height.
+    background-color: $green; // Created a colour using a pre defined variable.
+    margin-top: 20px; // Sets the margin area on the top of an element.
+
+    &:hover {
+        background-color: $hover-green; // Created a colour using a pre defined variable.
+    }
+}
+
+//////// Star Styles ////////
+
+.star-icon {
+    fill: white;
+}
+
+//////// Flexbox Layout ////////
+
+.middle-row {
+    display: flex; // Makes it into a flex container.
+    flex-direction: column; // Displays flex items in a column.
+}
+
+.mid-col-1 { 
+    display: flex; // Makes it into a flex container and a flex item.
+    flex-direction: column; // Displays flex items in a column.
+}
+
+.mid-col-2 {
+    display: flex; // Makes it into a flex container and a flex item.
+    flex-direction: column; // Displays flex items in a column.
+
+    h2 {
+       margin-top: 0; // Sets the margin area on the top of an element.
+       align-self: flex start; // The flex items will be positioned at the beginning of the flex container.
+    }
+}
+
+.middle-buttons { 
+    display: flex; // Makes it into a flex item.
+    flex-direction: column; // Displays flex items in a column.
+}
+
+.strong-title {
+    display: flex; // Makes it into a flex item.
+}
+
+.client-quote-auther {
+    display: flex; // Makes it into a flex item.
+}
+
+.client {
+    display: flex; // Makes it into a flex item.
 }

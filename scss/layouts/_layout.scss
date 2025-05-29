@@ -32,9 +32,10 @@
 
 //// Layout ////
 
-body {
+body { // This was made to get rid of white space.
     display: flex;
     flex-direction: column;
+    letter-spacing: .4px;
     margin: 0; // Sets the top and bottom margins of an element to 0 and centers it horizontally within its parent element.
 }
 

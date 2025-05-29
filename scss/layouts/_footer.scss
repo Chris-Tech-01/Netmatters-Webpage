@@ -50,10 +50,98 @@ footer {
     }
 }
 
-//// Footer FlexBox ////
+//////// Links ////////
+
+footer li {
+    list-style-type: none; // Used to remove the bullet points.
+}
+
+footer a {
+    text-decoration: none; // Used to remove underline from a hyperlink.
+
+    &:hover {
+        text-decoration: underline; // Adds an underline while hovering.
+    }
+}
+
+//////// Logos & Buttons ////////
+
+.logo-button {
+    display: inline-flex; // Makes it behave like an inline element but still a flex container.
+    align-items: center; // Vertical centering.
+    justify-content: center; // Horizontal centering.
+    background-color: $background-secondary; // Dark blue background.
+    height: 4.25em; // Sets button height.
+    width: 4.25em; // Makes button square.
+    margin: 0 10px 10px 0;
+    padding: 0; // Remove padding so button size is consistent.
+    text-decoration: none; // Removes underline from <a>.
+}
+
+.logo-icon {
+    width: 60%; // Prevents the icon from stretching too large.
+    height: auto; // Maintains the correct aspect ratio.
+    fill: $white; // Sets icon color.
+    display: block; // Removes extra spacing.
+}
+
+.logo-button-1 {
+
+    &:hover {
+        background-color: $logo-1-hover; // Created a colour using a pre defined variable.
+    }
+}
+
+.logo-button-2 {
+
+    &:hover {
+        background-color: $logo-2-hover; // Created a colour using a pre defined variable.
+    }
+}
+
+.logo-button-3 {
+
+    &:hover {
+        background-color: $logo-3-hover; // Created a colour using a pre defined variable.
+    }
+}
+
+.logo-button-4 {
+
+    &:hover {
+        background-color: $logo-4-hover; // Created a colour using a pre defined variable.
+    }
+}
+
+//////// Image ////////
+
+.img {
+    min-width: 250px; // Defines the minimum width of an element.
+    max-width: 250px; // Defines the minimum width of an element.
+    min-height: 51.25px; // Defines the minimum height of an element.
+    max-height: 51.25px; // Defines the maximum height of an element.
+
+
+    @include queries (xs) {
+        min-width: 250px; // Defines the minimum width of an element.
+        max-width: 250px; // Defines the maximum width of an element.
+        min-height: 51.25px; // Defines the minimum height of an element.
+        max-height: 51.25px; // Defines the maximum height of an element.
+    }
+
+     @include queries(s) {
+        min-width: 320px; // Defines the minimum width of an element.
+        max-width: 320px; // Defines the maximum width of an element.
+        min-height: 65.59px; // Defines the minimum height of an element.
+        max-height: 65.59px; // Defines the maximum height of an element.
+    }
+} 
+
+//////// Footer FlexBox ////////
 
 .footer-flex-container {
     display: flex;
+    flex: 1;
 
     @include queries(s) {
         flex-direction: column;
@@ -95,57 +183,3 @@ footer {
         flex-direction: row;
     }
 }
-
-//// Links ////
-
-footer li {
-    list-style-type: none; // Used to remove the bullet points.
-}
-
-footer a {
-    text-decoration: none; // Used to remove underline from a hyperlink.
-
-    &:hover {
-        text-decoration: underline; // Adds an underline while hovering.
-    }
-}
-
-//// Logos & Buttons ////
-
-.logo-button {
-    display: inline-flex; // Makes it behave like an inline element but still a flex container.
-    align-items: center; // Vertical centering.
-    justify-content: center; // Horizontal centering.
-    background-color: $background-secondary; // Dark blue background.
-    height: 4.25em; // Sets button height.
-    width: 4.25em; // Makes button square.
-    margin: 0 10px 10px 0;
-    padding: 0; // Remove padding so button size is consistent.
-    text-decoration: none; // Removes underline from <a>.
-}
-
-.logo-icon {
-    width: 60%; // Prevents the icon from stretching too large.
-    height: auto; // Maintains the correct aspect ratio.
-    fill: $white; // Sets icon color.
-    display: block; // Removes extra spacing.
-}
-
-.img {
-    
-    @include queries(null) {
-        min-width: 250px; // Defines the minimum width of an element.
-        min-height: 51.25px;
-    }
-
-    @include queries(s) {
-        min-width: 250px; // Defines the minimum width of an element.
-        min-height: 51.25px;
-    }
-
-    @include queries (xs) {
-        width: 320px; // Defines the minimum width of an element.
-        width: 320px; // Defines the maximum width of an element.
-        height: 65.59; // This automatically adjusts an element's height based on its content.
-    }
-} 

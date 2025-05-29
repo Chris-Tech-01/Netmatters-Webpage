@@ -2,7 +2,7 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-//// Footer Bottom Layouts ////
+//////// Footer Bottom Layouts ////////
 
 .footer-bottom-box {
     background-color: $background-secondary; // Sets the colour using a pre defined variable.
@@ -10,46 +10,23 @@
     font-size: .8125rem; // Sets the size of the font.
     line-height: 1.42857142rem; // Used to set the distance between lines of text.
     margin: 0;
-    padding-top: 5px; // Creates space between its content and its border.
+    padding-top: 10px; // Creates space between its content and its border.
     padding-bottom: 10px; // Creates space between its content and its border.
     
     ul {
         padding-left: 0;
     }
 
-    .license-3 {
-        margin-left: 10px;
+    .license-3 {        
         margin-right: 10px;
     }
 }
 
-//// Footer Bottom FlexBox ////
-
-.footer-bottom-box {
-    display: flex; // Makes the flex items Block Level.
-
-    .row {
-      align-items: center;  
-    }
+.row-group {
+    height: 22px;
 }
 
-.license-1 {
-    display:flex;
-}
-
-.license-2 {
-    display:flex;
-}
-
-.license-3 {
-    display:flex;
-}
-
-.license-4 {
-    display:flex;
-}
-
-//// Links ////
+//////// Links ////////
 
 .footer-bottom-box li {
     list-style-type: none; // Removes the Bullet Point.
@@ -64,4 +41,38 @@
             text-decoration: underline; // Adds an underline.
         }
     }
+}
+
+//////// Footer Bottom FlexBox ////////
+
+.footer-bottom-box {
+    display: flex; // Makes the flex items Block Level.
+    flex: 1;
+}
+
+.footer-bottom-column {
+    display: flex; // Makes the flex items Block Level.
+    flex-direction: column;
+}
+
+.row-group {
+    display: flex; // Makes the flex items Block Level.
+    flex-direction: row;
+    align-items: center;
+}
+
+.license-1 {
+    display:flex; // Makes the flex items Block Level.
+}
+
+.license-2 {
+    display:flex; // Makes the flex items Block Level.
+}
+
+.license-3 {
+    display:flex; // Makes the flex items Block Level.
+}
+
+.license-4 {
+    display:flex; // Makes the flex items Block Level.
 }

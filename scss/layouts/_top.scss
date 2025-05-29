@@ -1,0 +1,85 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layouts ////////
+
+.top {
+    padding: 50px 15px;
+
+    h1 {
+
+        a {
+            color: $text-colour;
+        }
+    }
+
+    h2 {
+        font-size: 2.7rem;
+        margin-bottom: 15px;
+        margin-top: 0;
+        color: $text-colour;        
+    }
+
+    span {
+        color: $text-colour;
+    }
+
+} 
+
+.block {
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.service-list {
+    color: $text-colour;
+}
+
+//////// Box's ////////
+
+.top-box {
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid $white-red;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+}
+
+
+
+//////// Links ////////
+
+.top {
+    a {
+        text-decoration: none; // Used to remove underline from a hyperlink.
+    }
+}
+
+.h1-link {
+    text-decoration: none; // Used to remove underline from a hyperlink.
+
+    &:hover {
+        text-decoration: underline; // Adds an underline while hovering.
+    }
+}
+
+//////// FlexBox Layout ////////
+
+.felx {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.block {
+
+    span {
+        display: flex;
+        flex-direction: column;
+    }
+}

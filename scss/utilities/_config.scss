@@ -1,10 +1,46 @@
-// Colours //
+//////// Colours ////////
 
-$white       : #fff;
-$dark-blue   : #323544;
-$darker-blue : #212330;
+$white            : #FFF;
+$white-red        : #CCC;
+$green            : #00B67B;
+$hover-green      : #009B69;
+$teal-grey        : #A3A8AC;
+$blue             : #4387f6;
+$hover-blue       : #166AF4;
+$dark-ish-blue    : #323544;
+$dark-blue        : #333645;
+$darker-blue      : #212330;
+$even-darker-blue : #272936;
+$darkest-blue     : #121318;
 
-// Colour variables //
+$facebook         : #3B5998;
+$linkedin         : #0077B5;
+$x                : #00ACED;
+$instagram        : #D93175;
 
-$background-primary    : $dark-blue;
+$shadow           : 0px 3px 35px rgba(0, 0, 0, .1);
+
+//////// Colour variables ////////
+
+$background-primary    : $dark-ish-blue;
 $background-secondary  : $darker-blue;
+$background-button     : $even-darker-blue;
+
+$btn-1-hover           : $darkest-blue;
+$btn-2-hover           : $hover-blue;
+$btn-3-hover           : $hover-green;
+
+$client                : $teal-grey;
+
+$logo-1-hover          : $facebook;
+$logo-2-hover          : $linkedin;
+$logo-3-hover          : $x;
+$logo-4-hover          : $instagram;
+
+$text-colour           : $dark-blue;
+
+$border                : $white-red;
+
+//////// Box Shadow ////////
+
+$box-shadow            : $shadow;
