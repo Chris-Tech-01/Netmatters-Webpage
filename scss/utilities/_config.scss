@@ -2,7 +2,10 @@
 
 $white            : #FFF;
 $white-red        : #CCC;
+$yellow           : #FFA500;
+$yellow-2         : #F7B322;
 $green            : #00B67B;
+$green-2          : #2ECC71;
 $hover-green      : #009B69;
 $teal-grey        : #A3A8AC;
 $blue             : #4387f6;
@@ -12,6 +15,12 @@ $dark-blue        : #333645;
 $darker-blue      : #212330;
 $even-darker-blue : #272936;
 $darkest-blue     : #121318;
+$neutral-blue     : #4183D7;
+$red              : #D64541;
+$pink             : #F62459;
+$purple           : #926FB1;
+$orange           : #CE4125;
+$grey             : #67809F;
 
 $facebook         : #3B5998;
 $linkedin         : #0077B5;
@@ -22,25 +31,51 @@ $shadow           : 0px 3px 35px rgba(0, 0, 0, .1);
 
 //////// Colour variables ////////
 
-$background-primary    : $dark-ish-blue;
-$background-secondary  : $darker-blue;
-$background-button     : $even-darker-blue;
+$background-primary       : $dark-ish-blue;
+$background-secondary     : $darker-blue;
 
-$btn-1-hover           : $darkest-blue;
-$btn-2-hover           : $hover-blue;
-$btn-3-hover           : $hover-green;
+$top-text-colour          : $dark-blue;
+$top-btn-colour           : $white;
+$top-btn-1                : $yellow-2;
+$top-btn-2                : $neutral-blue;
+$top-btn-3                : $green-2;
+$top-btn-4                : $red;
+$top-btn-5                : $purple;
+$top-btn-6                : $pink;
+$top-btn-7                : $orange;
+$top-btn-effect           : $white;
+$top-box-1-effect         : $grey;
+$top-box-2-effect         : $neutral-blue;
+$top-box-3-effect         : $green-2;
+$top-box-4-effect         : $red;
+$top-box-5-effect         : $purple;
+$top-box-6-effect         : $pink;
+$top-box-7-effect         : $orange;
 
-$client                : $teal-grey;
 
-$logo-1-hover          : $facebook;
-$logo-2-hover          : $linkedin;
-$logo-3-hover          : $x;
-$logo-4-hover          : $instagram;
+$mid-text-colour          : $white;
+$mid-btn-1-background     : $even-darker-blue;
+$mid-btn-2-background     : $blue;
+$mid-btn-3-background     : $green;
+$mid-btn-1-hover          : $darkest-blue;
+$mid-btn-2-hover          : $hover-blue;
+$mid-btn-3-hover          : $hover-green;
 
-$text-colour           : $dark-blue;
+$footer-text-colour       : $white;
 
-$border                : $white-red;
+$footer-bottom-text-colour: $white;
+
+$client                   : $teal-grey;
+
+$star                     : $yellow;
+
+$logo-1-hover             : $facebook;
+$logo-2-hover             : $linkedin;
+$logo-3-hover             : $x;
+$logo-4-hover             : $instagram;
+
+$border                   : $white-red;
 
 //////// Box Shadow ////////
 
-$box-shadow            : $shadow;
+$box-shadow               : $shadow;

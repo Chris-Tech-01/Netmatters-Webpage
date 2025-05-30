@@ -5,10 +5,10 @@
 //////// Container Layout ////////
 
 .middle { // flex 1 was used on here to get rid of white space.
-    display: flex; // Makes it into a flex container.
-    flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
+    // display: flex; // Makes it into a flex container.
+    // flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
     background-color: $background-primary; // Created a colour using a pre defined variable.
-    color: $white; // Created a colour using a pre defined variable.
+    color: $mid-text-colour ; // Created a colour using a pre defined variable.
 
     h2 {
         margin-bottom: 40px; // Sets the margin area on the bottom of an element.
@@ -16,7 +16,7 @@
 
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
-        color: $white; // Created a colour using a pre defined variable.
+        color: $mid-text-colour ; // Created a colour using a pre defined variable.
     }
 }
 
@@ -88,10 +88,10 @@ p {
     width: 225.86px; // Sets an element's width.
     height: 57px; // Sets an element's height.
     margin-bottom: 50px; // Sets the margin area on the bottom of an element.
-    background-color: $background-button; // Created a colour using a pre defined variable.
+    background-color: $mid-btn-1-background; // Created a colour using a pre defined variable.
 
     &:hover {
-        background-color: $darkest-blue; // Created a colour using a pre defined variable.
+        background-color: $mid-btn-1-hover; // Created a colour using a pre defined variable.
     }
 }
 
@@ -100,28 +100,30 @@ p {
     height: 55px; // Sets an element's height.
     margin-top: 20px; // Sets the margin area on the top of an element.
     margin-right: 8px; // Sets the margin area on the right of an element.
-    background-color: $blue; // Created a colour using a pre defined variable.
+    background-color: $mid-btn-2-background; // Created a colour using a pre defined variable.
 
     &:hover {
-        background-color: $hover-blue; // Created a colour using a pre defined variable.
+        background-color: $mid-btn-2-hover; // Created a colour using a pre defined variable.
     }
 }
 
 .mid-btn-3 {
     width: 294.05px; // Sets an element's width.
     height: 55px; // Sets an element's height.
-    background-color: $green; // Created a colour using a pre defined variable.
+    background-color: $mid-btn-3-background; // Created a colour using a pre defined variable.
     margin-top: 20px; // Sets the margin area on the top of an element.
 
     &:hover {
-        background-color: $hover-green; // Created a colour using a pre defined variable.
+        background-color: $mid-btn-3-hover; // Created a colour using a pre defined variable.
     }
 }
 
 //////// Star Styles ////////
 
 .star-icon {
-    fill: white;
+    width: 46.84px;
+    height: 51px;
+    fill: $star;
 }
 
 //////// Flexbox Layout ////////
@@ -129,6 +131,10 @@ p {
 .middle-row {
     display: flex; // Makes it into a flex container.
     flex-direction: column; // Displays flex items in a column.
+}
+
+.star-row {
+    display: flex;
 }
 
 .mid-col-1 { 
@@ -155,10 +161,8 @@ p {
     display: flex; // Makes it into a flex item.
 }
 
-.client-quote-auther {
+.client-quote-author {
     display: flex; // Makes it into a flex item.
+    flex-direction: column;
 }
 
-.client {
-    display: flex; // Makes it into a flex item.
-}

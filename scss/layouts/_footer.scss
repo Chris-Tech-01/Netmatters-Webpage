@@ -7,7 +7,7 @@
 
 footer {
     background-color: $background-primary; // Sets the colour using a pre defined variable.
-    color: $white; // Sets the colour using a pre defined variable.
+    color: $footer-text-colour; // Sets the colour using a pre defined variable.
     position: relative; // Positioned relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.
     margin-top: auto; // Defines the space between the top edge of an element and its surroundings.
     padding: 47px 0 0; // Creates space between its content and its border.
@@ -20,11 +20,16 @@ footer {
     text-transform: uppercase; // Transforms text to uppercase.
 }   
 
+.footer-social-logos {
+    margin-bottom: 30px;
+}
+
 .footer-menu {
     flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
     margin-bottom: 30px; // Sets the margin area on the bottom of an element.
 
-    li {
+    ul {
+        padding-left: 0px;
         font-size: .8125rem; // Sets the size of the font.
         line-height: 1.375rem; // Used to set the distance between lines of text.
     } 
@@ -71,20 +76,37 @@ footer a {
     align-items: center; // Vertical centering.
     justify-content: center; // Horizontal centering.
     background-color: $background-secondary; // Dark blue background.
-    height: 4.25em; // Sets button height.
-    width: 4.25em; // Makes button square.
+    height: 56px; // Sets button height.
+    width: 109.31px; // Makes button square.
     margin: 0 10px 10px 0;
-    padding: 0; // Remove padding so button size is consistent.
+    padding: 12px 22px 16px; // Remove padding so button size is consistent.
     text-decoration: none; // Removes underline from <a>.
 }
 
 .logo-icon {
     width: 60%; // Prevents the icon from stretching too large.
     height: auto; // Maintains the correct aspect ratio.
-    fill: $white; // Sets icon color.
+    fill: $footer-text-colour; // Sets icon color.
     display: block; // Removes extra spacing.
 }
 
+.logo-icon-1 {
+    width: 26.41px;
+    height: 26px;
+}
+
+.logo-icon-2 {
+    width: 22.69px;
+    height: 26px;
+}
+.logo-icon-3 {
+    width: 24.55px;
+    height: 26px;
+}
+.logo-icon-4 {
+    width: 22.7px;
+    height: 26px;
+}
 .logo-button-1 {
 
     &:hover {
@@ -115,7 +137,7 @@ footer a {
 
 //////// Image ////////
 
-.img {
+.img-footer {
     min-width: 250px; // Defines the minimum width of an element.
     max-width: 250px; // Defines the minimum width of an element.
     min-height: 51.25px; // Defines the minimum height of an element.
@@ -139,20 +161,11 @@ footer a {
 
 //////// Footer FlexBox ////////
 
-.footer-flex-container {
-    display: flex;
-    flex: 1;
-
-    @include queries(s) {
-        flex-direction: column;
-    }
-}
-
 .footer-logo-box { // Flex Item
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1;
+    flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
 
     @include queries(s) {
 
@@ -161,6 +174,7 @@ footer a {
 
 .footer-social-logos { // Flex Item
     display: flex; // Makes the flex items Block Level.
+    flex-direction: column;
     flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
     justify-content: flex-start; // Properties starting from the left.
 
@@ -171,7 +185,6 @@ footer a {
 
 .footer-menu-box { // Flex Item
     display: flex; // Makes the flex items Block Level.
-    // flex: 1;
 
     @include queries(xs) {
         flex-wrap: wrap;
@@ -182,4 +195,9 @@ footer a {
     @include queries(l) {
         flex-direction: row;
     }
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
 }

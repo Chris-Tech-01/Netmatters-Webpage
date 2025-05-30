@@ -5,52 +5,64 @@
 //////// Layouts ////////
 
 .top {
-    padding: 50px 15px;
 
-    h1 {
+    .section {
+        padding-left: 15px;
+        padding-right: 15px;
 
-        a {
-            color: $text-colour;
+        .btn {
+            color: $top-btn-colour;
         }
-    }
 
-    h2 {
-        font-size: 2.7rem;
-        margin-bottom: 15px;
-        margin-top: 0;
-        color: $text-colour;        
-    }
+        h1 {
+            a {
+                color: $top-text-colour;
+            }
+        }
 
-    span {
-        color: $text-colour;
-    }
+        h2 {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+            margin-top: 0;
+            color: $top-text-colour;        
+        }
 
-} 
+        span {
+            color: $top-text-colour;
+        }
 
-.block {
-    a {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
+    } 
+}
+
+.h2 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+    margin-bottom: 11px;
+}
+
+.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
 }
 
 .service-list {
-    color: $text-colour;
+    color: $top-text-colour;
+}
+
+.block {
+    padding: 30px;
 }
 
 //////// Box's ////////
 
 .top-box {
-    padding: 30px;
     margin-top: 30px;
     text-align: center;
     border: 1px solid $white-red;
     border-radius: 15px;
     box-shadow: $box-shadow;
 }
-
-
 
 //////// Links ////////
 
@@ -68,6 +80,166 @@
     }
 }
 
+//////// Box Hover Effects ////////
+
+.software {
+   
+    &:hover {
+        background-color: $top-box-1-effect;
+
+        .btn-software {
+            color: $top-box-1-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.it {
+   
+    &:hover {
+        background-color: $top-box-2-effect ;
+
+        .btn-it {
+            color: $top-box-2-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.digital {
+   
+    &:hover {
+        background-color: $top-box-3-effect;
+
+        .btn-digital {
+            color: $top-box-3-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.telecoms {
+   
+    &:hover {
+        background-color: $top-box-4-effect;
+
+        .btn-telecoms {
+            color: $top-box-4-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.web {
+   
+    &:hover {
+        background-color: $top-box-5-effect;
+
+        .btn-web {
+            color: $top-box-5-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.security {
+   
+    &:hover {
+        background-color: $top-box-6-effect;
+
+        .btn-security {
+            color: $top-box-6-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+.training {
+   
+    &:hover {
+        background-color: $top-box-7-effect;
+
+        .btn-training {
+            color: $top-box-7-effect;
+            background-color: $top-btn-effect; 
+        }
+
+        .p, .h2 {
+            color: $top-btn-effect;
+        }
+    }
+  
+}
+
+//////// Buttons ////////
+
+.btn {
+    height: 47px;
+    width: 129.73px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.btn-software {
+    background-color: $top-btn-1;
+}
+
+.btn-it {
+    background-color: $top-btn-2;
+}
+
+.btn-digital {
+    background-color: $top-btn-3;
+}
+
+.btn-telecoms {
+    background-color: $top-btn-4;
+}
+
+.btn-web {
+    background-color: $top-btn-5;
+}
+
+.btn-security {
+    background-color: $top-btn-6;
+}
+
+.btn-training {
+    background-color: $top-btn-7;
+}
+
 //////// FlexBox Layout ////////
 
 .felx {
@@ -77,6 +249,9 @@
 }
 
 .block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     span {
         display: flex;
