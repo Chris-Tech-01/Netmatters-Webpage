@@ -15,17 +15,22 @@
     </head>
 
     <body>
+        <div class="container">
+            <div class="banner"></div>
+        </div>
         <div class="top">
             <div class="container section">
                 <div class="grid">
                     <div class="service list">
                         <h2 class="top-h2">Our Services</h2>
-                        <h1>
-                            <a href="#" class="h1-link" target="_blank">View Our Work</a>
+                        <h1 class="top-h1">
+                            <a href="#" class="h1-link" target="_blank">View Our Work <i class="fa-solid fa-arrow-right"></i></a>
                         </h1>
-                        <div class="top-box top-box-1 flex">
+                        <div class="top-box top-box-1 grid">
                             <a href="#" class="block software" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <span class="icon"><i class="fa-solid fa-laptop"></i></span>
+                                </span>
                                 <span class="h2">Bespoke Software</span>
                                 <span class="p">
                                     Bespoke software solutions for all your business needs including integrations and reporting.
@@ -35,9 +40,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-2 flex">
+                        <div class="top-box top-box-2 grid">
                             <a href="#" class="block it" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <svg class="icon top-svg">
+                                        <use xlink:href="./sprite.svg#icon-display"></use>
+                                    </svg>
+                                </span>
                                 <span class="h2">IT Support</span>
                                 <span class="p">
                                     Fully managed IT support and consultancy packages tailored to meet your exact business needs.
@@ -47,9 +56,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-3 flex">
+                        <div class="top-box top-box-3 grid">
                             <a href="#" class="block digital" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <svg class="icon top-svg">
+                                        <use xlink:href="./sprite.svg#icon-signal_cellular_alt"></use>
+                                    </svg>
+                                </span>
                                 <span class="h2">Digital Marketing</span>
                                 <span class="p">
                                     Driven brand awareness & ROI through creative digital marketing campaigns.
@@ -59,9 +72,11 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-4 flex">
+                        <div class="top-box top-box-4 grid">
                             <a href="#" class="block telecoms" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
+                                </span>
                                 <span class="h2">Telecoms Services</span>
                                 <span class="p">
                                     Business telephony solutions including mobile & connectivity solutions.
@@ -71,9 +86,11 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-5 flex">
+                        <div class="top-box top-box-5 grid">
                             <a href="#" class="block web" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <span class="icon"><i class="fa-solid fa-code"></i></span>
+                                </span>
                                 <span class="h2">Web Design</span>
                                 <span class="p">
                                     User-centric design for businesses looking to make a lasting impression.
@@ -83,9 +100,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-6 flex">
+                        <div class="top-box top-box-6 grid">
                             <a href="#" class="block security" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <svg class="icon top-svg">
+                                        <use xlink:href="./sprite.svg#icon-security"></use>
+                                    </svg>
+                                </span>
                                 <span class="h2">Cyber Security</span>
                                 <span class="p">
                                     Prevention, testing, consultancy & breach management services.
@@ -95,9 +116,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="top-box top-box-7 flex">
+                        <div class="top-box top-box-7 grid">
                             <a href="#" class="block training" target="_blank">
-                                <span class="icon"></span>
+                                <span class="icon-box">
+                                    <svg class="icon top-svg">
+                                        <use xlink:href="./sprite.svg#icon-school"></use>
+                                    </svg>
+                                </span>
                                 <span class="h2">Developer Training</span>
                                 <span class="p">
                                     Web design & software training courses designed to secure a job in tech.
@@ -110,31 +135,29 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="section">
-                <div class="row">
-                    <picture>
-                        <source srcset="/images/norfolk_prohelp.png" type="image/png">
-                        <img class="img-logo-top" src="/images/norfolk_prohelp.png" alt="Norfolk Prohelp Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/investing-in-future-growth.png" type="image/png">
-                        <img class="img-logo-top" src="/images/investing-in-future-growth.png" alt="Investing in Future Growth Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/norfolk-carbon-charter.png" type="image/png">
-                        <img class="img-logo-top" src="/images/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/PPC_logo.png" type="image/png">
-                        <img class="img-logo-top" src="/images/PPC_logo.png" alt="PPC Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/princess-royal-training.png" type="image/png">
-                        <img class="img-logo-top" src="/images/princess-royal-training.png" alt="Princess Royal Training Logo">
-                    </picture>
-                </div>
+        </div>        
+        <div class="section">
+            <div class="row">
+                <picture>
+                    <source srcset="/images/norfolk_prohelp.png" type="image/png">
+                    <img class="img-logo-top" src="/images/norfolk_prohelp.png" alt="Norfolk Prohelp Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/investing-in-future-growth.png" type="image/png">
+                    <img class="img-logo-top" src="/images/investing-in-future-growth.png" alt="Investing in Future Growth Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/norfolk-carbon-charter.png" type="image/png">
+                    <img class="img-logo-top" src="/images/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/PPC_logo.png" type="image/png">
+                    <img class="img-logo-top" src="/images/PPC_logo.png" alt="PPC Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/princess-royal-training.png" type="image/png">
+                    <img class="img-logo-top" src="/images/princess-royal-training.png" alt="Princess Royal Training Logo">
+                </picture>
             </div>
         </div>
         <div class="middle">
@@ -161,8 +184,8 @@
                         We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.
                        </p>
                        <div class="middle-buttons">
-                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Why Choose Us?</a>
-                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Our Culture</a>
+                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Why Choose Us? <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Our Culture <i class="fa-solid fa-arrow-right"></i></a>
                        </div>
                     </div>
                     <div class="mid-col-2">
@@ -170,27 +193,27 @@
                         <div class="star-row">                            
                             <div>
                                 <svg class="star-icon">
-                                    <use xlink:href="./sprite.svg#icon-star-full" alt="Star"></use>
+                                    <use xlink:href="./sprite.svg#icon-star-full"></use>
                                 </svg>
                             </div>                            
                             <div>
                                 <svg class="star-icon">
-                                    <use xlink:href="./sprite.svg#icon-star-full" alt="Star"></use>
+                                    <use xlink:href="./sprite.svg#icon-star-full"></use>
                                 </svg>
                             </div>
                             <div>
                                 <svg class="star-icon">
-                                    <use xlink:href="./sprite.svg#icon-star-full" alt="Star"></use>
+                                    <use xlink:href="./sprite.svg#icon-star-full"></use>
                                 </svg>
                             </div>
                             <div>
                                 <svg class="star-icon">
-                                    <use xlink:href="./sprite.svg#icon-star-full" alt="Star"></use>
+                                    <use xlink:href="./sprite.svg#icon-star-full"></use>
                                 </svg>
                             </div>
                             <div>
                                 <svg class="star-icon">
-                                    <use xlink:href="./sprite.svg#icon-star-full" alt="Star"></use>
+                                    <use xlink:href="./sprite.svg#icon-star-full"></use>
                                 </svg>
                             </div>
                         </div>
@@ -206,39 +229,37 @@
                             </span>
                         </p>
                         <div class="middle-buttons">
-                        <a href="#" class="mid-btn mid-btn-2" target="_blank">Google Reviews</a>
-                        <a href="#" class="mid-btn mid-btn-3" target="_blank">Trustpilot Reviews</a>
+                        <a href="#" class="mid-btn mid-btn-2" target="_blank">Google Reviews <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-3" target="_blank">Trustpilot Reviews <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>                    
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="section">
-                <div class="row">
-                    <picture>
-                        <source srcset="/images/beat_logo.png" type="image/png">
-                        <img class="img-logo-bottom" src="/images/beat_logo.png" alt="Beat Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/survey_solutions_logo.png" type="image/png">
-                        <img class="img-logo-bottom" src="/images/survey_solutions_logo.png" alt="Survey Solutions Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/sweetzy_logo.png" type="image/png">
-                        <img class="img-logo-bottom" src="/images/sweetzy_logo.png" alt="Sweetzy Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/busseys_logo.png" type="image/png">
-                        <img class="img-logo-bottom" src="/images/busseys_logo.png" alt="Busseys Logo">
-                    </picture>
-                    <picture>
-                        <source srcset="/images/crane_logo.png" type="image/png">
-                        <img class="img-logo-bottom" src="/images/crane_logo.png" alt="Crane Logo">
-                    </picture>
-                </div>
+        </div>        
+        <div class="section">
+            <div class="row">
+                <picture>
+                    <source srcset="/images/beat_logo.png" type="image/png">
+                    <img class="img-logo-bottom" src="/images/beat_logo.png" alt="Beat Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/survey_solutions_logo.png" type="image/png">
+                    <img class="img-logo-bottom" src="/images/survey_solutions_logo.png" alt="Survey Solutions Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/sweetzy_logo.png" type="image/png">
+                    <img class="img-logo-bottom" src="/images/sweetzy_logo.png" alt="Sweetzy Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/busseys_logo.png" type="image/png">
+                    <img class="img-logo-bottom" src="/images/busseys_logo.png" alt="Busseys Logo">
+                </picture>
+                <picture>
+                    <source srcset="/images/crane_logo.png" type="image/png">
+                    <img class="img-logo-bottom" src="/images/crane_logo.png" alt="Crane Logo">
+                </picture>
             </div>
-        </div>       
+        </div>               
         <footer>
             <div class="Footer-flex-container">               
                 <div class="container">
@@ -255,24 +276,24 @@
                             <div class="row">
                                 <a href="#" class="logo-button logo-button-1" target="_blank">
                                     <svg class="logo-icon logo-icon-1">
-                                        <use xlink:href="./sprite.svg#icon-facebook" alt="Logo"></use>
+                                        <use xlink:href="./sprite.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                                 <a href="#" class="logo-button logo-button-2" target="_blank">
                                     <svg class="logo-icon logo-icon-2">
-                                        <use xlink:href="./sprite.svg#icon-linkedin2" alt="Logo"></use>
+                                        <use xlink:href="./sprite.svg#icon-linkedin2"></use>
                                     </svg >
                                 </a>
                             </div>
                             <div class="row">
                                 <a href="#" class="logo-button logo-button-3" target="_blank">
                                     <svg class="logo-icon logo-icon-3">
-                                        <use xlink:href="./sprite.svg#icon-x" alt="Logo"></use>
+                                        <use xlink:href="./sprite.svg#icon-x"></use>
                                     </svg>
                                 </a>
                                 <a href="#" class="logo-button logo-button-4" target="_blank">
                                     <svg class="logo-icon logo-icon-4">
-                                        <use xlink:href="./sprite.svg#icon-instagram" alt="Logo"></use>
+                                        <use xlink:href="./sprite.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </div>

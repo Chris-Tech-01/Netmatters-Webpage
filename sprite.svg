@@ -1,7 +1,19 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="icon-school" viewBox="0 0 24 24">
+<path d="M12 3l11.016 6v8.016h-2.016v-6.938l-9 4.922-11.016-6zM5.016 13.172l6.984 3.844 6.984-3.844v4.031l-6.984 3.797-6.984-3.797v-4.031z"></path>
+</symbol>
+<symbol id="icon-security" viewBox="0 0 24 24">
+<path d="M12 0.984l9 4.031v6q0 4.172-2.578 7.617t-6.422 4.383q-3.844-0.938-6.422-4.383t-2.578-7.617v-6zM12 12v8.953q2.766-0.891 4.688-3.352t2.297-5.602h-6.984zM12 12v-8.813l-6.984 3.094v5.719h6.984z"></path>
+</symbol>
+<symbol id="icon-signal_cellular_alt" viewBox="0 0 24 24">
+<path d="M11.016 9h3v11.016h-3v-11.016zM5.016 14.016h3v6h-3v-6zM17.016 3.984h3v16.031h-3v-16.031z"></path>
+</symbol>
 <symbol id="icon-x" viewBox="0 0 32 32">
 <path d="M24.325 3h4.411l-9.636 11.013 11.336 14.987h-8.876l-6.952-9.089-7.955 9.089h-4.413l10.307-11.78-10.875-14.22h9.101l6.284 8.308zM22.777 26.36h2.444l-15.776-20.859h-2.623z"></path>
+</symbol>
+<symbol id="icon-display" viewBox="0 0 32 32">
+<path d="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z"></path>
 </symbol>
 <symbol id="icon-star-full" viewBox="0 0 32 32">
 <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>

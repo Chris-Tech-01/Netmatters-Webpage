@@ -2,7 +2,7 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-//////// Layouts ////////
+//////// Layouts & Styles ////////
 
 .top {
 
@@ -40,6 +40,12 @@
     margin-bottom: 11px;
 }
 
+.h1-link {
+    font-size: 1.625rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
 .p {
     font-size: .8125rem;
     line-height: 1.375rem;
@@ -54,14 +60,32 @@
     padding: 30px;
 }
 
+.icon-box {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: 0 auto 17px;
+}
+
+.icon {
+    font-size: 2rem;
+    line-height: 62px;
+    width: 32.41px;
+    height: 32px;
+}
+
 //////// Box's ////////
 
 .top-box {
     margin-top: 30px;
     text-align: center;
-    border: 1px solid $white-red;
-    border-radius: 15px;
-    box-shadow: $box-shadow;
+    // border: 1px solid $white-red;
+    // border-radius: 15px;
+    // box-shadow: $box-shadow;
+
+    // &:hover {
+    //     border-color: transparent;
+    // }
 }
 
 //////// Links ////////
@@ -82,10 +106,35 @@
 
 //////// Box Hover Effects ////////
 
+.block {
+    position: relative;
+    top:0;
+    transition: .5s ease;
+    border: 1px solid $white-red;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        border-color: transparent;
+        top: -10px;
+        transition: .5s ease;
+    }
+}
+
+
 .software {
+
+    .icon-box {
+        background: $top-icon-1-background;
+    }
+
+    .fa-laptop {
+        color: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-1-effect;
+        border-radius: 15px;
 
         .btn-software {
             color: $top-box-1-effect;
@@ -95,14 +144,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .fa-laptop {
+            color: $top-icon-1-effect;
+        }
     }
   
 }
 
 .it {
+
+    .icon-box {
+        background: $top-icon-2-background;
+    }
+
+    .icon {
+        fill: $top-icon;
+    }
    
     &:hover {
-        background-color: $top-box-2-effect ;
+        background-color: $top-box-2-effect;
+        border-radius: 15px;
 
         .btn-it {
             color: $top-box-2-effect;
@@ -112,14 +178,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .icon {
+            fill: $top-icon-2-effect;
+        }
     }
   
 }
 
 .digital {
+
+    .icon-box {
+        background: $top-icon-3-background;
+    }
+
+    .icon {
+        fill: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-3-effect;
+        border-radius: 15px;
 
         .btn-digital {
             color: $top-box-3-effect;
@@ -129,14 +212,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .icon {
+            fill: $top-icon-3-effect;
+        }
     }
   
 }
 
 .telecoms {
+
+    .icon-box {
+        background: $top-icon-4-background;
+    }
+
+    .fa-phone-volume {
+        color: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-4-effect;
+        border-radius: 15px;
 
         .btn-telecoms {
             color: $top-box-4-effect;
@@ -146,14 +246,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .fa-phone-volume {
+            color: $top-icon-4-effect;
+        }
     }
   
 }
 
 .web {
+
+    .icon-box {
+        background: $top-icon-5-background;
+    }
+
+    .fa-code {
+        color: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-5-effect;
+        border-radius: 15px;
 
         .btn-web {
             color: $top-box-5-effect;
@@ -163,14 +280,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .fa-code {
+            color: $top-icon-5-effect;
+        }
     }
   
 }
 
 .security {
+
+    .icon-box {
+        background: $top-icon-6-background;
+    }
+
+    .icon {
+        fill: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-6-effect;
+        border-radius: 15px;
 
         .btn-security {
             color: $top-box-6-effect;
@@ -180,14 +314,31 @@
         .p, .h2 {
             color: $top-btn-effect;
         }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .icon {
+            fill: $top-icon-6-effect;
+        }
     }
   
 }
 
 .training {
+
+    .icon-box {
+        background: $top-icon-7-background;
+    }
+
+    .icon {
+        fill: $top-icon;
+    }
    
     &:hover {
         background-color: $top-box-7-effect;
+        border-radius: 15px;
 
         .btn-training {
             color: $top-box-7-effect;
@@ -196,6 +347,14 @@
 
         .p, .h2 {
             color: $top-btn-effect;
+        }
+
+        .icon-box {
+            background-color: $top-icon-background-effect;
+        }
+
+        .icon {
+            fill: $top-icon-7-effect;
         }
     }
   
@@ -242,12 +401,6 @@
 
 //////// FlexBox Layout ////////
 
-.felx {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .block {
     display: flex;
     flex-direction: column;
@@ -256,5 +409,54 @@
     span {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+}
+
+//////// Grid Layout ////////
+
+.top-h2 {
+    grid-area: top-h2;
+}
+.top-h1 {
+    display: grid;
+    justify-content: center;
+    grid-area: top-h1;
+}
+.top-box-1 {
+    grid-area: top-box-1;
+}
+.top-box-2 {
+    grid-area: top-box-2;
+}
+.top-box-3 {
+    grid-area: top-box-3;
+}
+.top-box-4 {
+    grid-area: top-box-4;
+}
+.top-box-5 {
+    grid-area: top-box-5;
+}
+.top-box-6 {
+    grid-area: top-box-6;
+}
+.top-box-7 {
+    grid-area: top-box-7;
+}
+
+.service {
+    display: grid;
+    grid-template-areas: 
+    "top-h2"
+    "top-box-1"
+    "top-box-2"
+    "top-box-3"
+    "top-box-4"
+    "top-box-5"
+    "top-box-6"
+    "top-box-7"
+    "top-h1";
+    grid-template-columns: 1fr;
 }
