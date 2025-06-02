@@ -15,8 +15,44 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="banner"></div>
+        <div class="inner">
+            <div class="container">
+                <div class="header">
+                    <div class="header-row">
+                        <a href="#">
+                        <img class="img-header" src="/images/f-logo.png" alt="Netmatters Logo">
+                        </a>
+                        <a class="phone-icon" href="#">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </a>
+                        <button class="header-btn" type="button" data-toggle="sidebar">
+                            <svg class="header-svg">
+                                <use xlink:href="./sprite.svg#icon-menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <form class="search-bar-container">                       
+                        <input class="search-bar" placeholder="Search..." type="text">                       
+                        <button class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-container">
+                <img class="img-logo-top" src="/images/home-MSxH.png" alt="Image of a padlock sitting inside a circle, connected by straight lines that change direction in sharp 90 degree angles, connecting to other images sitting within circles.">
+                <div class="container">
+                    <div class="banner-text">
+                        <h1>Cyber Security</h1>
+                        <p>Keeping businesses and their customers
+                        <br>
+                        sensitive information protected.</p>
+                        <a href="#" class="banner-btn">Find Out More<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+             </div>  
         </div>
         <div class="top">
             <div class="container section">
@@ -24,10 +60,10 @@
                     <div class="service list">
                         <h2 class="top-h2">Our Services</h2>
                         <h1 class="top-h1">
-                            <a href="#" class="h1-link" target="_blank">View Our Work <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="#" class="h1-link">View Our Work <i class="fa-solid fa-arrow-right"></i></a>
                         </h1>
                         <div class="top-box top-box-1 grid">
-                            <a href="#" class="block software" target="_blank">
+                            <a href="#" class="block software">
                                 <span class="icon-box">
                                     <span class="icon"><i class="fa-solid fa-laptop"></i></span>
                                 </span>
@@ -41,7 +77,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-2 grid">
-                            <a href="#" class="block it" target="_blank">
+                            <a href="#" class="block it">
                                 <span class="icon-box">
                                     <svg class="icon top-svg">
                                         <use xlink:href="./sprite.svg#icon-display"></use>
@@ -57,7 +93,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-3 grid">
-                            <a href="#" class="block digital" target="_blank">
+                            <a href="#" class="block digital">
                                 <span class="icon-box">
                                     <svg class="icon top-svg">
                                         <use xlink:href="./sprite.svg#icon-signal_cellular_alt"></use>
@@ -73,7 +109,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-4 grid">
-                            <a href="#" class="block telecoms" target="_blank">
+                            <a href="#" class="block telecoms">
                                 <span class="icon-box">
                                     <span class="icon"><i class="fa-solid fa-phone-volume"></i></span>
                                 </span>
@@ -87,7 +123,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-5 grid">
-                            <a href="#" class="block web" target="_blank">
+                            <a href="#" class="block web">
                                 <span class="icon-box">
                                     <span class="icon"><i class="fa-solid fa-code"></i></span>
                                 </span>
@@ -101,7 +137,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-6 grid">
-                            <a href="#" class="block security" target="_blank">
+                            <a href="#" class="block security">
                                 <span class="icon-box">
                                     <svg class="icon top-svg">
                                         <use xlink:href="./sprite.svg#icon-security"></use>
@@ -117,7 +153,7 @@
                             </a>
                         </div>
                         <div class="top-box top-box-7 grid">
-                            <a href="#" class="block training" target="_blank">
+                            <a href="#" class="block training">
                                 <span class="icon-box">
                                     <svg class="icon top-svg">
                                         <use xlink:href="./sprite.svg#icon-school"></use>
@@ -137,27 +173,12 @@
             </div>
         </div>        
         <div class="section">
-            <div class="row">
-                <picture>
-                    <source srcset="/images/norfolk_prohelp.png" type="image/png">
-                    <img class="img-logo-top" src="/images/norfolk_prohelp.png" alt="Norfolk Prohelp Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/investing-in-future-growth.png" type="image/png">
-                    <img class="img-logo-top" src="/images/investing-in-future-growth.png" alt="Investing in Future Growth Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/norfolk-carbon-charter.png" type="image/png">
-                    <img class="img-logo-top" src="/images/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/PPC_logo.png" type="image/png">
-                    <img class="img-logo-top" src="/images/PPC_logo.png" alt="PPC Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/princess-royal-training.png" type="image/png">
-                    <img class="img-logo-top" src="/images/princess-royal-training.png" alt="Princess Royal Training Logo">
-                </picture>
+            <div class="row">               
+                <img class="img-logo-top" src="/images/norfolk_prohelp.png" alt="Norfolk Prohelp Logo">                
+                <img class="img-logo-top" src="/images/investing-in-future-growth.png" alt="Investing in Future Growth Logo">               
+                <img class="img-logo-top" src="/images/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter Logo">               
+                <img class="img-logo-top" src="/images/PPC_logo.png" alt="PPC Logo">               
+                <img class="img-logo-top" src="/images/princess-royal-training.png" alt="Princess Royal Training Logo">               
             </div>
         </div>
         <div class="middle">
@@ -184,8 +205,8 @@
                         We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.
                        </p>
                        <div class="middle-buttons">
-                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Why Choose Us? <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#" class="mid-btn mid-btn-1" target="_blank">Our Culture <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-1">Why Choose Us? <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-1">Our Culture <i class="fa-solid fa-arrow-right"></i></a>
                        </div>
                     </div>
                     <div class="mid-col-2">
@@ -229,69 +250,146 @@
                             </span>
                         </p>
                         <div class="middle-buttons">
-                        <a href="#" class="mid-btn mid-btn-2" target="_blank">Google Reviews <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#" class="mid-btn mid-btn-3" target="_blank">Trustpilot Reviews <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-2">Google Reviews <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="mid-btn mid-btn-3">Trustpilot Reviews <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>                    
                 </div>
             </div>
         </div>        
-        <div class="section">
-            <div class="row">
-                <picture>
-                    <source srcset="/images/beat_logo.png" type="image/png">
-                    <img class="img-logo-bottom" src="/images/beat_logo.png" alt="Beat Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/survey_solutions_logo.png" type="image/png">
-                    <img class="img-logo-bottom" src="/images/survey_solutions_logo.png" alt="Survey Solutions Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/sweetzy_logo.png" type="image/png">
-                    <img class="img-logo-bottom" src="/images/sweetzy_logo.png" alt="Sweetzy Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/busseys_logo.png" type="image/png">
-                    <img class="img-logo-bottom" src="/images/busseys_logo.png" alt="Busseys Logo">
-                </picture>
-                <picture>
-                    <source srcset="/images/crane_logo.png" type="image/png">
-                    <img class="img-logo-bottom" src="/images/crane_logo.png" alt="Crane Logo">
-                </picture>
+        <div class="latest-articles">
+            <div class="container">
+                <div class="ln-heading-container">
+                    <h2>
+                        <strong>Latest News</strong>
+                    </h2>
+                    <h3>
+                        <a href="#">View All</a>
+                    </h3>
+                </div>
             </div>
-        </div>               
+            <div class="section">
+                <div class="container">
+                    <div class="article-list">
+                        <div class="item it">
+                            <a class="article-link" href="#">
+                                <div class="img-container">
+                                    <a class="btn-ln" href="#">Careers</a>
+                                    <a class="img-ln"></a>
+                                </div>
+                            </a>
+                            <div class="block">
+                                <h3>
+                                    <a href="#">2nd Line Technician</a>
+                                    <span class="read-time">- 4 minute read</span>
+                                </h3>
+                                <p>
+                                Salary Range £30,000 - £36,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham... 
+                                </p>
+                                <a class="btn-it" href="#">Read More</a>
+                                <div class="user">
+                                    <div class="avatar"></div>
+                                    <div class="details">
+                                        <strong class="text-primary">Posted by Bethany Shakespeare</strong>
+                                        <br>
+                                        2nd June 2025
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item software">
+                            <a class="article-link" href="#">
+                                <div class="img-container">
+                                    <a class="btn-ln" href="#">News</a>
+                                    <a class="img-ln"></a>
+                                </div>
+                            </a>
+                            <div class="block">
+                                <h3>
+                                    <a href="#">April Notables 2025 - Celebrating Our Team</a>                                    
+                                </h3>
+                                <p>
+                                April Notables 2025 At Netmatters, we're passionate about celebrating the people who make our succes...
+                                </p>
+                                <a class="btn-software" href="#">Read More</a>
+                                <div class="user">
+                                    <div class="avatar"></div>
+                                    <div class="details">
+                                        <strong class="text-primary">Posted by Netmatters</strong>
+                                        <br>
+                                        7th May 2025
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item training">
+                            <a class="article-link" href="#">
+                                <div class="img-container">
+                                    <a class="btn-ln" href="#">News</a>
+                                    <a class="img-ln"></a>
+                                </div>
+                            </a>
+                            <div class="block">
+                                <h3>
+                                    <a href="#">Netmatters Achieves King's Award for Enterpr...</a>
+                                    <span class="read-time">- 4 minute read</span>
+                                </h3>
+                                <p>
+                                Netmatters is honoured to have been presented with a King's Award for Enterprise for Promoting Oppor... 
+                                </p>
+                                <a class="btn-training" href="#">Read More</a>
+                                <div class="user">
+                                    <div class="avatar"></div>
+                                    <div class="details">
+                                        <strong class="text-primary">Posted by Netmatters</strong>
+                                        <br>
+                                        29th April 2025
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">                
+                <img class="img-logo-bottom" src="/images/beat_logo.png" alt="Beat Logo">                
+                <img class="img-logo-bottom" src="/images/survey_solutions_logo.png" alt="Survey Solutions Logo">               
+                <img class="img-logo-bottom" src="/images/sweetzy_logo.png" alt="Sweetzy Logo">               
+                <img class="img-logo-bottom" src="/images/busseys_logo.png" alt="Busseys Logo">                              
+                <img class="img-logo-bottom" src="/images/crane_logo.png" alt="Crane Logo">               
+            </div>
+        </div>              
         <footer>
             <div class="Footer-flex-container">               
                 <div class="container">
                     <div class="footer-logo-box">
-                        <div class="footer-logo">
-                            <picture>
-                                <source srcset="/images/nm-logo-white-med.png" type="image/png">
-                                <img class="img-footer" src="/images/nm-logo-white-med.png" alt="Netmatters Logo">
-                            </picture>
+                        <div class="footer-logo">                            
+                            <img class="img-footer" src="/images/nm-logo-white-med.png" alt="Netmatters Logo">                            
                         </div>
                         <h4>Follow us on:</h4>
 
                         <div class="footer-social-logos">
                             <div class="row">
-                                <a href="#" class="logo-button logo-button-1" target="_blank">
+                                <a href="#" class="logo-button logo-button-1">
                                     <svg class="logo-icon logo-icon-1">
                                         <use xlink:href="./sprite.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="logo-button logo-button-2" target="_blank">
+                                <a href="#" class="logo-button logo-button-2">
                                     <svg class="logo-icon logo-icon-2">
                                         <use xlink:href="./sprite.svg#icon-linkedin2"></use>
                                     </svg >
                                 </a>
                             </div>
                             <div class="row">
-                                <a href="#" class="logo-button logo-button-3" target="_blank">
+                                <a href="#" class="logo-button logo-button-3">
                                     <svg class="logo-icon logo-icon-3">
                                         <use xlink:href="./sprite.svg#icon-x"></use>
                                     </svg>
                                 </a>
-                                <a href="#" class="logo-button logo-button-4" target="_blank">
+                                <a href="#" class="logo-button logo-button-4">
                                     <svg class="logo-icon logo-icon-4">
                                         <use xlink:href="./sprite.svg#icon-instagram"></use>
                                     </svg>

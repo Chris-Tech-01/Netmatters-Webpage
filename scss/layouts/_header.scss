@@ -1,0 +1,105 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout ////////
+
+.inner {
+    padding: 20px 0;
+}
+
+.header-row {
+    
+    i {
+        font-size: 24px;
+    }
+}
+
+.header-row {
+    padding-top: 7px;
+    padding-bottom: 14px;
+}
+
+.img-header {
+    width: 253.59px;
+    height: 44.16px;
+}
+
+.search-bar-container {
+    width: 100%;
+    transition: none;
+    background-color: rgba(0, 0, 0, .1);
+    outline: 1px solid hsla(0, 0%, 100%, .2);
+    border: 2px solid rgba(0, 0, 0, .1); 
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);  
+    color: $search-bar;
+}
+
+.search-bar {
+    margin-right: -40px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.4px;
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background-color: transparent;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+
+    &:focus {
+        outline: none;
+        box-shadow: none;       
+    }
+}
+
+//////// Img and Logo styles ////////
+
+.header-btn {
+    margin-left: 16px;
+    border-radius: 4px;
+    fill: $header-btn-lines ;
+    background-color: $header-btn-background;
+    cursor: pointer;
+}
+
+.header-svg {
+    display: block;
+    height: 50px;
+    width: 47px;
+}
+
+.search-icon {
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.phone-icon {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+        border-bottom-color: currentColor;
+    }
+}
+
+//////// Flexbox Layout //////// 
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar-container {
+    display: flex;
+    flex-direction: row;
+}

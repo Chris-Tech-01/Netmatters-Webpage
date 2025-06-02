@@ -120,6 +120,173 @@ body {
   }
 }
 
+.inner {
+  padding: 20px 0;
+}
+
+.header-row i {
+  font-size: 24px;
+}
+
+.header-row {
+  padding-top: 7px;
+  padding-bottom: 14px;
+}
+
+.img-header {
+  width: 253.59px;
+  height: 44.16px;
+}
+
+.search-bar-container {
+  width: 100%;
+  transition: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: 1px solid hsla(0, 0%, 100%, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #555;
+}
+
+.search-bar {
+  margin-right: -40px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.4px;
+  height: 100%;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.search-bar:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.header-btn {
+  margin-left: 16px;
+  border-radius: 4px;
+  fill: #FFF;
+  background-color: #333645;
+  cursor: pointer;
+}
+
+.header-svg {
+  display: block;
+  height: 50px;
+  width: 47px;
+}
+
+.search-icon {
+  padding: 0 10px;
+  background: transparent;
+  border: none;
+}
+.search-icon i {
+  font-size: 20px;
+}
+
+.phone-icon {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.phone-icon:hover {
+  border-bottom-color: currentColor;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner {
+  background-image: url(../images/home-MSxH.png);
+  min-height: 550px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: 0;
+}
+.banner img {
+  display: none;
+}
+.banner h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #FFF;
+}
+.banner p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  color: #FFF;
+}
+
+.banner::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.banner-text {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.banner-btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
+  border: 1px solid #F62459;
+  text-transform: uppercase;
+  align-items: center;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #F62459;
+}
+.banner-btn:hover {
+  background-color: #E80A42;
+}
+.banner-btn i {
+  margin-left: 12px;
+  margin-right: -4px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .top .section {
   padding-left: 15px;
   padding-right: 15px;

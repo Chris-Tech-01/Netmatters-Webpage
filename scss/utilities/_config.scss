@@ -11,13 +11,16 @@ $teal-grey        : #A3A8AC;
 $blue             : #4387f6;
 $hover-blue       : #166AF4;
 $dark-ish-blue    : #323544;
+$darker-ish-blue  : #323644;
 $dark-blue        : #333645;
 $darker-blue      : #212330;
 $even-darker-blue : #272936;
 $darkest-blue     : #121318;
 $neutral-blue     : #4183D7;
 $red              : #D64541;
+$grey-red         : #555;
 $pink             : #F62459;
+$pink-darker      : #E80A42;
 $purple           : #926FB1;
 $orange           : #CE4125;
 $grey             : #67809F;
@@ -33,6 +36,16 @@ $shadow           : 0px 3px 35px rgba(0, 0, 0, .1);
 
 $background-primary         : $dark-ish-blue;
 $background-secondary       : $darker-blue;
+
+$header-netmatters-img      : $darker-ish-blue;
+$header-btn-lines           : $white;
+$header-btn-background      : $dark-blue;
+$search-bar                 : $grey-red;
+
+$banner-text-colour         : $white;
+$banner-btn-txt             : $white;
+$banner-btn                 : $pink;
+$banner-btn-hover           : $pink-darker;
 
 $top-text-colour            : $dark-blue;
 $top-btn-colour             : $white;

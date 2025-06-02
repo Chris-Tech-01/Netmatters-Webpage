@@ -1,0 +1,92 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout ////////
+
+.banner {
+    background-image: url(../images/home-MSxH.png);
+    min-height: 550px;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: 0;
+
+    img {
+        display: none;
+    }
+
+    h1 {
+       font-size: 2.5rem;
+       line-height: 3rem;
+       font-weight: 600;
+       margin-bottom: 1.25rem;
+       color: $banner-text-colour;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 600;
+        margin-bottom: .375rem;
+        color: $banner-text-colour;
+    }
+}
+
+.banner::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    }
+
+.banner-text {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+//////// Buttons ////////
+
+.banner-btn {
+    display: inline-block; // Makes it behave like an inline element.
+    font-size: 20px; // Sets the size of the font.
+    padding: 15px 20px; // Creates extra space within an element.
+    border-radius: 3px; // Rounds the corners of an element's outer border edge.
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    border: 1px solid $banner-btn; // Allow me to specify the style, width, and color of an element's border.
+    text-transform: uppercase; // Transforms text to uppercase.
+    align-items: center;
+    text-decoration: none; // Used to remove underline from a hyperlink. 
+    color: $banner-btn-txt;
+    background-color: $banner-btn;
+
+    &:hover {
+        background-color: $banner-btn-hover;
+    }
+    
+    i {
+        margin-left: 12px;
+        margin-right: -4px;
+    }
+}
+
+//////// Flexbox Layout ////////
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
