@@ -56,7 +56,7 @@
 //////// Img and Logo styles ////////
 
 .header-btn {
-    margin-left: 16px;
+    margin-left: 24px;
     border-radius: 4px;
     fill: $header-btn-lines ;
     background-color: $header-btn-background;
@@ -71,6 +71,7 @@
 
 .search-icon {
     padding: 0 10px;
+    color: $search-icon;
     background: transparent;
     border: none;
 
@@ -81,7 +82,7 @@
 
 .phone-icon {
     display: inline-block;
-    color: inherit;
+    color: $phone-colour;
     text-decoration: none;
     border-bottom: 2px solid transparent;
 
@@ -102,4 +103,9 @@
 .search-bar-container {
     display: flex;
     flex-direction: row;
+}
+
+.phone-and-button {
+    display: flex;
+    align-items: center;
 }

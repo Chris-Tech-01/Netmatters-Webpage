@@ -22,14 +22,16 @@
                         <a href="#">
                         <img class="img-header" src="/images/f-logo.png" alt="Netmatters Logo">
                         </a>
-                        <a class="phone-icon" href="#">
-                            <i class="fa-solid fa-phone-volume"></i>
-                        </a>
-                        <button class="header-btn" type="button" data-toggle="sidebar">
-                            <svg class="header-svg">
-                                <use xlink:href="./sprite.svg#icon-menu"></use>
-                            </svg>
-                        </button>
+                        <div class="phone-and-button">
+                            <a class="phone-icon" href="#">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </a>
+                            <button class="header-btn" type="button" data-toggle="sidebar">
+                                <svg class="header-svg">
+                                    <use xlink:href="./sprite.svg#icon-menu"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                     <form class="search-bar-container">                       
                         <input class="search-bar" placeholder="Search..." type="text">                       
@@ -258,98 +260,116 @@
             </div>
         </div>        
         <div class="latest-articles">
-            <div class="container">
-                <div class="ln-heading-container">
-                    <h2>
-                        <strong>Latest News</strong>
-                    </h2>
-                    <h3>
-                        <a href="#">View All</a>
-                    </h3>
-                </div>
+            <div class="container">                
+                <h2 class="title-padding">
+                    <strong class="ln-title">Latest News</strong>
+                </h2>
+                <h3 class="hide-small">
+                    <a href="#" class="ln-title-2">View All<i class="fa-solid fa-arrow-right"></i></a>
+                </h3>                
             </div>
-            <div class="section">
+            <div class="section-ln">
                 <div class="container">
-                    <div class="article-list">
-                        <div class="item it">
-                            <a class="article-link" href="#">
+                    <div class="ln-container it-2">
+                        <a class="article-link" href="#">
+                            <div class="block-ln">                           
                                 <div class="img-container">
-                                    <a class="btn-ln" href="#">Careers</a>
-                                    <a class="img-ln"></a>
+                                    <div class="btn-ln btn-ln-it" href="#">Careers</div>
+                                    <div class="img-ln">
+                                        <img class="ln-img" src="/images/2nd-line-technician-zYSs.png" alt="A colourful image with Netmatters saying they are hiring a 2nd line technician">
+                                    </div>
+                                </div>                               
+                                <div class="txt-area-ln">                                    
+                                    <h3 class="row clr-txt-1 h3-txt">
+                                        <div>2nd Line Technician</div>
+                                        <span class="read-time">- 4 minute read</span>
+                                    </h3>                                   
+                                    <p>
+                                    Salary Range £30,000 - £36,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham... 
+                                    </p>                                   
+                                    <div class="btn-ln-it read-more">Read More</div>
+                                    <div class="user">
+                                        <div class="avatar">
+                                            <img class="ln-avatar" src="/images/bethany-shakespeare-F6Iu.jpeg" alt="A colourful image saying Netmatters is passionate about celebrating the people who make their success">
+                                        </div>
+                                        <div class="details">
+                                            <strong class="text-primary">Posted by Bethany Shakespeare</strong>
+                                            <br>
+                                            2nd June 2025
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-                            <div class="block">
-                                <h3>
-                                    <a href="#">2nd Line Technician</a>
-                                    <span class="read-time">- 4 minute read</span>
-                                </h3>
-                                <p>
-                                Salary Range £30,000 - £36,000 + Pension Hours 40 hours per week, Monday - Friday Location Wymondham... 
-                                </p>
-                                <a class="btn-it" href="#">Read More</a>
-                                <div class="user">
-                                    <div class="avatar"></div>
-                                    <div class="details">
-                                        <strong class="text-primary">Posted by Bethany Shakespeare</strong>
-                                        <br>
-                                        2nd June 2025
+                           </div>
+                        </a>
+                    </div>                    
+                    <div class="ln-container software-2">
+                        <a class="article-link" href="#">
+                            <div class="block-ln">                           
+                                <div class="img-container">
+                                    <div class="btn-ln btn-ln-software-1">News</div>
+                                    <div class="img-ln">
+                                        <img class="ln-img" src="/images/april-notables-2025-A2Np.png" alt="A picture of the Netmatters King's Award, showing Netmatters is all about promoting oppertunity">
+                                    </div>
+                                </div>                                   
+                                <div class="txt-area-ln">
+                                    <h3 class="row clr-txt-2 h3-txt">
+                                        <div>April Notables 2025 - Celebrating Our Team</div>                                    
+                                    </h3>
+                                    <p>
+                                    April Notables 2025 At Netmatters, we're passionate about celebrating the people who make our succes...
+                                    </p>
+                                    <div class="btn-ln-software-2 read-more">Read More</div>
+                                    <div class="user">
+                                        <div class="avatar">
+                                            <img class="ln-avatar" src="/images/netmatters-ltd-VXAv.png" alt="A picture of Netmatters saying they are hiring a 2nd line technician">
+                                        </div>
+                                        <div class="details">
+                                            <strong class="text-primary">Posted by Netmatters</strong>
+                                            <br>
+                                            7th May 2025
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item software">
-                            <a class="article-link" href="#">
+                        </a>
+                    </div>                                       
+                    <div class="ln-container trainin-2">
+                        <a class="article-link" href="#">
+                            <div class="block-ln">                            
                                 <div class="img-container">
-                                    <a class="btn-ln" href="#">News</a>
-                                    <a class="img-ln"></a>
-                                </div>
-                            </a>
-                            <div class="block">
-                                <h3>
-                                    <a href="#">April Notables 2025 - Celebrating Our Team</a>                                    
-                                </h3>
-                                <p>
-                                April Notables 2025 At Netmatters, we're passionate about celebrating the people who make our succes...
-                                </p>
-                                <a class="btn-software" href="#">Read More</a>
-                                <div class="user">
-                                    <div class="avatar"></div>
-                                    <div class="details">
-                                        <strong class="text-primary">Posted by Netmatters</strong>
-                                        <br>
-                                        7th May 2025
+                                    <div class="btn-ln btn-ln-training">News</div>
+                                    <div class="img-ln">
+                                        <img class="ln-img" src="/images/netmatters-achieves-kings-lGCo.png" alt="A picture of Netmatters saying they are hiring a 2nd line technician">
+                                    </div>
+                                </div>                               
+                                <div class="txt-area-ln">
+                                    <h3 class="clr-txt-3 h3-txt">
+                                        <div>Netmatters Achieves King's Award for Enterpr...</div>
+                                    </h3>
+                                    <p>
+                                    Netmatters is honoured to have been presented with a King's Award for Enterprise for Promoting Oppor... 
+                                    </p>
+                                    <div class="btn-ln-training read-more">Read More</div>
+                                    <div class="user">
+                                        <div class="avatar">
+                                            <img class="ln-avatar" src="/images/netmatters-ltd-VXAv.png" alt="A picture of Netmatters saying they are hiring a 2nd line technician">
+                                        </div>
+                                        <div class="details">
+                                            <strong class="text-primary">Posted by Netmatters</strong>
+                                            <br>
+                                            29th April 2025
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item training">
-                            <a class="article-link" href="#">
-                                <div class="img-container">
-                                    <a class="btn-ln" href="#">News</a>
-                                    <a class="img-ln"></a>
-                                </div>
-                            </a>
-                            <div class="block">
-                                <h3>
-                                    <a href="#">Netmatters Achieves King's Award for Enterpr...</a>
-                                    <span class="read-time">- 4 minute read</span>
-                                </h3>
-                                <p>
-                                Netmatters is honoured to have been presented with a King's Award for Enterprise for Promoting Oppor... 
-                                </p>
-                                <a class="btn-training" href="#">Read More</a>
-                                <div class="user">
-                                    <div class="avatar"></div>
-                                    <div class="details">
-                                        <strong class="text-primary">Posted by Netmatters</strong>
-                                        <br>
-                                        29th April 2025
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </a>
+                    </div>                                     
                 </div>               
+            </div>
+            <div class="container flex-center">
+                <h3>
+                    <a href="#" class="ln-title-2">View All<i class="fa-solid fa-arrow-right"></i></a>
+                </h3>
             </div>
         </div>
         <div class="section">

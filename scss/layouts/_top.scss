@@ -97,10 +97,12 @@
 }
 
 .h1-link {
+    line-height: 0;
+    border-bottom: 3px solid transparent;
     text-decoration: none; // Used to remove underline from a hyperlink.
 
     &:hover {
-        text-decoration: underline; // Adds an underline while hovering.
+        border-bottom: 3px solid $dark-blue;
     }
 }
 
@@ -110,7 +112,7 @@
     position: relative;
     top:0;
     transition: .5s ease;
-    border: 1px solid $white-red;
+    border: 1px solid $border;
     border-radius: 15px;
     box-shadow: $box-shadow;
 
@@ -416,32 +418,40 @@
 
 //////// Grid Layout ////////
 
-.top-h2 {
-    grid-area: top-h2;
-}
 .top-h1 {
     display: grid;
     justify-content: center;
     grid-area: top-h1;
 }
+
+.top-h2 {
+    grid-area: top-h2;
+}
+
 .top-box-1 {
     grid-area: top-box-1;
 }
+
 .top-box-2 {
     grid-area: top-box-2;
 }
+
 .top-box-3 {
     grid-area: top-box-3;
 }
+
 .top-box-4 {
     grid-area: top-box-4;
 }
+
 .top-box-5 {
     grid-area: top-box-5;
 }
+
 .top-box-6 {
     grid-area: top-box-6;
 }
+
 .top-box-7 {
     grid-area: top-box-7;
 }

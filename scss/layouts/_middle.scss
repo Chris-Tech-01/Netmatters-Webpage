@@ -14,6 +14,11 @@
         margin-bottom: 40px; // Sets the margin area on the bottom of an element.
     }
 
+    p {
+        line-height: 1.875rem; // Used to set the distance between lines of text.
+        margin-bottom: 25px; // Sets the margin area on the bottom of an element.
+    }
+
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
         color: $mid-text-colour ; // Created a colour using a pre defined variable.
@@ -25,11 +30,6 @@
 // }
 
 //////// Item Layout & Styles ///////
-
-p {
-    line-height: 1.875rem; // Used to set the distance between lines of text.
-    margin-bottom: 25px; // Sets the margin area on the bottom of an element.
-}
 
 .middle-row {
     padding: 50px 0;

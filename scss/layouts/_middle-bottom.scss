@@ -1,0 +1,225 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout & styles ////////
+
+.title-padding {
+    padding: 50px 0 20px 0;
+    margin-top: 0;
+}
+
+.ln-title {
+    font-size: 2.25rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: $dark-blue;
+}
+
+.ln-title-2 {
+    position: relative;
+    font-size: 1.625rem;
+    line-height: 0;
+    font-weight: 600;
+    color: $dark-blue;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+
+    &:hover {
+       border-bottom: 2px solid $dark-blue;
+    }
+
+    i {
+        font-style: normal;
+        padding-left: 10px;
+    }    
+}
+
+.section-ln {
+    padding: 0 0 50px 0;
+}
+
+.ln-container {
+    padding-top: 30px;
+}
+
+.block-ln {
+    padding: 30px;
+
+    h3 {
+        line-height: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+        padding-top: 30px;
+    }
+
+    span {
+        font-size: .85rem;
+        text-transform: uppercase;
+        color: rgba(51, 54, 69, .5);
+    }
+
+    p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: $ln-p-colour;
+    }
+}
+
+.flex-center {
+    margin-bottom: 15px;
+}
+
+.hide-small {
+    display: none;
+}
+
+.article-link {
+    text-decoration: none;
+}
+
+.img-container {
+    position: relative;
+    width: calc(100% + 60px); // Helped me to break into the padding, so that the image would fill the entire space.
+    height: auto;
+    margin: -30px -30px 0 -30px; // Helped me to break into the padding, so that the image would fill the entire space.
+}
+
+.ln-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-ln {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: .75rem;
+    line-height: 1.438rem;
+    padding: 0 10px;
+}
+
+.read-more {
+    line-height: 35px;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+.clr-txt-1 {
+    color: $ln-txt-1;
+}
+
+.clr-txt-2 {
+    color: $ln-txt-2;
+}
+
+.clr-txt-3 {
+    color: $ln-txt-3;
+}
+
+.user {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid $white-red;
+}
+
+.ln-avatar {
+    border-radius: 50%;
+}
+
+.details {
+    font-size: .875rem;
+    line-height: 1.375rem;
+    padding-left: 20px;
+    color: $ln-details-colour
+}
+
+.text-primary {
+    font-weight: 600;
+    color: $ln-details-colour-2;
+}
+
+//////// Button Styles ////////
+
+.btn-ln {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $ln-btn-txt-colour;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.read-more {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $ln-btn-txt-colour;
+}
+
+.btn-ln-it {
+    background-color: $ln-box-1;
+}
+
+.btn-ln-software-1 {
+    background-color: $ln-box-2;
+}
+
+.btn-ln-software-2 {
+    background-color: $ln-btn-2;
+}
+
+.btn-ln-training {
+    background-color: $ln-box-3;
+}
+
+
+//////// Box Hover Effect ////////
+
+ .block-ln {
+    position: relative;
+    top:0;
+    transition: .5s ease;
+    border: 1px solid $border;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        border-color: transparent;
+        top: -10px;
+        transition: .5s ease;
+        border: 1px solid $border;
+    }
+}
+
+//////// Flex Layout ////////
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.ln-title-2 {
+    display: inline-flex;
+    align-items: center;
+}
+
+.txt-area-ln {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ln-txt-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+}

@@ -10,15 +10,16 @@ $hover-green      : #009B69;
 $teal-grey        : #A3A8AC;
 $blue             : #4387f6;
 $hover-blue       : #166AF4;
+$neutral-blue     : #4183D7;
 $dark-ish-blue    : #323544;
 $darker-ish-blue  : #323644;
 $dark-blue        : #333645;
 $darker-blue      : #212330;
 $even-darker-blue : #272936;
 $darkest-blue     : #121318;
-$neutral-blue     : #4183D7;
 $red              : #D64541;
 $grey-red         : #555;
+$grey-red-2       : #666;
 $pink             : #F62459;
 $pink-darker      : #E80A42;
 $purple           : #926FB1;
@@ -40,6 +41,8 @@ $background-secondary       : $darker-blue;
 $header-netmatters-img      : $darker-ish-blue;
 $header-btn-lines           : $white;
 $header-btn-background      : $dark-blue;
+$phone-colour               : $dark-blue;
+$search-icon                : $dark-blue;
 $search-bar                 : $grey-red;
 
 $banner-text-colour         : $white;
@@ -88,19 +91,30 @@ $mid-btn-3-background       : $green;
 $mid-btn-1-hover            : $darkest-blue;
 $mid-btn-2-hover            : $hover-blue;
 $mid-btn-3-hover            : $hover-green;
-
-$footer-text-colour         : $white;
-
-$footer-bottom-text-colour  : $white;
-
 $client                     : $teal-grey;
-
 $star                       : $yellow;
 
+$ln-p-colour                : $grey-red-2;
+$ln-details-colour          : $grey-red-2;
+$ln-details-colour-2        : $dark-blue;
+$ln-btn-txt-colour          : $white;
+$ln-box-1                   : $neutral-blue;
+$ln-btn-1                   : $neutral-blue;
+$ln-txt-1                   : $neutral-blue;
+$ln-box-2                   : $dark-blue;
+$ln-btn-2                   : $yellow-2;
+$ln-txt-2                   : $dark-blue;
+$ln-box-3                   : $orange;
+$ln-btn-3                   : $orange;
+$ln-txt-3                   : $orange;
+
+$footer-text-colour         : $white;
 $logo-1-hover               : $facebook;
 $logo-2-hover               : $linkedin;
 $logo-3-hover               : $x;
 $logo-4-hover               : $instagram;
+
+$footer-bottom-text-colour  : $white;
 
 $border                     : $white-red;
 
