@@ -7,7 +7,7 @@
 .middle { // flex 1 was used on here to get rid of white space.
     // display: flex; // Makes it into a flex container.
     // flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
-    background-color: $background-primary; // Created a colour using a pre defined variable.
+    background-color: $dark-blue ; // Created a colour using a pre defined variable.
     color: $mid-text-colour ; // Created a colour using a pre defined variable.
 
     h2 {

@@ -143,14 +143,6 @@ footer a {
     min-height: 51.25px; // Defines the minimum height of an element.
     max-height: 51.25px; // Defines the maximum height of an element.
 
-
-    @include queries (xs) {
-        min-width: 250px; // Defines the minimum width of an element.
-        max-width: 250px; // Defines the maximum width of an element.
-        min-height: 51.25px; // Defines the minimum height of an element.
-        max-height: 51.25px; // Defines the maximum height of an element.
-    }
-
      @include queries(s) {
         min-width: 320px; // Defines the minimum width of an element.
         max-width: 320px; // Defines the maximum width of an element.
@@ -166,10 +158,6 @@ footer a {
     flex-wrap: wrap;
     flex-direction: column;
     flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
-
-    @include queries(s) {
-
-    }
 }
 
 .footer-social-logos { // Flex Item
@@ -177,20 +165,13 @@ footer a {
     flex-direction: column;
     flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
     justify-content: flex-start; // Properties starting from the left.
-
-    @include queries(s) {
-        margin-bottom: 30px;
-    }
 }
 
 .footer-menu-box { // Flex Item
     display: flex; // Makes the flex items Block Level.
-
-    @include queries(xs) {
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex-basis: auto;
-    }
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: auto;
 
     @include queries(l) {
         flex-direction: row;

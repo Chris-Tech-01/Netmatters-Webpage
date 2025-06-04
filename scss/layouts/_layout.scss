@@ -37,6 +37,10 @@ body { // This was made to get rid of white space.
     margin: 0; // Sets the top and bottom margins of an element to 0 and centers it horizontally within its parent element.
 }
 
+h1 {
+    margin: 0;
+}
+
 h3 {
     margin: 0;
 }
@@ -53,6 +57,7 @@ h3 {
 //////// Media Queries ////////
 
 .container {
+    position: relative;
     margin-right: auto; // The space around an element's border.
     margin-left: auto; // The space around an element's border.
     margin-bottom: auto; // The space around an element's border.

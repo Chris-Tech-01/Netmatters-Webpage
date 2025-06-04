@@ -4,4 +4,42 @@
 
 //////// Layout ////////
 
+.slider-section {
+    padding: 50px 0;
+    overflow-x: hidden;
+}
 
+.slider-logo {
+    position: relative;
+    padding: 0 30px;
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+.slider-1 {
+    display: block;
+    max-height: 50px;
+    width: 100%;
+}
+
+.slider-2 {
+    display: block;
+    max-height: 70px;
+    width: 100%;
+}
+
+//////// Flexbox Layout ////////
+
+.slider-section {
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+}
+
+.slider-logo {
+    display: flex;
+    flex: 0 0 auto;
+}

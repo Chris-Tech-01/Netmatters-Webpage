@@ -88,6 +88,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 h3 {
   margin: 0;
 }
@@ -102,6 +106,7 @@ h3 {
 }
 
 .container {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: auto;
@@ -220,6 +225,10 @@ h3 {
   align-items: center;
 }
 
+.main-nav {
+  background-color: #333645;
+}
+
 .banner {
   background-image: url(../images/home-MSxH.png);
   min-height: 550px;
@@ -303,6 +312,11 @@ h3 {
 }
 .top .section .btn {
   color: #FFF;
+}
+.top .section h1 {
+  position: relative;
+  top: 25px;
+  margin-bottom: -50px;
 }
 .top .section h1 a {
   color: #333645;
@@ -651,7 +665,7 @@ h3 {
 }
 
 .middle {
-  background-color: #323544;
+  background-color: #333645;
   color: #FFF;
 }
 .middle h2 {
@@ -998,6 +1012,43 @@ h3 {
   flex-direction: row;
 }
 
+.slider-section {
+  padding: 50px 0;
+  overflow-x: hidden;
+}
+
+.slider-logo {
+  position: relative;
+  padding: 0 30px;
+  filter: grayscale(100%);
+}
+.slider-logo:hover {
+  filter: grayscale(0);
+}
+
+.slider-1 {
+  display: block;
+  max-height: 50px;
+  width: 100%;
+}
+
+.slider-2 {
+  display: block;
+  max-height: 70px;
+  width: 100%;
+}
+
+.slider-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slider-logo {
+  display: flex;
+  flex: 0 0 auto;
+}
+
 footer {
   background-color: #323544;
   color: #FFF;
@@ -1121,15 +1172,7 @@ footer a:hover {
   min-height: 51.25px;
   max-height: 51.25px;
 }
-@media (min-width: 413px) {
-  .img-footer {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 51.25px;
-    max-height: 51.25px;
-  }
-}
-@media (min-width: 480px) {
+@media (min-width: 576px) {
   .img-footer {
     min-width: 320px;
     max-width: 320px;
@@ -1144,27 +1187,19 @@ footer a:hover {
   flex-direction: column;
   flex: 1;
 }
+
 .footer-social-logos {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-@media (min-width: 480px) {
-  .footer-social-logos {
-    margin-bottom: 30px;
-  }
-}
 
 .footer-menu-box {
   display: flex;
-}
-@media (min-width: 413px) {
-  .footer-menu-box {
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-basis: auto;
-  }
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: auto;
 }
 @media (min-width: 992px) {
   .footer-menu-box {
