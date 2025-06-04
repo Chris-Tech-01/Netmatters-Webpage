@@ -25,9 +25,12 @@
     }
 }
 
-// .middle-row {
-//     max-width: 100%
-// }
+a.strong-paragraph {
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 //////// Item Layout & Styles ///////
 

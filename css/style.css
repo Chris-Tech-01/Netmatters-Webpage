@@ -315,8 +315,7 @@ h3 {
 }
 .top .section h1 {
   position: relative;
-  top: 25px;
-  margin-bottom: -50px;
+  top: 40px;
 }
 .top .section h1 a {
   color: #333645;
@@ -678,6 +677,10 @@ h3 {
 .middle a {
   text-decoration: none;
   color: #FFF;
+}
+
+a.strong-paragraph:hover {
+  text-decoration: underline;
 }
 
 .middle-row {
