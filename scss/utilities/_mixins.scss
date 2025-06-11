@@ -11,16 +11,20 @@ $breakpoints: ( // Creates variables to be used in my map.
 );
 
 $colour-map: ( // Creates variables to be used in my map.
-    background-1: #333645,
-    background-2: #323544,
-    software:     #67809F,
-    software-2:   #F7B322,
-    it:           #4183D7,
-    digital:      #2ECC71,
-    telecoms:     #D64541,
-    web:          #926FB1,
-    security:     #F62459,
-    training:     #CE4125
+    os-txt        : #333645,
+    os-btn-txt    : #FFF,
+    os-hov-effect : #FFF,
+    os-icon       : #FFF,
+    background-1  : #333645,
+    background-2  : #323544,
+    software      : #67809F,
+    software-2    : #F7B322,
+    it            : #4183D7,
+    digital       : #2ECC71,
+    telecoms      : #D64541,
+    web           : #926FB1,
+    security      : #F62459,
+    training      : #CE4125
 );
 
 //// mixins ////
@@ -36,7 +40,7 @@ $colour-map: ( // Creates variables to be used in my map.
     }
 }
 
-@mixin colour($colour, $property: background-color) { // I’m creating a mixin named colour which takes two input values. $colour will look up the colour in my mpas, $property sets which CSS property I want to apply the colour to.
+@mixin color($colour, $property: background-color) { // I’m creating a mixin named colour which takes two input values. $colour will look up the colour in my mpas, $property sets which CSS property I want to apply the colour to.
   $colour-value: map.get($colour-map, $colour); // Tries to find the colour value that matches the $colour in the $colour-map.
                                                 // If a match is found, it returns the hex value.
   @if $colour-value { // If a colour was found in the map

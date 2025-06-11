@@ -4,7 +4,7 @@
 
 //////// Container Layout ////////
 
-.middle { // flex 1 was used on here to get rid of white space.
+.welcome-to { // flex 1 was used on here to get rid of white space.
     // display: flex; // Makes it into a flex container.
     // flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
     background-color: $dark-blue ; // Created a colour using a pre defined variable.
@@ -34,7 +34,7 @@ a.strong-paragraph {
 
 //////// Item Layout & Styles ///////
 
-.middle-row {
+.welcome-to-row {
     padding: 50px 0;
 }
 
@@ -47,7 +47,7 @@ a.strong-paragraph {
     font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
 }
 
-.mid-col-1 {
+.welcome-to-col-1 {
     p {
         font-size: 14px; // Sets the size of the font.
     }
@@ -70,7 +70,7 @@ a.strong-paragraph {
 
 //////// Buttons ////////
 
-.mid-btn {
+.welcome-to-btn {
     display: inline-flex; // Makes it behave like an inline element but still a flex container.
     font-size: 20px; // Sets the size of the font.
     padding: 10px 30px; // Creates extra space within an element.
@@ -85,13 +85,13 @@ a.strong-paragraph {
     }
 }
 
-.middle-buttons a:first-child {
+.welcome-to-buttons a:first-child {
     width: 270.17px; // Sets an element's width.
     height: 57px; // Sets an element's height.
     margin-bottom: 17px; // Sets the margin area on the bottom of an element.
 }
 
-.mid-btn-1 {
+.welcome-to-btn-1 {
     width: 225.86px; // Sets an element's width.
     height: 57px; // Sets an element's height.
     margin-bottom: 50px; // Sets the margin area on the bottom of an element.
@@ -102,7 +102,7 @@ a.strong-paragraph {
     }
 }
 
-.mid-btn-2 {
+.welcome-to-btn-2 {
     width: 263.19px; // Sets an element's width.
     height: 55px; // Sets an element's height.
     margin-top: 20px; // Sets the margin area on the top of an element.
@@ -114,7 +114,7 @@ a.strong-paragraph {
     }
 }
 
-.mid-btn-3 {
+.welcome-to-btn-3 {
     width: 294.05px; // Sets an element's width.
     height: 55px; // Sets an element's height.
     background-color: $mid-btn-3-background; // Created a colour using a pre defined variable.
@@ -135,7 +135,7 @@ a.strong-paragraph {
 
 //////// Flexbox Layout ////////
 
-.middle-row {
+.welcome-to-row {
     display: flex; // Makes it into a flex container.
     flex-direction: column; // Displays flex items in a column.
 }
@@ -144,12 +144,12 @@ a.strong-paragraph {
     display: flex;
 }
 
-.mid-col-1 { 
+.welcome-to-col-1 { 
     display: flex; // Makes it into a flex container and a flex item.
     flex-direction: column; // Displays flex items in a column.
 }
 
-.mid-col-2 {
+.welcome-to-col-2 {
     display: flex; // Makes it into a flex container and a flex item.
     flex-direction: column; // Displays flex items in a column.
 
@@ -159,7 +159,7 @@ a.strong-paragraph {
     }
 }
 
-.middle-buttons { 
+.welcome-to-buttons { 
     display: flex; // Makes it into a flex item.
     flex-direction: column; // Displays flex items in a column.
 }

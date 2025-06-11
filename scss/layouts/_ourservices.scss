@@ -4,14 +4,14 @@
 
 //////// Layouts & Styles ////////
 
-.top {
+.our-services {
 
     .section {
         padding-left: 15px;
         padding-right: 15px;
 
         .btn {
-            color: $top-btn-colour;
+            @include color(os-btn-txt, color);
         }
 
         h1 {
@@ -19,7 +19,7 @@
             top: 40px;
 
             a {
-                color: $top-text-colour;
+                @include color(os-txt, color);
             }
         }
 
@@ -27,11 +27,11 @@
             font-size: 2.7rem;
             margin-bottom: 15px;
             margin-top: 0;
-            color: $top-text-colour;        
+            @include color(os-txt, color);      
         }
 
         span {
-            color: $top-text-colour;
+            @include color(os-txt, color);
         }
 
     } 
@@ -56,7 +56,7 @@
 }
 
 .service-list {
-    color: $top-text-colour;
+    @include color(os-txt, color);
 }
 
 .block {
@@ -79,21 +79,14 @@
 
 //////// Box's ////////
 
-.top-box {
+.our-services-box {
     margin-top: 30px;
     text-align: center;
-    // border: 1px solid $white-red;
-    // border-radius: 15px;
-    // box-shadow: $box-shadow;
-
-    // &:hover {
-    //     border-color: transparent;
-    // }
 }
 
 //////// Links ////////
 
-.top {
+.our-services {
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
     }
@@ -130,32 +123,32 @@
 .software {
 
     .icon-box {
-        background: $top-icon-1-background;
+        @include color(software);
     }
 
     .fa-laptop {
-        color: $top-icon;
+        @include color(os-icon, color);
     }
    
     &:hover {
-        background-color: $top-box-1-effect;
+        @include color(software);
         border-radius: 15px;
 
         .btn-software {
-            color: $top-box-1-effect;
-            background-color: $top-btn-effect; 
+            @include color(software, color);
+            @include color(os-hov-effect);
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+           @include color(os-icon);
         }
 
         .fa-laptop {
-            color: $top-icon-1-effect;
+            @include color(software, color);
         }
     }
   
@@ -164,32 +157,32 @@
 .it {
 
     .icon-box {
-        background: $top-icon-2-background;
+        @include color(it);
     }
 
     .icon {
-        fill: $top-icon;
+        @include color(os-icon, fill);
     }
    
     &:hover {
-        background-color: $top-box-2-effect;
+        @include color(it);
         border-radius: 15px;
 
         .btn-it {
-            color: $top-box-2-effect;
-            background-color: $top-btn-effect; 
+            @include color(it, color);
+            @include color(os-hov-effect); 
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .icon {
-            fill: $top-icon-2-effect;
+            @include color(it, fill);
         }
     }
   
@@ -198,32 +191,32 @@
 .digital {
 
     .icon-box {
-        background: $top-icon-3-background;
+        @include color(digital);
     }
 
     .icon {
-        fill: $top-icon;
+        @include color(os-icon, fill);
     }
    
     &:hover {
-        background-color: $top-box-3-effect;
+        @include color(digital);
         border-radius: 15px;
 
         .btn-digital {
-            color: $top-box-3-effect;
-            background-color: $top-btn-effect; 
+            @include color(digital, color);
+            @include color(os-hov-effect); 
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .icon {
-            fill: $top-icon-3-effect;
+            @include color(digital, fill);
         }
     }
   
@@ -232,32 +225,32 @@
 .telecoms {
 
     .icon-box {
-        background: $top-icon-4-background;
+        @include color(telecoms);
     }
 
     .fa-phone-volume {
-        color: $top-icon;
+        @include color(os-icon, color);
     }
    
     &:hover {
-        background-color: $top-box-4-effect;
+        @include color(telecoms);
         border-radius: 15px;
 
         .btn-telecoms {
-            color: $top-box-4-effect;
-            background-color: $top-btn-effect; 
+            @include color(telecoms, color);
+            @include color(os-hov-effect);
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .fa-phone-volume {
-            color: $top-icon-4-effect;
+            @include color(telecoms, color);
         }
     }
   
@@ -266,32 +259,32 @@
 .web {
 
     .icon-box {
-        background: $top-icon-5-background;
+        @include color(web);
     }
 
     .fa-code {
-        color: $top-icon;
+        @include color(os-icon, color);
     }
    
     &:hover {
-        background-color: $top-box-5-effect;
+        @include color(web);
         border-radius: 15px;
 
         .btn-web {
-            color: $top-box-5-effect;
-            background-color: $top-btn-effect; 
+            @include color(web, color);
+            @include color(os-hov-effect); 
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .fa-code {
-            color: $top-icon-5-effect;
+            @include color(web, color);
         }
     }
   
@@ -300,32 +293,32 @@
 .security {
 
     .icon-box {
-        background: $top-icon-6-background;
+        @include color(security);
     }
 
     .icon {
-        fill: $top-icon;
+        @include color(os-icon, fill);
     }
    
     &:hover {
-        background-color: $top-box-6-effect;
+        @include color(security);
         border-radius: 15px;
 
         .btn-security {
-            color: $top-box-6-effect;
-            background-color: $top-btn-effect; 
+            @include color(security, color);
+           @include color(os-hov-effect); 
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .icon {
-            fill: $top-icon-6-effect;
+            @include color(security, fill);
         }
     }
   
@@ -334,32 +327,32 @@
 .training {
 
     .icon-box {
-        background: $top-icon-7-background;
+        @include color(training);
     }
 
     .icon {
-        fill: $top-icon;
+        @include color(os-icon, fill);
     }
    
     &:hover {
-        background-color: $top-box-7-effect;
+        @include color(training);
         border-radius: 15px;
 
         .btn-training {
-            color: $top-box-7-effect;
-            background-color: $top-btn-effect; 
+            @include color(training, color);
+            @include color(os-hov-effect); 
         }
 
         .p, .h2 {
-            color: $top-btn-effect;
+            @include color(os-hov-effect, color);
         }
 
         .icon-box {
-            background-color: $top-icon-background-effect;
+            @include color(os-icon);
         }
 
         .icon {
-            fill: $top-icon-7-effect;
+            @include color(training, fill);
         }
     }
   
@@ -377,31 +370,31 @@
 }
 
 .btn-software {
-    background-color: $top-btn-1;
+    @include color(software);
 }
 
 .btn-it {
-    background-color: $top-btn-2;
+    @include color(it);
 }
 
 .btn-digital {
-    background-color: $top-btn-3;
+    @include color(digital);
 }
 
 .btn-telecoms {
-    background-color: $top-btn-4;
+    @include color(telecoms);
 }
 
 .btn-web {
-    background-color: $top-btn-5;
+    @include color(web);
 }
 
 .btn-security {
-    background-color: $top-btn-6;
+    @include color(security);
 }
 
 .btn-training {
-    background-color: $top-btn-7;
+    @include color(training);
 }
 
 //////// FlexBox Layout ////////
@@ -421,55 +414,55 @@
 
 //////// Grid Layout ////////
 
-.top-h1 {
+.our-services-h1 {
     display: grid;
     justify-content: center;
-    grid-area: top-h1;
+    grid-area: our-services-h1;
 }
 
-.top-h2 {
-    grid-area: top-h2;
+.our-services-h2 {
+    grid-area: our-services-h2;
 }
 
-.top-box-1 {
-    grid-area: top-box-1;
+.our-services-box-1 {
+    grid-area: our-services-box-1;
 }
 
-.top-box-2 {
-    grid-area: top-box-2;
+.our-services-box-2 {
+    grid-area: our-services-box-2;
 }
 
-.top-box-3 {
-    grid-area: top-box-3;
+.our-services-box-3 {
+    grid-area: our-services-box-3;
 }
 
-.top-box-4 {
-    grid-area: top-box-4;
+.our-services-box-4 {
+    grid-area: our-services-box-4;
 }
 
-.top-box-5 {
-    grid-area: top-box-5;
+.our-services-box-5 {
+    grid-area: our-services-box-5;
 }
 
-.top-box-6 {
-    grid-area: top-box-6;
+.our-services-box-6 {
+    grid-area: our-services-box-6;
 }
 
-.top-box-7 {
-    grid-area: top-box-7;
+.our-services-box-7 {
+    grid-area: our-services-box-7;
 }
 
 .service {
     display: grid;
     grid-template-areas: 
-    "top-h2"
-    "top-box-1"
-    "top-box-2"
-    "top-box-3"
-    "top-box-4"
-    "top-box-5"
-    "top-box-6"
-    "top-box-7"
-    "top-h1";
+    "our-services-h2"
+    "our-services-box-1"
+    "our-services-box-2"
+    "our-services-box-3"
+    "our-services-box-4"
+    "our-services-box-5"
+    "our-services-box-6"
+    "our-services-box-7"
+    "our-services-h1";
     grid-template-columns: 1fr;
 }
