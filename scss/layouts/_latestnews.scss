@@ -64,7 +64,7 @@
         line-height: 1.375rem;
         margin-top: 0;
         margin-bottom: 25px;
-        color: $ln-p-colour;
+        @include color(ln-p-color, color);
     }
 }
 
@@ -109,15 +109,15 @@
 }
 
 .clr-txt-1 {
-    color: $ln-txt-1;
+    @include color(it, color);
 }
 
 .clr-txt-2 {
-    color: $ln-txt-2;
+    @include color(software, color);
 }
 
 .clr-txt-3 {
-    color: $ln-txt-3;
+    @include color(training, color);
 }
 
 .user {
@@ -162,19 +162,19 @@
 }
 
 .btn-ln-it {
-    background-color: $ln-box-1;
+    @include color(it);
 }
 
 .btn-ln-software-1 {
-    background-color: $ln-box-2;
+    @include color(software);
 }
 
 .btn-ln-software-2 {
-    background-color: $ln-btn-2;
+    @include color(software-2);
 }
 
 .btn-ln-training {
-    background-color: $ln-box-3;
+    @include color(training);
 }
 
 

@@ -11,20 +11,30 @@ $breakpoints: ( // Creates variables to be used in my map.
 );
 
 $colour-map: ( // Creates variables to be used in my map.
-    os-txt        : #333645,
-    os-btn-txt    : #FFF,
-    os-hov-effect : #FFF,
-    os-icon       : #FFF,
-    background-1  : #333645,
-    background-2  : #323544,
-    software      : #67809F,
-    software-2    : #F7B322,
-    it            : #4183D7,
-    digital       : #2ECC71,
-    telecoms      : #D64541,
-    web           : #926FB1,
-    security      : #F62459,
-    training      : #CE4125
+    os-txt         : #333645,
+    os-btn-txt     : #FFF,
+    os-hov-effect  : #FFF,
+    os-icon        : #FFF,
+    wt-txt-color   : #fff,
+    wt-btn-bg-1    : #272936,
+    wt-btn-bg-hv-1 : #121318,
+    wt-btn-bg-2    : #4387F6,
+    wt-btn-bg-hv-2 : #166AF4,
+    wt-btn-bg-3    : #00B67B,
+    wt-btn-bg-hv-3 : #009B69,
+    client         : #A3A8AC,
+    star           : #FFA500,
+    ln-p-color     : #666,
+    background-1   : #333645,
+    background-2   : #323544,
+    software       : #67809F,
+    software-2     : #F7B322,
+    it             : #4183D7,
+    digital        : #2ECC71,
+    telecoms       : #D64541,
+    web            : #926FB1,
+    security       : #F62459,
+    training       : #CE4125
 );
 
 //// mixins ////

@@ -4,11 +4,9 @@
 
 //////// Container Layout ////////
 
-.welcome-to { // flex 1 was used on here to get rid of white space.
-    // display: flex; // Makes it into a flex container.
-    // flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
-    background-color: $dark-blue ; // Created a colour using a pre defined variable.
-    color: $mid-text-colour ; // Created a colour using a pre defined variable.
+.welcome-to {
+    @include color(background-1); // Created a colour using a mixin.
+    @include color(wt-txt-color, color); // Created a colour using a mixin.
 
     h2 {
         margin-bottom: 40px; // Sets the margin area on the bottom of an element.
@@ -21,7 +19,7 @@
 
     a {
         text-decoration: none; // Used to remove underline from a hyperlink.
-        color: $mid-text-colour ; // Created a colour using a pre defined variable.
+        @include color(wt-txt-color, color); // Created a colour using a mixin.
     }
 }
 
@@ -61,7 +59,7 @@ a.strong-paragraph {
 
 .client-quote-author {
     font-weight: 600; // The “value” placed on my font that will determine how bold or light my text will appear.
-    color: $client; // Created a colour using a pre defined variable.
+    @include color(client, color); // Created a colour using a mixin.
 }
 
 .client {
@@ -95,10 +93,10 @@ a.strong-paragraph {
     width: 225.86px; // Sets an element's width.
     height: 57px; // Sets an element's height.
     margin-bottom: 50px; // Sets the margin area on the bottom of an element.
-    background-color: $mid-btn-1-background; // Created a colour using a pre defined variable.
+    @include color(wt-btn-bg-1); // Created a colour using a mixin.
 
     &:hover {
-        background-color: $mid-btn-1-hover; // Created a colour using a pre defined variable.
+        @include color(wt-btn-bg-hv-1); // Created a colour using a mixin.
     }
 }
 
@@ -107,21 +105,21 @@ a.strong-paragraph {
     height: 55px; // Sets an element's height.
     margin-top: 20px; // Sets the margin area on the top of an element.
     margin-right: 8px; // Sets the margin area on the right of an element.
-    background-color: $mid-btn-2-background; // Created a colour using a pre defined variable.
+    @include color(wt-btn-bg-2); // Created a colour using a mixin.
 
     &:hover {
-        background-color: $mid-btn-2-hover; // Created a colour using a pre defined variable.
+        @include color(wt-btn-bg-hv-2); // Created a colour using a mixin.
     }
 }
 
 .welcome-to-btn-3 {
     width: 294.05px; // Sets an element's width.
     height: 55px; // Sets an element's height.
-    background-color: $mid-btn-3-background; // Created a colour using a pre defined variable.
     margin-top: 20px; // Sets the margin area on the top of an element.
+    @include color(wt-btn-bg-3); // Created a colour using a mixin.
 
     &:hover {
-        background-color: $mid-btn-3-hover; // Created a colour using a pre defined variable.
+        @include color(wt-btn-bg-hv-3); // Created a colour using a mixin.
     }
 }
 
@@ -130,7 +128,7 @@ a.strong-paragraph {
 .star-icon {
     width: 46.84px;
     height: 51px;
-    fill: $star;
+    @include color(star, fill); // Created a colour using a mixin.
 }
 
 //////// Flexbox Layout ////////

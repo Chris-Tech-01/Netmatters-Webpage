@@ -580,7 +580,7 @@ h3 {
 }
 
 .btn-software {
-  background-color: #67809F;
+  background-color: #F7B322;
 }
 
 .btn-it {
@@ -665,7 +665,7 @@ h3 {
 
 .welcome-to {
   background-color: #333645;
-  color: #FFF;
+  color: #fff;
 }
 .welcome-to h2 {
   margin-bottom: 40px;
@@ -676,7 +676,7 @@ h3 {
 }
 .welcome-to a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 a.strong-paragraph:hover {
@@ -750,7 +750,7 @@ a.strong-paragraph:hover {
   height: 55px;
   margin-top: 20px;
   margin-right: 8px;
-  background-color: #4387f6;
+  background-color: #4387F6;
 }
 .welcome-to-btn-2:hover {
   background-color: #166AF4;
@@ -759,8 +759,8 @@ a.strong-paragraph:hover {
 .welcome-to-btn-3 {
   width: 294.05px;
   height: 55px;
-  background-color: #00B67B;
   margin-top: 20px;
+  background-color: #00B67B;
 }
 .welcome-to-btn-3:hover {
   background-color: #009B69;
@@ -913,7 +913,7 @@ a.strong-paragraph:hover {
 }
 
 .clr-txt-2 {
-  color: #333645;
+  color: #67809F;
 }
 
 .clr-txt-3 {
@@ -963,7 +963,7 @@ a.strong-paragraph:hover {
 }
 
 .btn-ln-software-1 {
-  background-color: #333645;
+  background-color: #67809F;
 }
 
 .btn-ln-software-2 {
