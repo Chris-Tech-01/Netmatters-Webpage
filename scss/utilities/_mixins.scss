@@ -3,43 +3,53 @@
 //// Maps ////
 
 $breakpoints: ( // Creates variables to be used in my map. 
-    xs   : 480px,
-    s    : 576px,
+    s    : 480px,
     m    : 768px,
     l    : 992px,
-    xl   : 1200px
+    xl   : 1260px
 );
 
 $colour-map: ( // Creates variables to be used in my map.
-    os-txt         : #333645,
-    os-btn-txt     : #FFF,
-    os-hov-effect  : #FFF,
-    os-icon        : #FFF,
-    wt-txt-color   : #fff,
-    wt-btn-bg-1    : #272936,
-    wt-btn-bg-hv-1 : #121318,
-    wt-btn-bg-2    : #4387F6,
-    wt-btn-bg-hv-2 : #166AF4,
-    wt-btn-bg-3    : #00B67B,
-    wt-btn-bg-hv-3 : #009B69,
-    client         : #A3A8AC,
-    star           : #FFA500,
-    ln-p-color     : #666,
-    background-1   : #333645,
-    background-2   : #323544,
-    software       : #67809F,
-    software-2     : #F7B322,
-    it             : #4183D7,
-    digital        : #2ECC71,
-    telecoms       : #D64541,
-    web            : #926FB1,
-    security       : #F62459,
-    training       : #CE4125
+    hdr-search-bar   : #555,
+    hdr-btn-lines    : #FFF,
+    banner-txt       : #FFF,
+    banner-btn-hvr   : #E80A42,
+    os-btn-txt       : #FFF,
+    os-hov-effect    : #FFF,
+    os-icon          : #FFF,
+    wt-txt-color     : #fff,
+    wt-btn-bg-1      : #272936,
+    wt-btn-bg-hv-1   : #121318,
+    wt-btn-bg-2      : #4387F6,
+    wt-btn-bg-hv-2   : #166AF4,
+    wt-btn-bg-3      : #00B67B,
+    wt-btn-bg-hv-3   : #009B69,
+    client           : #A3A8AC,
+    star             : #FFA500,
+    ln-btn-txt-color : #FFF,
+    ln-p-color       : #666,
+    footer-txt-color : #FFF,
+    main-txt-color   : #333645,
+    background-1     : #333645,
+    background-2     : #323544,
+    background-3     : #212330,
+    software         : #67809F,
+    software-2       : #F7B322,
+    it               : #4183D7,
+    digital          : #2ECC71,
+    telecoms         : #D64541,
+    web              : #926FB1,
+    security         : #F62459,
+    training         : #CE4125,
+    facebook         : #3B5998,
+    linkedin         : #0077B5,
+    x                : #00ACED,
+    instagram        : #D93175
 );
 
 //// mixins ////
 
-@mixin queries($size) { // I’m creating a mixin named queries, and it will take one input value. I’m calling that input $size.
+@mixin mq($size) { // I’m creating a mixin named queries, and it will take one input value. I’m calling that input $size.
     @if map.has-key($breakpoints, $size) { // Checks if the provided $size exists as a key in the $breakpoints map.
         $breakpoint-value: map.get($breakpoints, $size); // If the key exists, retrieve the pixel value associated with that key.
         @media (min-width: $breakpoint-value) { // Start a media query using the retrieved breakpoint value.

@@ -19,7 +19,7 @@
             top: 40px;
 
             a {
-                @include color(os-txt, color);
+                @include color(main-txt-color, color);
             }
         }
 
@@ -27,11 +27,11 @@
             font-size: 2.7rem;
             margin-bottom: 15px;
             margin-top: 0;
-            @include color(os-txt, color);      
+            @include color(main-txt-color, color);      
         }
 
         span {
-            @include color(os-txt, color);
+            @include color(main-txt-color, color);
         }
 
     } 
@@ -56,7 +56,7 @@
 }
 
 .service-list {
-    @include color(os-txt, color);
+    @include color(main-txt-color, color);
 }
 
 .block {

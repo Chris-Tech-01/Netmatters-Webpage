@@ -22,7 +22,7 @@
        line-height: 3rem;
        font-weight: 600;
        margin-bottom: 1.25rem;
-       color: $banner-text-colour;
+       @include color(banner-txt, color);
     }
 
     p {
@@ -30,7 +30,7 @@
         line-height: 1.75rem;
         font-weight: 600;
         margin-bottom: .375rem;
-        color: $banner-text-colour;
+        @include color(banner-txt, color);
     }
 }
 
@@ -58,15 +58,14 @@
     border-radius: 3px; // Rounds the corners of an element's outer border edge.
     margin-top: 1.938rem;
     margin-bottom: 1.125rem;
-    border: 1px solid $banner-btn; // Allow me to specify the style, width, and color of an element's border.
     text-transform: uppercase; // Transforms text to uppercase.
     align-items: center;
     text-decoration: none; // Used to remove underline from a hyperlink. 
-    color: $banner-btn-txt;
-    background-color: $banner-btn;
+    @include color(banner-txt, color);
+    @include color(security);
 
     &:hover {
-        background-color: $banner-btn-hover;
+        @include color(banner-btn-hvr);
     }
     
     i {

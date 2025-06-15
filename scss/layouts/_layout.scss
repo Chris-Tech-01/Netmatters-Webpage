@@ -1,5 +1,7 @@
-@use "../vendors" as *;
 @use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
 
 //// Debug Testing ////
 
@@ -64,15 +66,15 @@ h3 {
     padding-left: 15px; // Creates space between its content and its border.
     padding-right: 15px; // Creates space between its content and its border.
 
-    @media (min-width: 768px) {
+    @include mq(m) {
         width: 750px; // Sets an element's width.
     }
 
-    @media (min-width: 992px) {
+    @include mq(l) {
         width: 970px; // Sets an element's width.
     }
 
-    @media (min-width: 1260px) {
+    @include mq(xl) {
         width: 1200px; // Sets an element's width.
     }
 }

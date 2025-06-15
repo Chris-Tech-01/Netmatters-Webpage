@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -71,12 +77,6 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
-}
-
-* {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 * {
@@ -278,7 +278,6 @@ h3 {
   border-radius: 3px;
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
-  border: 1px solid #F62459;
   text-transform: uppercase;
   align-items: center;
   text-decoration: none;
@@ -1053,27 +1052,38 @@ a.strong-paragraph:hover {
 }
 
 footer {
-  background-color: #323544;
-  color: #FFF;
   position: relative;
   margin-top: auto;
-  padding: 47px 0 0;
+  padding: 27px 0 0;
   margin: 0;
+  background-color: #323544;
+  color: #FFF;
+}
+@media (min-width: 1260px) {
+  footer {
+    padding-top: 47px;
+  }
 }
 
-.footer-logo-box h4 {
+@media (min-width: 1260px) {
+  .footer-logo-box {
+    width: 400px;
+  }
+}
+
+.follow-us {
   margin-top: 24px;
   margin-bottom: 26px;
   text-transform: uppercase;
 }
 
 .footer-social-logos {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .footer-menu {
   flex: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .footer-menu ul {
   padding-left: 0px;
@@ -1083,23 +1093,29 @@ footer {
 .footer-menu h4 {
   font-size: 1rem;
   line-height: 18px;
-  margin-bottom: 26px;
-  margin-top: 0;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  white-space: nowrap;
   text-transform: uppercase;
 }
-@media (min-width: 768px) {
-  .footer-menu {
-    flex: 50%;
-  }
-}
-@media (min-width: 992px) {
-  .footer-menu {
-    flex: 25%;
+@media (min-width: 1260px) {
+  .footer-menu h4 {
+    margin-top: 0;
   }
 }
 @media (min-width: 1260px) {
   .footer-menu {
-    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.footer-menu-4 {
+  margin-top: 21.5px;
+}
+@media (min-width: 992px) {
+  .footer-menu-4 {
+    margin-top: 0;
   }
 }
 
@@ -1115,22 +1131,24 @@ footer a:hover {
 }
 
 .logo-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #212330;
-  height: 56px;
-  width: 109.31px;
+  width: 100px;
+  height: 50px;
   margin: 0 10px 10px 0;
   padding: 12px 22px 16px;
   text-decoration: none;
+  background-color: #212330;
+}
+@media (min-width: 480px) {
+  .logo-button {
+    width: 55px;
+    height: 48px;
+    padding: 0;
+  }
 }
 
 .logo-icon {
-  width: 60%;
-  height: auto;
-  fill: #FFF;
   display: block;
+  fill: #FFF;
 }
 
 .logo-icon-1 {
@@ -1175,7 +1193,7 @@ footer a:hover {
   min-height: 51.25px;
   max-height: 51.25px;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .img-footer {
     min-width: 320px;
     max-width: 320px;
@@ -1184,11 +1202,16 @@ footer a:hover {
   }
 }
 
+@media (min-width: 1260px) {
+  .footer-flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .footer-logo-box {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  flex: 1;
 }
 
 .footer-social-logos {
@@ -1197,6 +1220,17 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+@media (min-width: 480px) {
+  .footer-social-logos {
+    flex-direction: row;
+  }
+}
+
+.logo-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .footer-menu-box {
   display: flex;
@@ -1204,8 +1238,19 @@ footer a:hover {
   flex-direction: column;
   flex-basis: auto;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer-menu-box {
+    flex-direction: row;
+  }
+}
+
+.footer-bp {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .footer-bp {
     flex-direction: row;
   }
 }
@@ -1216,22 +1261,18 @@ footer a:hover {
 }
 
 .footer-bottom-box {
-  background-color: #212330;
-  color: #FFF;
+  width: 100%;
   font-size: 0.8125rem;
   padding-top: 12px;
   padding-bottom: 12px;
+  background-color: #212330;
+  color: #FFF;
 }
 .footer-bottom-box ul {
   padding-left: 0;
 }
 .footer-bottom-box .license-3 {
   margin-right: 10px;
-}
-
-.footer-bottom-container {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .row-group {
@@ -1252,6 +1293,11 @@ footer a:hover {
 .footer-bottom-column {
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer-bottom-column {
+    flex-direction: row;
+  }
 }
 
 .row-group {

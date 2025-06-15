@@ -5,11 +5,12 @@
 //////// Footer Bottom Layouts ////////
 
 .footer-bottom-box {
-    background-color: $background-secondary; // Sets the colour using a pre defined variable.
-    color: $footer-bottom-text-colour; // Sets the colour using a pre defined variable.
+    width: 100%;
     font-size: .8125rem; // Sets the size of the font.
     padding-top: 12px; // Creates space between its content and its border.
     padding-bottom: 12px; // Creates space between its content and its border.
+    @include color(background-3); // Sets the colour using a pre defined variable.
+    @include color(footer-txt-color, color); // Sets the colour using a mixin.
     
     ul {
         padding-left: 0;
@@ -18,11 +19,6 @@
     .license-3 {        
         margin-right: 10px;
     }
-}
-
-.footer-bottom-container {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .row-group {
@@ -51,6 +47,10 @@
 .footer-bottom-column {
     display: flex; // Makes the flex items Block Level.
     flex-direction: column;
+
+    @include mq(m) {
+        flex-direction: row;
+    }
 }
 
 .row-group {

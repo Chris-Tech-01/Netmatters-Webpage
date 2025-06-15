@@ -135,12 +135,12 @@
     font-size: .875rem;
     line-height: 1.375rem;
     padding-left: 20px;
-    color: $ln-details-colour
+    @include color(ln-p-color, color);
 }
 
 .text-primary {
     font-weight: 600;
-    color: $ln-details-colour-2;
+    @include color(main-txt-color, color);
 }
 
 //////// Button Styles ////////
@@ -148,7 +148,7 @@
 .btn-ln {
     text-decoration: none;
     text-transform: uppercase;
-    color: $ln-btn-txt-colour;
+    @include color(ln-btn-txt-color, color);
 
     &:hover {
         text-decoration: underline;
@@ -158,7 +158,7 @@
 .read-more {
     text-decoration: none;
     text-transform: uppercase;
-    color: $ln-btn-txt-colour;
+    @include color(ln-btn-txt-color, color);
 }
 
 .btn-ln-it {

@@ -32,7 +32,7 @@
     outline: 1px solid hsla(0, 0%, 100%, .2);
     border: 2px solid rgba(0, 0, 0, .1); 
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);  
-    color: $search-bar;
+    @include color(hdr-search-bar, color);
 }
 
 .search-bar {
@@ -58,8 +58,8 @@
 .header-btn {
     margin-left: 24px;
     border-radius: 4px;
-    fill: $header-btn-lines ;
-    background-color: $header-btn-background;
+    @include color(hdr-btn-lines, fill);
+    @include color(background-1);
     cursor: pointer;
 }
 
@@ -71,7 +71,7 @@
 
 .search-icon {
     padding: 0 10px;
-    color: $search-icon;
+    @include color(background-1, color);
     background: transparent;
     border: none;
 
@@ -82,7 +82,7 @@
 
 .phone-icon {
     display: inline-block;
-    color: $phone-colour;
+    @include color(background-1, color);
     text-decoration: none;
     border-bottom: 2px solid transparent;
 

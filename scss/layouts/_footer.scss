@@ -6,27 +6,37 @@
 //////// Footer Styles & Layout ////////
 
 footer {
-    background-color: $background-primary; // Sets the colour using a pre defined variable.
-    color: $footer-text-colour; // Sets the colour using a pre defined variable.
     position: relative; // Positioned relative to its normal position. Other content will not be adjusted to fit into any gap left by the element.
     margin-top: auto; // Defines the space between the top edge of an element and its surroundings.
-    padding: 47px 0 0; // Creates space between its content and its border.
+    padding: 27px 0 0; // Creates space between its content and its border.
     margin: 0;
+    @include color(background-2); // Sets the colour using a mixin.
+    @include color(footer-txt-color, color); // Sets the colour using a mixin.
+
+    @include mq(xl) {
+        padding-top: 47px;
+    }
 }
 
-.footer-logo-box h4 {
+.footer-logo-box {
+    @include mq(xl) {
+        width: 400px;
+    }
+}
+
+.follow-us {
     margin-top: 24px; // The space around an element's border.
     margin-bottom: 26px; // The space around an element's border.
     text-transform: uppercase; // Transforms text to uppercase.
 }   
 
 .footer-social-logos {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .footer-menu {
     flex: 100%; // An element should initially have a size of 100% of its container's main size before any remaining space is distributed.
-    margin-bottom: 30px; // Sets the margin area on the bottom of an element.
+    margin-bottom: 20px; // Sets the margin area on the bottom of an element.
 
     ul {
         padding-left: 0px;
@@ -37,21 +47,27 @@ footer {
     h4 {
         font-size: 1rem; // Sets the size of the font.
         line-height: 18px; // Used to set the distance between lines of text.
-        margin-bottom: 26px; // The space around an element's border.
-        margin-top: 0; // The space around an element's border.
+        margin-bottom: 12px; // The space around an element's border.
+        margin-top: 5px;
+        white-space: nowrap;
         text-transform: uppercase; // Transforms text to uppercase.
+
+        @include mq(xl) {
+            margin-top: 0;
+        }
     }
 
-    @media (min-width: 768px) {
-        flex: 50%; // An element should initially have a size of 50% of its container's main size before any remaining space is distributed.
-    }
+    @include mq(xl) {
+        margin-left: 15px;
+        margin-right: 15px;
+    } 
+}
 
-    @media (min-width: 992px) {
-        flex: 25%; // An element should initially have a size of 25% of its container's main size before any remaining space is distributed.
-    }
+.footer-menu-4 {
+    margin-top: 21.5px;
 
-    @media (min-width: 1260px) {
-        margin-bottom: 40px; // Sets the margin area on the bottom of an element.
+    @include mq(l) {
+        margin-top: 0;
     }
 }
 
@@ -72,22 +88,23 @@ footer a {
 //////// Logos & Buttons ////////
 
 .logo-button {
-    display: inline-flex; // Makes it behave like an inline element but still a flex container.
-    align-items: center; // Vertical centering.
-    justify-content: center; // Horizontal centering.
-    background-color: $background-secondary; // Dark blue background.
-    height: 56px; // Sets button height.
-    width: 109.31px; // Makes button square.
+    width: 100px;
+    height: 50px;
     margin: 0 10px 10px 0;
     padding: 12px 22px 16px; // Remove padding so button size is consistent.
     text-decoration: none; // Removes underline from <a>.
+    @include color(background-3); // Sets the colour using a mixin.
+
+    @include mq(s) {
+        width: 55px;
+        height: 48px;
+        padding: 0;
+    }
 }
 
 .logo-icon {
-    width: 60%; // Prevents the icon from stretching too large.
-    height: auto; // Maintains the correct aspect ratio.
-    fill: $footer-text-colour; // Sets icon color.
     display: block; // Removes extra spacing.
+    @include color(footer-txt-color, fill); // Sets the colour using a mixin.
 }
 
 .logo-icon-1 {
@@ -107,31 +124,32 @@ footer a {
     width: 22.7px;
     height: 26px;
 }
+
 .logo-button-1 {
 
     &:hover {
-        background-color: $logo-1-hover; // Created a colour using a pre defined variable.
+        @include color(facebook); // Sets the colour using a mixin.
     }
 }
 
 .logo-button-2 {
 
     &:hover {
-        background-color: $logo-2-hover; // Created a colour using a pre defined variable.
+        @include color(linkedin); // Sets the colour using a mixin.
     }
 }
 
 .logo-button-3 {
 
     &:hover {
-        background-color: $logo-3-hover; // Created a colour using a pre defined variable.
+        @include color(x); // Sets the colour using a mixin.
     }
 }
 
 .logo-button-4 {
 
     &:hover {
-        background-color: $logo-4-hover; // Created a colour using a pre defined variable.
+        @include color(instagram); // Sets the colour using a mixin.
     }
 }
 
@@ -143,7 +161,7 @@ footer a {
     min-height: 51.25px; // Defines the minimum height of an element.
     max-height: 51.25px; // Defines the maximum height of an element.
 
-     @include queries(s) {
+     @include mq(s) {
         min-width: 320px; // Defines the minimum width of an element.
         max-width: 320px; // Defines the maximum width of an element.
         min-height: 65.59px; // Defines the minimum height of an element.
@@ -153,11 +171,17 @@ footer a {
 
 //////// Footer FlexBox ////////
 
+.footer-flex-container {
+
+    @include mq(xl) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 .footer-logo-box { // Flex Item
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    flex: 1; // The size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it.
 }
 
 .footer-social-logos { // Flex Item
@@ -165,6 +189,16 @@ footer a {
     flex-direction: column;
     flex-wrap: wrap; // Allows flex items to wrap onto multiple lines.
     justify-content: flex-start; // Properties starting from the left.
+
+    @include mq(s) {
+        flex-direction: row;
+    }
+}
+
+.logo-button {
+    display: flex;
+    align-items: center; // Vertical centering.
+    justify-content: center; // Horizontal centering.
 }
 
 .footer-menu-box { // Flex Item
@@ -173,7 +207,17 @@ footer a {
     flex-direction: column;
     flex-basis: auto;
 
-    @include queries(l) {
+    @include mq(m) {
+        flex-direction: row;
+    }
+}
+
+.footer-bp {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    @include mq(l) {
         flex-direction: row;
     }
 }
