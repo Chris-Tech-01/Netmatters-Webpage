@@ -319,6 +319,11 @@ h3 {
 .our-services .section h1 a {
   color: #333645;
 }
+@media (min-width: 768px) {
+  .our-services .section h1 {
+    position: static;
+  }
+}
 .our-services .section h2 {
   font-size: 2.7rem;
   margin-bottom: 15px;
@@ -339,6 +344,11 @@ h3 {
   font-size: 1.625rem;
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+@media (min-width: 768px) {
+  .h1-link {
+    font-size: 2.25rem;
+  }
 }
 
 .p {
@@ -462,6 +472,11 @@ h3 {
 .digital:hover .btn-digital {
   color: #2ECC71;
   background-color: #FFF;
+}
+@media (min-width: 1260px) {
+  .digital:hover .btn-digital {
+    margin-top: 24px;
+  }
 }
 .digital:hover .p, .digital:hover .h2 {
   color: #FFF;
@@ -589,6 +604,11 @@ h3 {
 .btn-digital {
   background-color: #2ECC71;
 }
+@media (min-width: 1260px) {
+  .btn-digital {
+    margin-top: 24px;
+  }
+}
 
 .btn-telecoms {
   background-color: #D64541;
@@ -618,10 +638,23 @@ h3 {
   align-items: center;
 }
 
+@media (min-width: 1260px) {
+  .our-services-box {
+    display: flex;
+    align-items: stretch;
+  }
+}
 .our-services-h1 {
   display: grid;
-  justify-content: center;
+  justify-self: end;
   grid-area: our-services-h1;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .our-services-h1 {
+    display: initial;
+    margin-bottom: 20px;
+  }
 }
 
 .our-services-h2 {
@@ -660,6 +693,30 @@ h3 {
   display: grid;
   grid-template-areas: "our-services-h2" "our-services-box-1" "our-services-box-2" "our-services-box-3" "our-services-box-4" "our-services-box-5" "our-services-box-6" "our-services-box-7" "our-services-h1";
   grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .service {
+    display: grid;
+    column-gap: 30px;
+    grid-template-areas: "our-services-h2 our-services-h1" "our-services-box-1 our-services-box-1" "our-services-box-2 our-services-box-2" "our-services-box-3 our-services-box-3" "our-services-box-4 our-services-box-5" "our-services-box-6 our-services-box-7";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .service {
+    display: grid;
+    column-gap: 30px;
+    grid-template-areas: "our-services-h2 our-services-h2 our-services-h2 our-services-h1 our-services-h1 our-services-h1" "our-services-box-1 our-services-box-1 our-services-box-2 our-services-box-2 our-services-box-3 our-services-box-3" "our-services-box-4 our-services-box-4 our-services-box-4 our-services-box-5 our-services-box-5 our-services-box-5" "our-services-box-6 our-services-box-6 our-services-box-6 our-services-box-7 our-services-box-7 our-services-box-7";
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1260px) {
+  .service {
+    display: grid;
+    column-gap: 30px;
+    grid-template-areas: "our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h1 our-services-h1 our-services-h1 our-services-h1 our-services-h1 our-services-h1" "our-services-box-1 our-services-box-1 our-services-box-1 our-services-box-1 our-services-box-2 our-services-box-2 our-services-box-2 our-services-box-2 our-services-box-3 our-services-box-3 our-services-box-3 our-services-box-3" "our-services-box-4 our-services-box-4 our-services-box-4 our-services-box-5 our-services-box-5 our-services-box-5 our-services-box-6 our-services-box-6 our-services-box-6 our-services-box-7 our-services-box-7 our-services-box-7";
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .welcome-to {

@@ -21,6 +21,10 @@
             a {
                 @include color(main-txt-color, color);
             }
+
+            @include mq(m) {
+                position: static;
+            }
         }
 
         h2 {
@@ -47,6 +51,10 @@
     font-size: 1.625rem;
     font-weight: 600;
     letter-spacing: .4px;
+
+    @include mq(m) {
+        font-size: 2.25rem;
+    }
 }
 
 .p {
@@ -204,7 +212,11 @@
 
         .btn-digital {
             @include color(digital, color);
-            @include color(os-hov-effect); 
+            @include color(os-hov-effect);
+
+            @include mq(xl) {
+                margin-top: 24px;
+            }
         }
 
         .p, .h2 {
@@ -379,6 +391,10 @@
 
 .btn-digital {
     @include color(digital);
+
+    @include mq(xl) {
+        margin-top: 24px;
+    }
 }
 
 .btn-telecoms {
@@ -412,12 +428,25 @@
     }
 }
 
+@include mq(xl) { // Fix,s my shrinking issue. Will also have to push the button down with this method.
+        .our-services-box {
+        display: flex;
+        align-items: stretch; 
+    }
+}
+
 //////// Grid Layout ////////
 
 .our-services-h1 {
     display: grid;
-    justify-content: center;
+    justify-self: end;
     grid-area: our-services-h1;
+    white-space: nowrap;
+
+    @include mq(m) {
+        display: initial;
+        margin-bottom: 20px;
+    }
 }
 
 .our-services-h2 {
@@ -465,4 +494,38 @@
     "our-services-box-7"
     "our-services-h1";
     grid-template-columns: 1fr;
+
+    @include mq(m) {
+        display: grid;
+        column-gap: 30px;
+        grid-template-areas: 
+        "our-services-h2 our-services-h1"
+        "our-services-box-1 our-services-box-1"
+        "our-services-box-2 our-services-box-2"
+        "our-services-box-3 our-services-box-3"
+        "our-services-box-4 our-services-box-5"
+        "our-services-box-6 our-services-box-7";
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(l) {
+        display: grid;
+        column-gap: 30px;
+        grid-template-areas: 
+        "our-services-h2 our-services-h2 our-services-h2 our-services-h1 our-services-h1 our-services-h1"
+        "our-services-box-1 our-services-box-1 our-services-box-2 our-services-box-2 our-services-box-3 our-services-box-3"
+        "our-services-box-4 our-services-box-4 our-services-box-4 our-services-box-5 our-services-box-5 our-services-box-5"
+        "our-services-box-6 our-services-box-6 our-services-box-6 our-services-box-7 our-services-box-7 our-services-box-7";
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mq(xl) {
+        display: grid;
+        column-gap: 30px;
+        grid-template-areas: 
+        "our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h2 our-services-h1 our-services-h1 our-services-h1 our-services-h1 our-services-h1 our-services-h1"
+        "our-services-box-1 our-services-box-1 our-services-box-1 our-services-box-1 our-services-box-2 our-services-box-2 our-services-box-2 our-services-box-2 our-services-box-3 our-services-box-3 our-services-box-3 our-services-box-3"
+        "our-services-box-4 our-services-box-4 our-services-box-4 our-services-box-5 our-services-box-5 our-services-box-5 our-services-box-6 our-services-box-6 our-services-box-6 our-services-box-7 our-services-box-7 our-services-box-7";
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
