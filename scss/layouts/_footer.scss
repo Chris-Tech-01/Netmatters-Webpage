@@ -96,9 +96,13 @@ footer a {
     @include color(background-3); // Sets the colour using a mixin.
 
     @include mq(s) {
-        width: 55px;
-        height: 48px;
+        width: 66px;
+        height: 56px;
         padding: 0;
+    }
+
+    @include mq(xl) {
+        margin: 0 7px 0 0;
     }
 }
 

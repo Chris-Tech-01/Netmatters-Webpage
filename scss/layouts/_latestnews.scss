@@ -13,7 +13,7 @@
     font-size: 2.25rem;
     line-height: 1.1;
     font-weight: 600;
-    color: $dark-blue;
+    @include color(ln-title-color, color);
 }
 
 .ln-title-2 {
@@ -21,9 +21,9 @@
     font-size: 1.625rem;
     line-height: 0;
     font-weight: 600;
-    color: $dark-blue;
     border-bottom: 2px solid transparent;
     text-decoration: none;
+    @include color(ln-title-color, color);
 
     &:hover {
        border-bottom: 2px solid $dark-blue;
@@ -43,10 +43,22 @@
     padding-top: 30px;
 }
 
+.it-2 {
+    @include mq(m) {
+        display: none;
+    }
+
+    @include mq(xl) {
+        display: initial;
+    }
+}
+
 .block-ln {
     padding: 30px;
 
     h3 {
+        font-size: 1rem;
+        font-weight: bold;
         line-height: 1.5rem;
         margin-top: 0;
         margin-bottom: 15px;
@@ -54,6 +66,8 @@
     }
 
     span {
+        display: none;
+        margin-left: 5px;
         font-size: .85rem;
         text-transform: uppercase;
         color: rgba(51, 54, 69, .5);
@@ -66,6 +80,32 @@
         margin-bottom: 25px;
         @include color(ln-p-color, color);
     }
+
+    @include mq(m) {
+        width: 345px;
+        height: 569px;
+    }
+
+    @include mq(l) {
+        width: 455px;
+        height: 633px;
+    }
+
+    @include mq(xl) {
+        width: 370px;
+        height: 589px;
+    }
+}
+
+.it-2 {
+
+    h3 {
+        white-space: nowrap;
+
+        @include mq(xl) {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 .flex-center {
@@ -74,6 +114,19 @@
 
 .hide-small {
     display: none;
+
+    @include mq(m) {
+        display: initial;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.hide-medium {
+
+    @include mq(m) {
+        display: none;
+    }
 }
 
 .article-link {
@@ -201,6 +254,25 @@
 .flex-center {
     display: flex;
     justify-content: center;
+}
+
+.ln-position {
+
+    @include mq(m) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.ln-titles {
+
+    @include mq(m) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 .ln-title-2 {

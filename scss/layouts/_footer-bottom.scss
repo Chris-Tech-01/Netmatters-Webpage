@@ -16,8 +16,23 @@
         padding-left: 0;
     }
 
-    .license-3 {        
-        margin-right: 10px;
+    @include mq(m) {
+        padding-top: 15px;
+    }
+}
+
+.license-2 {
+
+    @include mq(m) {
+        margin-left: 5px;
+    }
+}
+
+.license-3 {        
+    margin-right: 10px;
+
+    @include mq(m) {
+        margin-left: 10px;
     }
 }
 

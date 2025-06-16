@@ -2,7 +2,7 @@
 @use "../utilities" as *;
 @use "../vendors" as *;
 
-//////// Container Layout ////////
+//////// Layout ////////
 
 .welcome-to {
     @include color(background-1); // Created a colour using a mixin.
@@ -10,10 +10,12 @@
 
     h2 {
         margin-bottom: 40px; // Sets the margin area on the bottom of an element.
+        margin-top: 0;
     }
 
     p {
         line-height: 1.875rem; // Used to set the distance between lines of text.
+        margin-top: 0;
         margin-bottom: 25px; // Sets the margin area on the bottom of an element.
     }
 
@@ -23,14 +25,16 @@
     }
 }
 
+.welcome-to-column {
+    padding: 0 12px;
+}
+
 a.strong-paragraph {
 
     &:hover {
         text-decoration: underline;
     }
 }
-
-//////// Item Layout & Styles ///////
 
 .welcome-to-row {
     padding: 50px 0;
@@ -47,7 +51,7 @@ a.strong-paragraph {
 
 .welcome-to-col-1 {
     p {
-        font-size: 14px; // Sets the size of the font.
+        font-size: 1rem; // Sets the size of the font.
     }
 }
 
@@ -63,7 +67,8 @@ a.strong-paragraph {
 }
 
 .client {
-   font-weight: 600; 
+   font-weight: 600;
+   font-size: 1.1rem;
 }
 
 //////// Buttons ////////
@@ -87,6 +92,16 @@ a.strong-paragraph {
     width: 270.17px; // Sets an element's width.
     height: 57px; // Sets an element's height.
     margin-bottom: 17px; // Sets the margin area on the bottom of an element.
+    margin-right: 6px;
+
+    @include mq(l) {
+        margin-top: 8px;
+    }
+
+    @include mq(xl) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .welcome-to-btn-1 {
@@ -97,6 +112,10 @@ a.strong-paragraph {
 
     &:hover {
         @include color(wt-btn-bg-hv-1); // Created a colour using a mixin.
+    }
+
+    @include mq(l) {
+        margin-bottom: 0;
     }
 }
 
@@ -128,7 +147,12 @@ a.strong-paragraph {
 .star-icon {
     width: 46.84px;
     height: 51px;
+    margin-bottom: 25px;
     @include color(star, fill); // Created a colour using a mixin.
+}
+
+.star {
+    margin-left: 4px;
 }
 
 //////// Flexbox Layout ////////
@@ -136,10 +160,18 @@ a.strong-paragraph {
 .welcome-to-row {
     display: flex; // Makes it into a flex container.
     flex-direction: column; // Displays flex items in a column.
+
+    @include mq(l) {
+        flex-direction: row;
+    }
 }
 
 .star-row {
     display: flex;
+}
+
+.welcome-to-column {
+    flex: 1;
 }
 
 .welcome-to-col-1 { 
@@ -157,17 +189,10 @@ a.strong-paragraph {
     }
 }
 
-.welcome-to-buttons { 
-    display: flex; // Makes it into a flex item.
-    flex-direction: column; // Displays flex items in a column.
-}
+.middle-buttons {
 
-.strong-title {
-    display: flex; // Makes it into a flex item.
+    @include mq(xl) {
+        display: flex;
+        flex-direction: row;
+    }
 }
-
-.client-quote-author {
-    display: flex; // Makes it into a flex item.
-    flex-direction: column;
-}
-
