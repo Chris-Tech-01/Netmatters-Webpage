@@ -1,9 +1,0 @@
-@use "../base" as *;
-@use "../utilities" as *;
-@use "../vendors" as *;
-
-//////// Layout ////////
-
-.main-nav{
-    @include color(background-1);
-}

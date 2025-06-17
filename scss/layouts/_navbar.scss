@@ -1,0 +1,146 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout ////////
+
+.nav-bar {
+    display: none;
+    width: 100%;
+    @include color(background-1);
+
+    @include mq(l) {
+        display: block;
+    }
+}
+
+.nav-list {
+    margin: 0 0;
+    padding: 0;
+
+    a {
+        height: 100%;
+        width: 100%;
+        padding: 19px 0;
+        text-align: center;
+        text-decoration: none;
+        list-style: none;
+        @include color(nav-txt, color);
+    }
+
+    span {
+        height: 26px;
+        width: 26px;
+        margin-bottom: 8px;
+    }
+}
+
+//////// Nav Icons ////////
+
+.nav-icon {
+    font-size: 1.25rem;
+    height: 28px;
+    width: 28px;
+}
+
+.nav-software-icon {
+    @include color(software, color);
+}
+
+.nav-it-icon {
+    @include color(it, fill);
+}
+
+.nav-digital-icon {
+    @include color(digital, fill);
+}
+
+.nav-telecoms-icon {
+    @include color(telecoms, color);
+}
+
+.nav-web-icon {
+    @include color(web, color);
+}
+
+.nav-security-icon {
+    @include color(security, fill);
+}
+
+.nav-training-icon {
+    @include color(training, fill);
+}
+
+//////// Hover colors ////////
+
+.nav-software {
+
+    &:hover {
+        @include color(software);
+    }
+}
+
+.nav-it {
+
+    &:hover {
+        @include color(it);
+    }
+}
+
+.nav-digital {
+
+    &:hover {
+        @include color(digital);
+    }
+}
+
+.nav-telecoms {
+
+    &:hover {
+        @include color(telecoms);
+    }
+}
+
+.nav-web {
+
+    &:hover {
+        @include color(web);
+    }
+}
+
+.nav-security {
+
+    &:hover {
+        @include color(security);
+    }
+}
+
+.nav-training {
+
+    &:hover {
+        @include color(training);
+    }
+}
+
+//////// FlexBox ////////
+
+.nav-bar {
+
+    .container {
+        display: flex;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+

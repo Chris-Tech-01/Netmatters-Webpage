@@ -11,6 +11,7 @@
     background-size: cover;
     position: relative;
     background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
 
     img {
@@ -23,6 +24,10 @@
        font-weight: 600;
        margin-bottom: 1.25rem;
        @include color(banner-txt, color);
+
+       @include mq(l) {
+            font-size: 4rem;
+       }
     }
 
     p {
@@ -31,6 +36,10 @@
         font-weight: 600;
         margin-bottom: .375rem;
         @include color(banner-txt, color);
+
+        @include mq(l) {
+            font-size: 1.625rem;
+       }
     }
 }
 
@@ -39,7 +48,7 @@
     height: 100%;
     content: "";
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 1;
     }
 
@@ -47,6 +56,10 @@
     text-align: center;
     position: relative;
     z-index: 2;
+
+    @include mq(l) {
+        text-align: initial;
+    }
 }
 
 //////// Buttons ////////
@@ -87,5 +100,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include mq(l) {
+            align-items: flex-start;
+        }
     }
 

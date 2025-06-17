@@ -439,13 +439,14 @@
 
 .our-services-h1 {
     display: grid;
-    justify-self: end;
+    justify-self: center;
     grid-area: our-services-h1;
     white-space: nowrap;
 
     @include mq(m) {
         display: initial;
         margin-bottom: 20px;
+        justify-self: end;
     }
 }
 
