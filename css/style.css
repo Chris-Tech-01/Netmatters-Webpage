@@ -249,10 +249,47 @@ h3 {
   list-style: none;
   color: #FFF;
 }
+.nav-list a:hover .nav-software-icon {
+  color: #FFF;
+}
+.nav-list a:hover .nav-it-icon {
+  fill: #FFF;
+}
+.nav-list a:hover .nav-digital-icon {
+  fill: #FFF;
+}
+.nav-list a:hover .nav-telecoms-icon {
+  color: #FFF;
+}
+.nav-list a:hover .nav-web-icon {
+  color: #FFF;
+}
+.nav-list a:hover .nav-security-icon {
+  fill: #FFF;
+}
+.nav-list a:hover .nav-training-icon {
+  fill: #FFF;
+}
 .nav-list span {
   height: 26px;
   width: 26px;
   margin-bottom: 8px;
+}
+
+.nav-software-box {
+  position: relative;
+}
+.nav-software-box .nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  background-color: #526781;
+}
+.nav-software-box:hover .nav-dropdown {
+  display: block;
 }
 
 .nav-icon {
@@ -330,6 +367,21 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.nav-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-dd-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-dd-box {
+  display: flex;
+  flex-direction: column;
 }
 
 .banner {

@@ -26,12 +26,60 @@
         text-decoration: none;
         list-style: none;
         @include color(nav-txt, color);
+
+        &:hover {
+            .nav-software-icon {
+                @include color(nav-icon-hv, color);
+            }
+
+            .nav-it-icon {
+                @include color(nav-icon-hv, fill);
+            }
+
+            .nav-digital-icon {
+                @include color(nav-icon-hv, fill);
+            }
+
+            .nav-telecoms-icon {
+                @include color(nav-icon-hv, color);
+            }
+
+            .nav-web-icon {
+                @include color(nav-icon-hv, color);
+            }
+
+            .nav-security-icon {
+                @include color(nav-icon-hv, fill);
+            }
+            
+            .nav-training-icon {
+                @include color(nav-icon-hv, fill);
+            }
+        }
     }
 
     span {
         height: 26px;
         width: 26px;
         margin-bottom: 8px;
+    }
+}
+
+.nav-software-box {
+    position: relative;
+
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        z-index: 2;
+        @include color(nav-software-dd);
+    }
+
+    &:hover .nav-dropdown {
+        display: block;
     }
 }
 
@@ -143,4 +191,17 @@
     }
 }
 
+.nav-dropdown {
+    display: flex;
+    flex-direction: column;
+}
 
+.nav-dd-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-dd-box {
+    display: flex;
+    flex-direction: column;
+}
