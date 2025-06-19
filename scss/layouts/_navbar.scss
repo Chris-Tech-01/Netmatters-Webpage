@@ -5,6 +5,7 @@
 //////// Layout ////////
 
 .nav-bar {
+    position: relative;
     display: none;
     width: 100%;
     @include color(background-1);
@@ -12,51 +13,16 @@
     @include mq(l) {
         display: block;
     }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 }
 
 .nav-list {
     margin: 0 0;
     padding: 0;
-
-    a {
-        height: 100%;
-        width: 100%;
-        padding: 19px 0;
-        text-align: center;
-        text-decoration: none;
-        list-style: none;
-        @include color(nav-txt, color);
-
-        &:hover {
-            .nav-software-icon {
-                @include color(nav-icon-hv, color);
-            }
-
-            .nav-it-icon {
-                @include color(nav-icon-hv, fill);
-            }
-
-            .nav-digital-icon {
-                @include color(nav-icon-hv, fill);
-            }
-
-            .nav-telecoms-icon {
-                @include color(nav-icon-hv, color);
-            }
-
-            .nav-web-icon {
-                @include color(nav-icon-hv, color);
-            }
-
-            .nav-security-icon {
-                @include color(nav-icon-hv, fill);
-            }
-            
-            .nav-training-icon {
-                @include color(nav-icon-hv, fill);
-            }
-        }
-    }
 
     span {
         height: 26px;
@@ -65,23 +31,319 @@
     }
 }
 
-.nav-software-box {
-    position: relative;
+.nav-box  {
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    @include color(nav-txt, color);
+}
 
-    .nav-dropdown {
-        display: none; 
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100vw;
-        z-index: 2;
-        @include color(nav-software-dd);
-    }
+.nav-content {
+    font-size: 1.125rem;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    padding: 19px 5px;
+    text-transform: uppercase;
 
-    &:hover .nav-dropdown {
-        display: block;
+    small {
+        font-size: .625rem;
+        line-height: 1;
+        text-transform: uppercase;
     }
 }
+
+.nav-software-box {
+    position: relative;
+}
+
+.dd-triangle {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 34px 67px 0 67px;
+    z-index: 3;
+
+    @include mq(xl) {
+        border-width: 34px 84px 0 84px;
+    }
+}
+
+.dd-software-triangle {
+    border-color: #67809F transparent transparent transparent;
+}
+
+.dd-it-triangle {
+    border-color: #4183D7 transparent transparent transparent;
+}
+
+.dd-digital-triangle {
+    border-color: #2ECC71 transparent transparent transparent;
+}
+
+.dd-telecoms-triangle {
+    border-color: #D64541 transparent transparent transparent;
+}
+
+.dd-web-triangle {
+    border-color: #926FB1 transparent transparent transparent;
+}
+
+.dd-security-triangle {
+    border-color: #F62459 transparent transparent transparent;
+}
+
+.dd-training-triangle {
+    border-color: #CE4125 transparent transparent transparent;
+}
+
+.dd-title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.nav-dropdown {
+    display: none;
+    padding: 35px 0 50px 0;
+    @include color(nav-txt, color);
+
+    li {
+        font-size: 1.2rem;
+        padding: 12px 15px 12px 0;
+    }
+    
+    a {
+        text-decoration: none;
+        @include color(nav-txt, color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.nav-software, .nav-it, .nav-digital, .nav-telecoms, .nav-web, .nav-security, .nav-training {
+    width: 100%;
+}
+
+.nav-software {
+   
+    &:hover {
+        @include color(software);
+
+        .nav-software-icon {
+            @include color(nav-icon-hv, color);
+        }
+
+        .nav-software-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-software-dd);
+        }
+
+        .dd-software-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-it {
+    
+    &:hover {
+        @include color(it);
+
+        .nav-it-icon {
+            @include color(nav-icon-hv, fill);
+        }
+
+        .nav-it-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-it-dd);
+        }
+
+        .dd-it-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-digital {
+    
+    &:hover {
+        @include color(digital);
+
+        .nav-digital-icon {
+            @include color(nav-icon-hv, fill);
+        }
+
+        .nav-digital-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-digital-dd);
+        }
+
+        .dd-digital-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-telecoms {
+    
+    &:hover {
+        @include color(telecoms);
+
+        .nav-telecoms-icon {
+            @include color(nav-icon-hv, color);
+        }
+
+        .nav-telecoms-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-telecoms-dd);
+        }
+
+        .dd-telecoms-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-web {
+    
+    &:hover {
+        @include color(web);
+
+        .nav-web-icon {
+            @include color(nav-icon-hv, color);
+        }
+
+        .nav-web-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-web-dd);
+        }
+
+        .dd-web-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-security {
+    
+    &:hover {
+        @include color(security);
+
+        .nav-security-icon {
+            @include color(nav-icon-hv, fill);
+        }
+
+        .nav-security-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-security-dd);
+        }
+
+        .dd-security-triangle {
+            display: block;
+        }
+    }
+}
+
+.nav-training {
+    
+    &:hover {
+        @include color(training);
+
+        .nav-training-icon {
+            @include color(nav-icon-hv, fill);
+        }
+
+        .nav-training-dropdown {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            @include color(nav-training-dd);
+        }
+
+        .dd-training-triangle {
+            display: block;
+        }
+    }
+}
+
+// .nav-software-box {
+//     position: relative;
+
+//     .nav-software-dropdown {
+//         display: none; 
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         width: 100vw;
+//         z-index: 2;
+//         @include color(nav-software-dd);
+//     }
+
+//     &:hover .nav-software-dropdown {
+//         display: block;
+//     }
+// }
+
+// &:hover {
+    //     .nav-software-icon {
+    //         @include color(nav-icon-hv, color);
+    //     }
+
+    //     .nav-it-icon {
+    //         @include color(nav-icon-hv, fill);
+    //     }
+
+    //     .nav-digital-icon {
+    //         @include color(nav-icon-hv, fill);
+    //     }
+
+    //     .nav-telecoms-icon {
+    //         @include color(nav-icon-hv, color);
+    //     }
+
+    //     .nav-web-icon {
+    //         @include color(nav-icon-hv, color);
+    //     }
+
+    //     .nav-security-icon {
+    //         @include color(nav-icon-hv, fill);
+    //     }
+        
+    //     .nav-training-icon {
+    //         @include color(nav-icon-hv, fill);
+    //     }
+    // }
 
 //////// Nav Icons ////////
 
@@ -89,6 +351,10 @@
     font-size: 1.25rem;
     height: 28px;
     width: 28px;
+}
+
+.fa-laptop {
+    font-size:1.6rem;
 }
 
 .nav-software-icon {
@@ -121,87 +387,88 @@
 
 //////// Hover colors ////////
 
-.nav-software {
+// .nav-software-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(software);
-    }
-}
+//     &:hover {
+//         @include color(software);
+//     }
+// }
 
-.nav-it {
+// .nav-it-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(it);
-    }
-}
+//     &:hover {
+//         @include color(it);
+//     }
+// }
 
-.nav-digital {
+// .nav-digital-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(digital);
-    }
-}
+//     &:hover {
+//         @include color(digital);
+//     }
+// }
 
-.nav-telecoms {
+// .nav-telecoms-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(telecoms);
-    }
-}
+//     &:hover {
+//         @include color(telecoms);
+//     }
+// }
 
-.nav-web {
+// .nav-web-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(web);
-    }
-}
+//     &:hover {
+//         @include color(web);
+//     }
+// }
 
-.nav-security {
+// .nav-security-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(security);
-    }
-}
+//     &:hover {
+//         @include color(security);
+//     }
+// }
 
-.nav-training {
+// .nav-training-box {
+//     height: 100%;
+//     width: 100%;
 
-    &:hover {
-        @include color(training);
-    }
-}
+//     &:hover {
+//         @include color(training);
+//     }
+// }
 
 //////// FlexBox ////////
 
-.nav-bar {
-
-    .container {
-        display: flex;
-    }
-}
-
 .nav-list {
     display: flex;
-    flex-direction: row;
-    flex: 1;
-
-    .nav-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
-.nav-dropdown {
+.nav-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.nav-dd-row {
+.dd-row { 
     display: flex;
     flex-direction: row;
 }
 
-.nav-dd-box {
+.dd-column { 
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
+    flex: 0 0 35%;
 }
