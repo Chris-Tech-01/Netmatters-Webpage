@@ -10,8 +10,16 @@ $breakpoints: ( // Creates variables to be used in my map.
 );
 
 $colour-map: ( // Creates variables to be used in my map.
-    hdr-search-bar   : #555,
+    hdr-sb           : #555,
+    hdr-sb-2         : #FFF,
+    hdr-logo-2       : #FFF,
+    hdr-logo-2-bg    : #999AA2,
+    hdr-logo-2-bg-hvr: #7E808A,
+    hdr-border-color : #5BC0DE,
     hdr-btn-lines    : #FFF,
+    hdr-btn-hvr      : #22242e,
+    hdr-mouse-bg     : #4183D7,
+    hdr-mouse-hvr    : #2665B5,
     nav-txt          : #FFF,
     nav-icon-hv      : #FFF,
     nav-software-dd  : #526781,

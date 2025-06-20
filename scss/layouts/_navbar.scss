@@ -123,6 +123,10 @@
             text-decoration: underline;
         }
     }
+
+    .container {
+        padding: 0;
+    }
 }
 
 .nav-software, .nav-it, .nav-digital, .nav-telecoms, .nav-web, .nav-security, .nav-training {
@@ -297,54 +301,6 @@
     }
 }
 
-// .nav-software-box {
-//     position: relative;
-
-//     .nav-software-dropdown {
-//         display: none; 
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         width: 100vw;
-//         z-index: 2;
-//         @include color(nav-software-dd);
-//     }
-
-//     &:hover .nav-software-dropdown {
-//         display: block;
-//     }
-// }
-
-// &:hover {
-    //     .nav-software-icon {
-    //         @include color(nav-icon-hv, color);
-    //     }
-
-    //     .nav-it-icon {
-    //         @include color(nav-icon-hv, fill);
-    //     }
-
-    //     .nav-digital-icon {
-    //         @include color(nav-icon-hv, fill);
-    //     }
-
-    //     .nav-telecoms-icon {
-    //         @include color(nav-icon-hv, color);
-    //     }
-
-    //     .nav-web-icon {
-    //         @include color(nav-icon-hv, color);
-    //     }
-
-    //     .nav-security-icon {
-    //         @include color(nav-icon-hv, fill);
-    //     }
-        
-    //     .nav-training-icon {
-    //         @include color(nav-icon-hv, fill);
-    //     }
-    // }
-
 //////// Nav Icons ////////
 
 .nav-icon {
@@ -384,71 +340,6 @@
 .nav-training-icon {
     @include color(training, fill);
 }
-
-//////// Hover colors ////////
-
-// .nav-software-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(software);
-//     }
-// }
-
-// .nav-it-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(it);
-//     }
-// }
-
-// .nav-digital-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(digital);
-//     }
-// }
-
-// .nav-telecoms-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(telecoms);
-//     }
-// }
-
-// .nav-web-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(web);
-//     }
-// }
-
-// .nav-security-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(security);
-//     }
-// }
-
-// .nav-training-box {
-//     height: 100%;
-//     width: 100%;
-
-//     &:hover {
-//         @include color(training);
-//     }
-// }
 
 //////// FlexBox ////////
 
