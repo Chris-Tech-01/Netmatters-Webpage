@@ -95,10 +95,13 @@
 //////// Img and Logo styles ////////
 
 .header-btn {
+    display: block;
+    height: 56px;
+    width: 63px;
     margin-left: 20px;
     border-radius: 4px;
+    padding: 5px 14px;
     border: 1px solid #333645;
-    @include color(hdr-btn-lines, fill);
     @include color(background-1);
     cursor: pointer;
 
@@ -107,10 +110,12 @@
     }
 }
 
-.header-svg {
+.burger-line {
     display: block;
-    height: 50px;
-    width: 47px;
+    height: 4px;
+    width: 100%;
+    margin: 6px 0;
+    @include color(hdr-burger-line);
 }
 
 .search-icon-1 {

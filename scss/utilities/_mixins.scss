@@ -11,6 +11,7 @@ $breakpoints: ( // Creates variables to be used in my map.
 
 $colour-map: ( // Creates variables to be used in my map.
     hdr-sb           : #555,
+    hdr-burger-line  : #FFF,
     hdr-sb-2         : #FFF,
     hdr-logo-2       : #FFF,
     hdr-logo-2-bg    : #999AA2,
@@ -67,7 +68,7 @@ $colour-map: ( // Creates variables to be used in my map.
 
 //// mixins ////
 
-@mixin mq($size) { // I’m creating a mixin named queries, and it will take one input value. I’m calling that input $size.
+@mixin mq($size) { // I’m creating a mixin named mq, and it will take one input value. I’m calling that input $size.
     @if map.has-key($breakpoints, $size) { // Checks if the provided $size exists as a key in the $breakpoints map.
         $breakpoint-value: map.get($breakpoints, $size); // If the key exists, retrieve the pixel value associated with that key.
         @media (min-width: $breakpoint-value) { // Start a media query using the retrieved breakpoint value.
@@ -78,7 +79,7 @@ $colour-map: ( // Creates variables to be used in my map.
     }
 }
 
-@mixin color($colour, $property: background-color) { // I’m creating a mixin named colour which takes two input values. $colour will look up the colour in my mpas, $property sets which CSS property I want to apply the colour to.
+@mixin color($colour, $property: background-color) { // I’m creating a mixin named colour which takes two input values. $colour will look up the colour in my maps, $property sets which CSS property I want to apply the colour to.
   $colour-value: map.get($colour-map, $colour); // Tries to find the colour value that matches the $colour in the $colour-map.
                                                 // If a match is found, it returns the hex value.
   @if $colour-value { // If a colour was found in the map
