@@ -6,11 +6,23 @@
 
 .slider-section {
     padding: 50px 0;
-    overflow-x: hidden;
+
+    h4 {
+        font-size: 1.125rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.8125rem;
+        line-height: 1.375rem;
+    }
+
+    strong {
+        font-weight: bold;
+    }
 }
 
 .slider-logo {
-    position: relative;
     padding: 0 30px;
     filter: grayscale(100%);
 
@@ -31,6 +43,177 @@
     width: 100%;
 }
 
+.popup {
+    display: none;
+    position: absolute;
+    width: 280px;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin: 0 auto 100px;
+    text-align: center;
+    z-index: 2;
+    @include color(logo-txt-color, color);
+    @include color(background-1);
+}
+
+.logo-triangle {
+    display: none;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    bottom: 67px;
+    border-style: solid;
+    border-width: 34px 35px 0 35px;
+    z-index: 3;
+    border-color: #333645 transparent transparent transparent;
+}
+
+.beat {
+    position: relative;
+    
+    &:hover {
+
+        .beat-popup {
+            display: block;
+        }
+
+        .beat-triangle {
+            display: block;
+            left: 24px;
+        }
+    }
+}
+
+.survey {
+    position: relative;
+    
+    &:hover {
+
+        .survey-popup {
+            display: block;
+        }
+
+        .survey-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.guides {
+    position: relative;
+    
+    &:hover {
+
+        .guides-popup {
+            display: block;
+        }
+
+        .guides-triangle {
+            display: block;
+            left: 20%;
+        }
+    }
+}
+
+.sweetzy {
+    position: relative;
+    
+    &:hover {
+
+        .sweetzy-popup {
+            display: block;
+        }
+
+        .sweetzy-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.howes {
+    position: relative;
+    
+    &:hover {
+
+        .howes-popup {
+            display: block;
+        }
+
+        .howes-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.girls {
+    position: relative;
+    
+    &:hover {
+
+        .girls-popup {
+            display: block;
+        }
+
+        .girls-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.ashcroft {
+    position: relative;
+    
+    &:hover {
+
+        .ashcroft-popup {
+            display: block;
+        }
+
+        .ashcroft-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.one {
+    position: relative;
+    
+    &:hover {
+
+        .one-popup {
+            display: block;
+        }
+
+        .one-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
+.searles {
+    position: relative;
+    
+    &:hover {
+
+        .searles-popup {
+            display: block;
+        }
+
+        .searles-triangle {
+            display: block;
+            left: 40%;
+        }
+    }
+}
+
 //////// Flexbox Layout ////////
 
 .slider-section {
@@ -40,6 +223,19 @@
 }
 
 .slider-logo {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.beat, 
+.survey, 
+.guides, 
+.sweetzy, 
+.howes, 
+.girls,
+.ashcroft,
+.one,
+.searles {
     display: flex;
     flex: 0 0 auto;
 }
