@@ -6,6 +6,7 @@
 
 .slider-section {
     padding: 50px 0;
+    overflow-x: hidden;
 
     h4 {
         font-size: 1.125rem;
@@ -44,17 +45,22 @@
 }
 
 .popup {
-    display: none;
-    position: absolute;
-    width: 280px;
-    bottom: 0;
-    left: 0;
+    max-width: 280px;
     padding: 20px;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     text-align: center;
-    z-index: 2;
+    z-index: 9999;
     @include color(logo-txt-color, color);
     @include color(background-1);
+}
+
+.popup-box {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: -200px;
+    right: -200px;
+    z-index: 2;
 }
 
 .logo-triangle {
@@ -81,7 +87,6 @@
 
         .beat-triangle {
             display: block;
-            left: 24px;
         }
     }
 }
@@ -97,7 +102,6 @@
 
         .survey-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -113,7 +117,6 @@
 
         .guides-triangle {
             display: block;
-            left: 20%;
         }
     }
 }
@@ -129,7 +132,6 @@
 
         .sweetzy-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -145,7 +147,6 @@
 
         .howes-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -161,7 +162,6 @@
 
         .girls-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -177,7 +177,6 @@
 
         .ashcroft-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -193,7 +192,6 @@
 
         .one-triangle {
             display: block;
-            left: 40%;
         }
     }
 }
@@ -209,7 +207,21 @@
 
         .searles-triangle {
             display: block;
-            left: 40%;
+        }
+    }
+}
+
+.busseys {
+    position: relative;
+    
+    &:hover {
+
+        .busseys-popup {
+            display: block;
+        }
+
+        .busseys-triangle {
+            display: block;
         }
     }
 }
@@ -235,7 +247,8 @@
 .girls,
 .ashcroft,
 .one,
-.searles {
+.searles,
+.busseys {
     display: flex;
     flex: 0 0 auto;
 }

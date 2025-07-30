@@ -86,7 +86,6 @@ textarea:not([rows]) {
 body {
   letter-spacing: 0.4px;
   margin: 0;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -1445,6 +1444,7 @@ a.strong-paragraph:hover {
 
 .section-ln {
   padding: 0 0 50px 0;
+  z-index: 1;
 }
 
 .ln-container {
@@ -1715,6 +1715,7 @@ a.strong-paragraph:hover {
 
 .slider-section {
   padding: 50px 0;
+  overflow-x: hidden;
 }
 .slider-section h4 {
   font-size: 1.125rem;
@@ -1749,17 +1750,22 @@ a.strong-paragraph:hover {
 }
 
 .popup {
-  display: none;
-  position: absolute;
-  width: 280px;
-  bottom: 0;
-  left: 0;
+  max-width: 280px;
   padding: 20px;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   text-align: center;
-  z-index: 2;
+  z-index: 9999;
   color: #fff;
   background-color: #333645;
+}
+
+.popup-box {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: -200px;
+  right: -200px;
+  z-index: 2;
 }
 
 .logo-triangle {
@@ -1783,7 +1789,6 @@ a.strong-paragraph:hover {
 }
 .beat:hover .beat-triangle {
   display: block;
-  left: 24px;
 }
 
 .survey {
@@ -1794,7 +1799,6 @@ a.strong-paragraph:hover {
 }
 .survey:hover .survey-triangle {
   display: block;
-  left: 40%;
 }
 
 .guides {
@@ -1805,7 +1809,6 @@ a.strong-paragraph:hover {
 }
 .guides:hover .guides-triangle {
   display: block;
-  left: 20%;
 }
 
 .sweetzy {
@@ -1816,7 +1819,6 @@ a.strong-paragraph:hover {
 }
 .sweetzy:hover .sweetzy-triangle {
   display: block;
-  left: 40%;
 }
 
 .howes {
@@ -1827,7 +1829,6 @@ a.strong-paragraph:hover {
 }
 .howes:hover .howes-triangle {
   display: block;
-  left: 40%;
 }
 
 .girls {
@@ -1838,7 +1839,6 @@ a.strong-paragraph:hover {
 }
 .girls:hover .girls-triangle {
   display: block;
-  left: 40%;
 }
 
 .ashcroft {
@@ -1849,7 +1849,6 @@ a.strong-paragraph:hover {
 }
 .ashcroft:hover .ashcroft-triangle {
   display: block;
-  left: 40%;
 }
 
 .one {
@@ -1860,7 +1859,6 @@ a.strong-paragraph:hover {
 }
 .one:hover .one-triangle {
   display: block;
-  left: 40%;
 }
 
 .searles {
@@ -1871,7 +1869,16 @@ a.strong-paragraph:hover {
 }
 .searles:hover .searles-triangle {
   display: block;
-  left: 40%;
+}
+
+.busseys {
+  position: relative;
+}
+.busseys:hover .busseys-popup {
+  display: block;
+}
+.busseys:hover .busseys-triangle {
+  display: block;
 }
 
 .slider-section {
@@ -1893,7 +1900,8 @@ a.strong-paragraph:hover {
 .girls,
 .ashcroft,
 .one,
-.searles {
+.searles,
+.busseys {
   display: flex;
   flex: 0 0 auto;
 }
