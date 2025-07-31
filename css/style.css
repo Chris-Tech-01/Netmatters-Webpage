@@ -86,6 +86,7 @@ textarea:not([rows]) {
 body {
   letter-spacing: 0.4px;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -1714,8 +1715,8 @@ a.strong-paragraph:hover {
 }
 
 .slider-section {
+  position: relative;
   padding: 50px 0;
-  overflow-x: hidden;
 }
 .slider-section h4 {
   font-size: 1.125rem;
@@ -1754,7 +1755,6 @@ a.strong-paragraph:hover {
   padding: 20px;
   margin: 0 auto 50px;
   text-align: center;
-  z-index: 9999;
   color: #fff;
   background-color: #333645;
 }
@@ -1765,7 +1765,6 @@ a.strong-paragraph:hover {
   bottom: 100%;
   left: -200px;
   right: -200px;
-  z-index: 2;
 }
 
 .logo-triangle {
@@ -1777,7 +1776,6 @@ a.strong-paragraph:hover {
   bottom: 67px;
   border-style: solid;
   border-width: 34px 35px 0 35px;
-  z-index: 3;
   border-color: #333645 transparent transparent transparent;
 }
 

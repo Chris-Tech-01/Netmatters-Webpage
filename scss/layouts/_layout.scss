@@ -36,7 +36,8 @@
 
 body { 
     letter-spacing: .4px;
-    margin: 0; // Sets the top, bottom, left, and right margins of an element to 0.
+    margin: 0;
+    overflow-x: hidden;
 }
 
 h1 {

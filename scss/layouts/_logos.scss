@@ -5,8 +5,8 @@
 //////// Layout ////////
 
 .slider-section {
+    position: relative;
     padding: 50px 0;
-    overflow-x: hidden;
 
     h4 {
         font-size: 1.125rem;
@@ -49,7 +49,6 @@
     padding: 20px;
     margin: 0 auto 50px;
     text-align: center;
-    z-index: 9999;
     @include color(logo-txt-color, color);
     @include color(background-1);
 }
@@ -60,7 +59,6 @@
     bottom: 100%;
     left: -200px;
     right: -200px;
-    z-index: 2;
 }
 
 .logo-triangle {
@@ -72,7 +70,6 @@
     bottom: 67px;
     border-style: solid;
     border-width: 34px 35px 0 35px;
-    z-index: 3;
     border-color: #333645 transparent transparent transparent;
 }
 
@@ -229,9 +226,9 @@
 //////// Flexbox Layout ////////
 
 .slider-section {
-  display: flex;
-  gap: 1rem; 
-  align-items: center;
+    display: flex;
+    gap: 1rem; 
+    align-items: center;
 }
 
 .slider-logo {
