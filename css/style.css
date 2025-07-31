@@ -86,7 +86,6 @@ textarea:not([rows]) {
 body {
   letter-spacing: 0.4px;
   margin: 0;
-  overflow-x: hidden;
 }
 
 h1 {
@@ -1296,20 +1295,6 @@ a.strong-paragraph:hover {
   font-size: 1.1rem;
 }
 
-.welcome-to-btn {
-  display: inline-flex;
-  font-size: 20px;
-  padding: 10px 30px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  align-items: center;
-}
-.welcome-to-btn i {
-  margin-left: 12px;
-  margin-right: -4px;
-}
-
 .welcome-to-buttons a:first-child {
   width: 270.17px;
   height: 57px;
@@ -1715,8 +1700,8 @@ a.strong-paragraph:hover {
 }
 
 .slider-section {
-  position: relative;
   padding: 50px 0;
+  overflow-x: clip;
 }
 .slider-section h4 {
   font-size: 1.125rem;
@@ -1740,7 +1725,7 @@ a.strong-paragraph:hover {
 
 .slider-1 {
   display: block;
-  max-height: 50px;
+  height: 50px;
   width: 100%;
 }
 
@@ -1771,9 +1756,9 @@ a.strong-paragraph:hover {
   display: none;
   position: absolute;
   content: "";
-  width: 0px;
-  height: 0px;
-  bottom: 67px;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   border-style: solid;
   border-width: 34px 35px 0 35px;
   border-color: #333645 transparent transparent transparent;
@@ -1877,6 +1862,22 @@ a.strong-paragraph:hover {
 }
 .busseys:hover .busseys-triangle {
   display: block;
+}
+
+.logo-btn {
+  color: white;
+  display: flex;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo-btn i {
+  margin-left: 12px;
+  margin-right: -4px;
 }
 
 .slider-section {

@@ -73,21 +73,6 @@ a.strong-paragraph {
 
 //////// Buttons ////////
 
-.welcome-to-btn {
-    display: inline-flex; // Makes it behave like an inline element but still a flex container.
-    font-size: 20px; // Sets the size of the font.
-    padding: 10px 30px; // Creates extra space within an element.
-    border-radius: 6px; // Rounds the corners of an element's outer border edge.
-    border: 1px solid transparent; // Allow me to specify the style, width, and color of an element's border.
-    text-transform: uppercase; // Transforms text to uppercase.
-    align-items: center;
-
-    i {
-        margin-left: 12px;
-        margin-right: -4px;
-    }
-}
-
 .welcome-to-buttons a:first-child {
     width: 270.17px; // Sets an element's width.
     height: 57px; // Sets an element's height.
