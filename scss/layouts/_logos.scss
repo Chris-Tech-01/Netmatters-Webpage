@@ -73,6 +73,8 @@
     border-color: #333645 transparent transparent transparent;
 }
 
+//////// Hover Effects ////////
+
 .beat {
     position: relative;
     
@@ -228,19 +230,43 @@
 .logo-btn {
     color: white;
     display: flex;
-    font-size: 20px; 
-    padding: 5px 15px; 
-    border-radius: 6px; 
+    height: 47px;
+    font-size: 16px; 
+    padding: 5px 15px;
+    margin-top: 11px;
+    border-radius: 3px; 
     border: 1px solid transparent;
     align-items: center;
     text-transform: uppercase;
     text-decoration: none;
-    
-
 
     i {
         margin-left: 12px;
         margin-right: -4px;
+    }
+}
+
+.logo-btn-digital {  
+    @include color(logo-btn-digital); 
+
+    &:hover {
+        @include color(logo-btn-digital-hover); 
+    }
+}
+
+.logo-btn-it {  
+    @include color(logo-btn-it); 
+
+    &:hover {
+        @include color(logo-btn-it-hover); 
+    }
+}
+
+.logo-btn-web {  
+    @include color(logo-btn-web); 
+
+    &:hover {
+        @include color(logo-btn-web-hover); 
     }
 }
 

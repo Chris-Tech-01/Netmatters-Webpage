@@ -1295,6 +1295,20 @@ a.strong-paragraph:hover {
   font-size: 1.1rem;
 }
 
+.welcome-to-btn {
+  display: inline-flex;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  align-items: center;
+}
+.welcome-to-btn i {
+  margin-left: 12px;
+  margin-right: -4px;
+}
+
 .welcome-to-buttons a:first-child {
   width: 270.17px;
   height: 57px;
@@ -1867,9 +1881,11 @@ a.strong-paragraph:hover {
 .logo-btn {
   color: white;
   display: flex;
-  font-size: 20px;
+  height: 47px;
+  font-size: 16px;
   padding: 5px 15px;
-  border-radius: 6px;
+  margin-top: 11px;
+  border-radius: 3px;
   border: 1px solid transparent;
   align-items: center;
   text-transform: uppercase;
@@ -1878,6 +1894,27 @@ a.strong-paragraph:hover {
 .logo-btn i {
   margin-left: 12px;
   margin-right: -4px;
+}
+
+.logo-btn-digital {
+  background-color: #00B67B;
+}
+.logo-btn-digital:hover {
+  background-color: #009B69;
+}
+
+.logo-btn-it {
+  background-color: #4387F6;
+}
+.logo-btn-it:hover {
+  background-color: #166AF4;
+}
+
+.logo-btn-web {
+  background-color: #926fb1;
+}
+.logo-btn-web:hover {
+  background-color: #7e57a0;
 }
 
 .slider-section {
