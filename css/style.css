@@ -767,7 +767,7 @@ h3 {
   height: 100%;
   content: "";
   position: absolute;
-  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(270deg, transparent 25%, #000);
   z-index: 1;
 }
 
