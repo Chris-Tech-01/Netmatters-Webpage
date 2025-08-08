@@ -48,9 +48,13 @@
     height: 100%;
     content: "";
     position: absolute;
-    background: linear-gradient(270deg, transparent 25%, #000);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
+
+    @include mq(l) {
+        background: linear-gradient(270deg, transparent 25%, #000); 
     }
+}
 
 .banner-text {
     text-align: center;

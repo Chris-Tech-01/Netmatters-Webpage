@@ -767,8 +767,13 @@ h3 {
   height: 100%;
   content: "";
   position: absolute;
-  background: linear-gradient(270deg, transparent 25%, #000);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
+}
+@media (min-width: 992px) {
+  .banner::before {
+    background: linear-gradient(270deg, transparent 25%, #000);
+  }
 }
 
 .banner-text {
