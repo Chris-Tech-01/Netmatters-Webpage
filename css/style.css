@@ -535,7 +535,13 @@ h3 {
   padding: 0;
 }
 
-.nav-software, .nav-it, .nav-digital, .nav-telecoms, .nav-web, .nav-security, .nav-training {
+.nav-software,
+.nav-it,
+.nav-digital,
+.nav-telecoms,
+.nav-web,
+.nav-security,
+.nav-training {
   width: 100%;
 }
 
@@ -671,11 +677,8 @@ h3 {
   width: 28px;
 }
 
-.fa-laptop {
-  font-size: 1.6rem;
-}
-
 .nav-software-icon {
+  font-size: 1.6rem;
   color: #67809F;
 }
 
@@ -2238,6 +2241,231 @@ footer a:hover {
 
 .license-4 {
   display: flex;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 275px;
+  height: 100%;
+  text-transform: uppercase;
+  overflow: auto;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+  background-color: #333645;
+}
+#sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+#sidebar li {
+  list-style: none;
+}
+#sidebar a {
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  #sidebar {
+    width: 350px;
+  }
+}
+
+.sidebar-animation-wrapper {
+  position: relative;
+  transition: transform 0.4s ease;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.darken-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.darken-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sidebar-menu {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar-menu:hover .sidebar-menu-title {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.sidebar-menu-hide-small {
+  display: none;
+}
+@media (min-width: 992px) {
+  .sidebar-menu-hide-small {
+    display: block;
+  }
+}
+
+.sidebar-menu-title {
+  display: block;
+  padding: 20px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  color: #fff;
+}
+
+.sidebar-support {
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.sidebar-support:hover {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+@media (min-width: 992px) {
+  .sidebar-support {
+    display: none;
+  }
+}
+
+.sidebar-sub-menu,
+.sidebar-small-menu {
+  font-size: 0.875rem;
+  line-height: 1.42;
+}
+.sidebar-sub-menu li,
+.sidebar-small-menu li {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.sidebar-sub-menu a,
+.sidebar-small-menu a {
+  padding: 15px 20px;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+}
+.sidebar-sub-menu i,
+.sidebar-small-menu i {
+  font-size: 0.45rem;
+  padding-right: 15px;
+}
+
+.sidebar-small {
+  padding: 21px;
+}
+@media (min-width: 992px) {
+  .sidebar-small {
+    display: none;
+  }
+}
+
+.sidebar-small-menu {
+  font-size: 1rem !important;
+  margin-top: 20px !important;
+  border-radius: 3px;
+  text-align: center;
+  overflow: hidden;
+}
+.sidebar-small-menu a {
+  padding: 10px !important;
+}
+
+.sidebar-small-content {
+  padding: 20px 0 0;
+}
+.sidebar-small-content:hover .sidebar-icon-box {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.sidebar-contact-us {
+  display: block;
+  font-size: 1.125rem;
+  padding: 19px 0 18px;
+  border-radius: 3px;
+  text-align: center;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+}
+.sidebar-contact-us:hover {
+  background-color: hsla(0, 0%, 100%, 0.05);
+}
+
+.sidebar-icon-title {
+  font-size: 1.125rem;
+}
+
+.sidebar-icon-box {
+  padding: 19px 0 18px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+}
+.sidebar-icon-box small {
+  font-size: 0.625rem;
+  padding-top: 10px;
+}
+
+.sidebar-icon {
+  font-size: 1.25rem;
+  height: 28px;
+  width: 28px;
+}
+
+.sidebar-software-icon {
+  font-size: 1.6rem;
+  color: #67809F;
+}
+
+.sidebar-it-icon {
+  fill: #4183D7;
+}
+
+.sidebar-digital-icon {
+  fill: #2ECC71;
+}
+
+.sidebar-telecoms-icon {
+  color: #D64541;
+}
+
+.sidebar-web-icon {
+  color: #926FB1;
+}
+
+.sidebar-security-icon {
+  fill: #F62459;
+}
+
+.sidebar-training-icon {
+  fill: #CE4125;
+}
+
+.sidebar-sub-menu a {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-small-menu a {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

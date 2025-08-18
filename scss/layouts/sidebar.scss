@@ -1,0 +1,252 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout ////////
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 275px;
+    height: 100%;
+    text-transform: uppercase;
+    overflow: auto;
+    // transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1;
+    border-top: 1px solid rgba(0, 0, 0, .25);
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    @include color(sidebar-text-color, color);
+    @include color(background-1);
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    @include mq(l) {
+        width: 350px;
+    }
+}
+
+.sidebar-animation-wrapper {
+    position: relative;
+    transition: transform 0.4s ease;
+    z-index: 2;
+    @include color(body-background);
+}
+
+.darken-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.darken-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sidebar-menu {
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        
+        .sidebar-menu-title {
+            background-color: hsla(0, 0%, 100%, .05);
+        }
+    }
+}
+
+.sidebar-menu-hide-small {
+    display: none;
+
+    @include mq(l) {
+        display: block;
+    }
+}
+
+.sidebar-menu-title {
+    display: block;
+    padding: 20px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1;
+    @include color(sidebar-text-color, color);
+}
+
+.sidebar-support {
+    border-top: 1px solid hsla(0, 0%, 100%, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+
+    &:hover {
+        background-color: hsla(0, 0%, 100%, .05);
+    }
+
+    @include mq(l) {
+        display: none;
+    }
+}
+
+.sidebar-sub-menu,
+.sidebar-small-menu {
+    font-size: 0.875rem;
+    line-height: 1.42;
+    
+    li {
+        border-top: 1px solid rgba(0, 0, 0, .45);
+        background-color: rgba(0, 0, 0, .25);
+    }
+
+    a {
+        padding: 15px 20px;
+        border-top: 1px solid hsla(0, 0%, 100%, .05);
+    }
+
+    i {
+        font-size: .45rem;
+        padding-right: 15px;
+    }
+}
+
+.sidebar-small {
+    padding: 21px;
+
+    @include mq(l) {
+        display: none;
+    }
+}
+
+.sidebar-small-menu {
+    font-size: 1rem !important;
+    margin-top: 20px !important;
+    border-radius: 3px;
+    text-align: center;
+    overflow: hidden;
+
+    a {
+        padding: 10px !important;
+    }
+}
+
+.sidebar-small-content {
+    padding: 20px 0 0;
+
+    &:hover {
+
+        .sidebar-icon-box {
+            background-color: hsla(0, 0%, 100%, .05);
+        }
+    }
+}
+
+.sidebar-contact-us {
+    display: block;
+    font-size: 1.125rem;
+    padding: 19px 0 18px;
+    border-radius: 3px;
+    text-align: center;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    @include color(sidebar-text-color, color);
+
+    &:hover {
+        background-color: hsla(0, 0%, 100%, .05);
+    }
+}
+
+.sidebar-icon-title {
+    font-size: 1.125rem;
+}
+
+//////// Sidebar Icons ////////
+
+.sidebar-icon-box {
+    padding: 19px 0 18px;
+    outline: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    @include color(sidebar-text-color, color);
+
+    small {
+        font-size: .625rem;
+        padding-top: 10px;
+    }
+}
+
+.sidebar-icon {
+    font-size: 1.25rem;
+    height: 28px;
+    width: 28px;
+}
+
+.sidebar-software-icon {
+    font-size:1.6rem;
+    @include color(software, color);
+}
+
+.sidebar-it-icon {
+    @include color(it, fill);
+}
+
+.sidebar-digital-icon {
+    @include color(digital, fill);
+}
+
+.sidebar-telecoms-icon {
+    @include color(telecoms, color);
+}
+
+.sidebar-web-icon {
+    @include color(web, color);
+}
+
+.sidebar-security-icon {
+    @include color(security, fill);
+}
+
+.sidebar-training-icon {
+    @include color(training, fill);
+}
+
+//////// FlexBox ////////
+
+.sidebar-sub-menu {
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sidebar-small-menu {
+
+    a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.sidebar-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -129,7 +129,13 @@
     }
 }
 
-.nav-software, .nav-it, .nav-digital, .nav-telecoms, .nav-web, .nav-security, .nav-training {
+.nav-software, 
+.nav-it, 
+.nav-digital, 
+.nav-telecoms, 
+.nav-web, 
+.nav-security, 
+.nav-training {
     width: 100%;
 }
 
@@ -309,11 +315,8 @@
     width: 28px;
 }
 
-.fa-laptop {
-    font-size:1.6rem;
-}
-
 .nav-software-icon {
+    font-size:1.6rem;
     @include color(software, color);
 }
 
