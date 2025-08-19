@@ -130,6 +130,16 @@ h3 {
 
 .inner {
   padding: 20px 0;
+  background-color: #fff;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 
 .header-row i {
@@ -234,6 +244,22 @@ h3 {
   width: 100%;
   margin: 6px 0;
   background-color: #FFF;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
+}
+
+.header-btn.open .burger-line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  transition-delay: 0.2s;
+}
+
+.header-btn.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.header-btn.open .burger-line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  transition-delay: 0.2s;
 }
 
 .search-icon-1 {
@@ -2292,7 +2318,8 @@ footer a:hover {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 1;
+  z-index: 4;
+  cursor: pointer;
 }
 
 .darken-overlay.active {

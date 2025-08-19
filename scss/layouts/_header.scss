@@ -6,6 +6,16 @@
 
 .inner {
     padding: 20px 0;
+    background-color: #fff;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    transition: transform 0.3s ease;
 }
 
 .header-row {
@@ -92,7 +102,7 @@
     }
 }
 
-//////// Img and Logo styles ////////
+//////// Button ////////
 
 .header-btn {
     display: block;
@@ -116,7 +126,27 @@
     width: 100%;
     margin: 6px 0;
     @include color(hdr-burger-line);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform-origin: center;
 }
+
+//////// Button Animation ////////
+
+.header-btn.open .burger-line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+    transition-delay: 0.2s;
+}
+
+.header-btn.open .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header-btn.open .burger-line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+    transition-delay: 0.2s;
+}
+
+//////// Img and Logo styles ////////
 
 .search-icon-1 {
     padding: 0 10px;

@@ -6,17 +6,26 @@ export function sidebarToggle() {
 
     if (!sidebar || !wrapper || !toggleBtn || !overlay) return;
 
-    const toggleSidebar = () => {
+    function toggleSidebar () {
+        
         const isOpen = overlay.classList.toggle('active');
-        wrapper.style.transform = isOpen ? `translateX(-${sidebar.offsetWidth}px)` : 'translateX(0)';
+        
+        if (isOpen) {
+            wrapper.style.transform = `translateX(-${sidebar.offsetWidth}px)`;
+            toggleBtn.classList.add('open');
+        } else {
+            wrapper.style.transform = `translateX(0)`;
+            toggleBtn.classList.remove('open');
+        }
     };
 
-    toggleBtn.addEventListener('click', toggleSidebar);
-    overlay.addEventListener('click', toggleSidebar);
-
-    window.addEventListener('resize', () => {
+    function handleResize() {
         if (overlay.classList.contains('active')) {
             wrapper.style.transform = `translateX(-${sidebar.offsetWidth}px)`;
         }
-    });
+    }
+
+    toggleBtn.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', toggleSidebar);
+    window.addEventListener('resize', handleResize);
 }
