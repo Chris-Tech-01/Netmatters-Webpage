@@ -54,8 +54,10 @@ $colour-map: ( // Creates variables to be used in my map.
   logo-btn-digital-hover    : #009B69,
   logo-btn-it               : #4387F6,
   logo-btn-it-hover         : #166AF4,
-  logo-btn-web              : #926fb1,
-  logo-btn-web-hover        : #7e57a0,
+  logo-btn-web              : #926FB1,
+  logo-btn-web-hover        : #7E57A0,
+  logo-btn-software-2       : #F7B322,
+  logo-btn-software-2-hover : #E8A008,
   footer-txt-color          : #FFF,
   main-txt-color            : #333645,
   background-1              : #333645,
@@ -84,7 +86,7 @@ $colour-map: ( // Creates variables to be used in my map.
         @content; // The @content directive allows me to inject CSS where this mixin is used.
         }
     } @else {
-        @warn "No value found for breakpoint '#{$size}'."; // Else output of warning.
+        @warn "No value found for breakpoint '#{$size}'."; // Else output a warning.
     }
 }
 
@@ -94,6 +96,6 @@ $colour-map: ( // Creates variables to be used in my map.
   @if $colour-value { // If a colour was found in the map
     #{$property}: $colour-value; // Output a CSS property using the colour.
   } @else {
-    @warn "Category "#{$colour}" not found in $category-colors map."; // Else output of warning.
+    @warn "Category "#{$colour}" not found in $category-colors map."; // Else output a warning.
   }
 }

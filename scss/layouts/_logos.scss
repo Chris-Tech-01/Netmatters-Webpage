@@ -225,6 +225,51 @@
     }
 }
 
+.crane {
+    position: relative;
+    
+    &:hover {
+
+        .crane-popup {
+            display: block;
+        }
+
+        .crane-triangle {
+            display: block;
+        }
+    }
+}
+
+.black-swan {
+    position: relative;
+    
+    &:hover {
+
+        .black-swan-popup {
+            display: block;
+        }
+
+        .black-swan-triangle {
+            display: block;
+        }
+    }
+}
+
+.xupes {
+    position: relative;
+    
+    &:hover {
+
+        .xupes-popup {
+            display: block;
+        }
+
+        .xupes-triangle {
+            display: block;
+        }
+    }
+}
+
 //////// Buttons ////////
 
 .logo-btn {
@@ -270,12 +315,26 @@
     }
 }
 
+.logo-btn-software-2 {  
+    @include color(logo-btn-software-2); 
+
+    &:hover {
+        @include color(logo-btn-software-2-hover); 
+    }
+}
+
 //////// Flexbox Layout ////////
 
 .slider-section {
     display: flex;
     gap: 1rem; 
     align-items: center;
+}
+
+.slider-track {
+    display: flex;
+    gap: 1rem;
+    will-change: transform;
 }
 
 .slider-logo {
@@ -292,7 +351,10 @@
 .ashcroft,
 .one,
 .searles,
-.busseys {
+.busseys,
+.crane,
+.black-swan,
+.xupes {
     display: flex;
     flex: 0 0 auto;
 }

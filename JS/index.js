@@ -5,3 +5,7 @@ export {
 export {
     stickyHeader
 } from './stickyHeader.js';
+
+export {
+    logoSlider
+} from './logoSlider.js';

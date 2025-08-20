@@ -1912,6 +1912,36 @@ a.strong-paragraph:hover {
   display: block;
 }
 
+.crane {
+  position: relative;
+}
+.crane:hover .crane-popup {
+  display: block;
+}
+.crane:hover .crane-triangle {
+  display: block;
+}
+
+.black-swan {
+  position: relative;
+}
+.black-swan:hover .black-swan-popup {
+  display: block;
+}
+.black-swan:hover .black-swan-triangle {
+  display: block;
+}
+
+.xupes {
+  position: relative;
+}
+.xupes:hover .xupes-popup {
+  display: block;
+}
+.xupes:hover .xupes-triangle {
+  display: block;
+}
+
 .logo-btn {
   color: white;
   display: flex;
@@ -1945,16 +1975,29 @@ a.strong-paragraph:hover {
 }
 
 .logo-btn-web {
-  background-color: #926fb1;
+  background-color: #926FB1;
 }
 .logo-btn-web:hover {
-  background-color: #7e57a0;
+  background-color: #7E57A0;
+}
+
+.logo-btn-software-2 {
+  background-color: #F7B322;
+}
+.logo-btn-software-2:hover {
+  background-color: #E8A008;
 }
 
 .slider-section {
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+.slider-track {
+  display: flex;
+  gap: 1rem;
+  will-change: transform;
 }
 
 .slider-logo {
@@ -1971,7 +2014,10 @@ a.strong-paragraph:hover {
 .ashcroft,
 .one,
 .searles,
-.busseys {
+.busseys,
+.crane,
+.black-swan,
+.xupes {
   display: flex;
   flex: 0 0 auto;
 }
@@ -2298,6 +2344,12 @@ footer a:hover {
   #sidebar {
     width: 350px;
   }
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .sidebar-animation-wrapper {

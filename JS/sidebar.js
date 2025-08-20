@@ -19,7 +19,7 @@ export function sidebarToggle() {
         }
     };
 
-    function handleResize() {
+    function resize() {
         if (overlay.classList.contains('active')) {
             wrapper.style.transform = `translateX(-${sidebar.offsetWidth}px)`;
         }
@@ -27,5 +27,5 @@ export function sidebarToggle() {
 
     toggleBtn.addEventListener('click', toggleSidebar);
     overlay.addEventListener('click', toggleSidebar);
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', resize);
 }
