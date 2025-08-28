@@ -96,6 +96,6 @@ $colour-map: ( // Creates variables to be used in my map.
   @if $colour-value { // If a colour was found in the map
     #{$property}: $colour-value; // Output a CSS property using the colour.
   } @else {
-    @warn "Category "#{$colour}" not found in $category-colors map."; // Else output a warning.
+    @warn "Category "#{$colour}" not found in $colour-map."; // Else output a warning.
   }
 }
