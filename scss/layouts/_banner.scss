@@ -5,17 +5,66 @@
 //////// Layout ////////
 
 .banner {
-    background-image: url(../images/home-MSxH.png);
-    min-height: 550px;
+    height: 550px;
     width: 100%;
-    background-size: cover;
     position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
     z-index: 0;
 
     img {
-        display: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1; 
+
+    @include mq(l) {
+        background: linear-gradient(270deg, transparent 25%, #000); 
+    }
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+
+    @include mq(l) {
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: left;
     }
 
     h1 {
@@ -27,6 +76,7 @@
 
        @include mq(l) {
             font-size: 4rem;
+            line-height: 5rem;
        }
     }
 
@@ -34,6 +84,7 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
         font-weight: 600;
+        margin-top: 0;
         margin-bottom: .375rem;
         @include color(banner-txt, color);
 
@@ -43,43 +94,57 @@
     }
 }
 
-.banner::before {
-    width: 100%;
-    height: 100%;
-    content: "";
+.carousel-dots {
     position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 
-    @include mq(l) {
-        background: linear-gradient(270deg, transparent 25%, #000); 
-    }
-}
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
 
-.banner-text {
-    text-align: center;
-    position: relative;
-    z-index: 2;
+        &:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
 
-    @include mq(l) {
-        text-align: initial;
+        &.active {
+            background: #fff;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -6px;
+                left: -6px;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                box-sizing: border-box;
+            }
+        }
     }
 }
 
 //////// Buttons ////////
 
 .banner-btn {
-    display: inline-block; // Makes it behave like an inline element.
-    font-size: 20px; // Sets the size of the font.
-    padding: 15px 20px; // Creates extra space within an element.
-    border-radius: 3px; // Rounds the corners of an element's outer border edge.
+    display: inline-block; 
+    font-size: 20px; 
+    padding: 15px 20px; 
+    border-radius: 3px; 
     margin-top: 1.938rem;
     margin-bottom: 1.125rem;
-    text-transform: uppercase; // Transforms text to uppercase.
+    text-transform: uppercase; 
     align-items: center;
-    text-decoration: none; // Used to remove underline from a hyperlink. 
+    text-decoration: none; 
     @include color(banner-txt, color);
-    @include color(security);
 
     &:hover {
         @include color(banner-btn-hvr);
@@ -91,22 +156,45 @@
     }
 }
 
-//////// Flexbox Layout ////////
-
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.banner-web-btn {
+    @include color(web);
 }
 
-.banner-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.banner-software-btn {
+    @include color(software-2);
+}
 
-        @include mq(l) {
-            align-items: flex-start;
-        }
+.banner-it-btn {
+    @include color(it);
+}
+
+.banner-digital-btn {
+    @include color(digital);
+}
+
+.banner-training-btn {
+    @include color(training);
+}
+
+.banner-security-btn {
+    @include color(security);
+}
+
+//////// Flexbox Layout ////////
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(l) {
+        align-items: flex-start;
     }
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 20px;
+}
 

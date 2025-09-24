@@ -31,8 +31,8 @@
 }
 
 .img-header {
-    min-width: 253.59px;
-    min-height: 44.16px;
+    min-width: 214.55px;
+    min-height: 37.36px;
 }
 
 .sb-content {
@@ -108,7 +108,7 @@
     display: block;
     height: 56px;
     width: 63px;
-    margin-left: 20px;
+    margin-left: 5px;
     border-radius: 4px;
     padding: 5px 14px;
     border: 1px solid #333645;
@@ -117,6 +117,10 @@
 
     &:hover {
         @include color(hdr-btn-hvr)
+    }
+
+    @include mq(m) {
+        margin-left: 20px;
     }
 }
 
@@ -275,6 +279,7 @@
 
 .phone-icon {
     display: inline-block;
+    margin-right: 20px;
     @include color(background-1, color);
     text-decoration: none;
     border-bottom: 2px solid transparent;

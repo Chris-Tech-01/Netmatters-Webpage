@@ -152,8 +152,8 @@ h3 {
 }
 
 .img-header {
-  min-width: 253.59px;
-  min-height: 44.16px;
+  min-width: 214.55px;
+  min-height: 37.36px;
 }
 
 .sb-content {
@@ -227,7 +227,7 @@ h3 {
   display: block;
   height: 56px;
   width: 63px;
-  margin-left: 20px;
+  margin-left: 5px;
   border-radius: 4px;
   padding: 5px 14px;
   border: 1px solid #333645;
@@ -236,6 +236,11 @@ h3 {
 }
 .header-btn:hover {
   background-color: #22242e;
+}
+@media (min-width: 768px) {
+  .header-btn {
+    margin-left: 20px;
+  }
 }
 
 .burger-line {
@@ -383,6 +388,7 @@ h3 {
 
 .phone-icon {
   display: inline-block;
+  margin-right: 20px;
   color: #333645;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -754,19 +760,70 @@ h3 {
 }
 
 .banner {
-  background-image: url(../images/home-MSxH.png);
-  min-height: 550px;
+  height: 550px;
   width: 100%;
-  background-size: cover;
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: 0;
 }
 .banner img {
-  display: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
-.banner h1 {
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+}
+
+.slide::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+@media (min-width: 992px) {
+  .slide::before {
+    background: linear-gradient(270deg, transparent 25%, #000);
+  }
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+@media (min-width: 992px) {
+  .banner-text {
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+}
+.banner-text h1 {
   font-size: 2.5rem;
   line-height: 3rem;
   font-weight: 600;
@@ -774,46 +831,57 @@ h3 {
   color: #FFF;
 }
 @media (min-width: 992px) {
-  .banner h1 {
+  .banner-text h1 {
     font-size: 4rem;
+    line-height: 5rem;
   }
 }
-.banner p {
+.banner-text p {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+  margin-top: 0;
   margin-bottom: 0.375rem;
   color: #FFF;
 }
 @media (min-width: 992px) {
-  .banner p {
+  .banner-text p {
     font-size: 1.625rem;
   }
 }
 
-.banner::before {
-  width: 100%;
-  height: 100%;
+.carousel-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.carousel-dots .dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.carousel-dots .dot.active {
+  background: #fff;
+}
+.carousel-dots .dot.active::before {
   content: "";
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-@media (min-width: 992px) {
-  .banner::before {
-    background: linear-gradient(270deg, transparent 25%, #000);
-  }
-}
-
-.banner-text {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-@media (min-width: 992px) {
-  .banner-text {
-    text-align: initial;
-  }
+  top: -6px;
+  left: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
 }
 
 .banner-btn {
@@ -827,7 +895,6 @@ h3 {
   align-items: center;
   text-decoration: none;
   color: #FFF;
-  background-color: #F62459;
 }
 .banner-btn:hover {
   background-color: #E80A42;
@@ -837,10 +904,28 @@ h3 {
   margin-right: -4px;
 }
 
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.banner-web-btn {
+  background-color: #926FB1;
+}
+
+.banner-software-btn {
+  background-color: #F7B322;
+}
+
+.banner-it-btn {
+  background-color: #4183D7;
+}
+
+.banner-digital-btn {
+  background-color: #2ECC71;
+}
+
+.banner-training-btn {
+  background-color: #CE4125;
+}
+
+.banner-security-btn {
+  background-color: #F62459;
 }
 
 .banner-text {
@@ -853,6 +938,11 @@ h3 {
   .banner-text {
     align-items: flex-start;
   }
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 20px;
 }
 
 .our-services .section {

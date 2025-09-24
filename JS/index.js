@@ -9,3 +9,7 @@ export {
 export {
     logoSlider
 } from './logoSlider.js';
+
+export {
+    initCarousel
+} from './carousel.js';
