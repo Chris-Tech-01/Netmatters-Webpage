@@ -49,6 +49,7 @@
     transition: transform 0.4s ease;
     z-index: 2;
     @include color(body-background);
+    overflow-x: clip;
 }
 
 .darken-overlay {
@@ -62,7 +63,7 @@
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    z-index: 4;
+    z-index: 3;
     cursor: pointer;
 }
 

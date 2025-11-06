@@ -8,14 +8,12 @@
     height: 550px;
     width: 100%;
     position: relative;
-    z-index: 0;
 
     img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 1;
     }
 }
 
@@ -57,14 +55,23 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 300px;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
+
+    @include mq(m) {
+        width: auto;
+    }
 
     @include mq(l) {
         left: 10%;
         transform: translateY(-50%);
         text-align: left;
+    }
+
+    @include mq(xl) {
+        margin-left: 100px;
     }
 
     h1 {
@@ -94,12 +101,20 @@
     }
 }
 
+.banner-text-first {
+    width: 350px;
+
+    @include mq(m) {
+        width: auto;
+    }
+}
+
 .carousel-dots {
     position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 2;
 
     .dot {
         width: 10px;
@@ -145,10 +160,6 @@
     align-items: center;
     text-decoration: none; 
     @include color(banner-txt, color);
-
-    &:hover {
-        @include color(banner-btn-hvr);
-    }
     
     i {
         margin-left: 12px;
@@ -156,28 +167,60 @@
     }
 }
 
-.banner-web-btn {
-    @include color(web);
+.banner-btn-first {
+    margin-top: 1rem;
+
+    @include mq(m) {
+        margin-top: 1.938rem;
+    }
 }
 
 .banner-software-btn {
     @include color(software-2);
+
+    &:hover {
+        @include color(banner-btn-software-hvr);
+    }
 }
 
 .banner-it-btn {
     @include color(it);
+
+    &:hover {
+        @include color(banner-btn-it-hvr);
+    }
 }
 
 .banner-digital-btn {
     @include color(digital);
+
+    &:hover {
+        @include color(banner-btn-digital-hvr);
+    }
 }
 
 .banner-training-btn {
     @include color(training);
+
+    &:hover {
+        @include color(banner-btn-training-hvr);
+    }
+}
+
+.banner-web-btn {
+    @include color(web);
+
+    &:hover {
+        @include color(banner-btn-web-hvr);
+    }
 }
 
 .banner-security-btn {
     @include color(security);
+
+    &:hover {
+        @include color(banner-btn-security-hvr);
+    }
 }
 
 //////// Flexbox Layout ////////

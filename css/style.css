@@ -86,6 +86,7 @@ textarea:not([rows]) {
 body {
   letter-spacing: 0.4px;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -763,14 +764,12 @@ h3 {
   height: 550px;
   width: 100%;
   position: relative;
-  z-index: 0;
 }
 .banner img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
 }
 
 .banner-container {
@@ -812,15 +811,26 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 300px;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
+}
+@media (min-width: 768px) {
+  .banner-text {
+    width: auto;
+  }
 }
 @media (min-width: 992px) {
   .banner-text {
     left: 10%;
     transform: translateY(-50%);
     text-align: left;
+  }
+}
+@media (min-width: 1260px) {
+  .banner-text {
+    margin-left: 100px;
   }
 }
 .banner-text h1 {
@@ -850,12 +860,21 @@ h3 {
   }
 }
 
+.banner-text-first {
+  width: 350px;
+}
+@media (min-width: 768px) {
+  .banner-text-first {
+    width: auto;
+  }
+}
+
 .carousel-dots {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
+  z-index: 2;
 }
 .carousel-dots .dot {
   width: 10px;
@@ -896,36 +915,60 @@ h3 {
   text-decoration: none;
   color: #FFF;
 }
-.banner-btn:hover {
-  background-color: #E80A42;
-}
 .banner-btn i {
   margin-left: 12px;
   margin-right: -4px;
 }
 
-.banner-web-btn {
-  background-color: #926FB1;
+.banner-btn-first {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .banner-btn-first {
+    margin-top: 1.938rem;
+  }
 }
 
 .banner-software-btn {
   background-color: #F7B322;
 }
+.banner-software-btn:hover {
+  background-color: #E8A008;
+}
 
 .banner-it-btn {
   background-color: #4183D7;
+}
+.banner-it-btn:hover {
+  background-color: #2A6EC6;
 }
 
 .banner-digital-btn {
   background-color: #2ECC71;
 }
+.banner-digital-btn:hover {
+  background-color: #26AB5F;
+}
 
 .banner-training-btn {
   background-color: #CE4125;
 }
+.banner-training-btn:hover {
+  background-color: #C42E2A;
+}
+
+.banner-web-btn {
+  background-color: #926FB1;
+}
+.banner-web-btn:hover {
+  background-color: #7E57A0;
+}
 
 .banner-security-btn {
   background-color: #F62459;
+}
+.banner-security-btn:hover {
+  background-color: #E80A42;
 }
 
 .banner-text {
@@ -2447,6 +2490,7 @@ footer a:hover {
   transition: transform 0.4s ease;
   z-index: 2;
   background-color: #fff;
+  overflow-x: clip;
 }
 
 .darken-overlay {
@@ -2460,7 +2504,7 @@ footer a:hover {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 4;
+  z-index: 3;
   cursor: pointer;
 }
 

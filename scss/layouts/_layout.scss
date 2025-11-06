@@ -26,6 +26,16 @@
 //   height: 100%;
 // }
 
+// #sidebar { 
+//     outline: 3px solid lime !important; 
+// }
+// .sidebar-animation-wrapper { 
+//     outline: 3px solid red !important; 
+// }
+// .banner, .carousel { 
+//     outline: 3px dashed blue !important; 
+// }
+
 //// Global layout ////
 
 * {
@@ -37,7 +47,7 @@
 body { 
     letter-spacing: .4px;
     margin: 0;
-    // overflow-x: clip;
+    overflow-x: hidden;
 }
 
 h1 {
