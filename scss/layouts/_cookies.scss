@@ -1,0 +1,129 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+//////// Layout ////////
+
+#cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.cookie-app {
+    margin: auto;
+}
+
+.cookie-content {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    @include color(body-background); 
+}
+
+.cookie-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.cookie-title {
+    font-size: 1.625rem;
+    margin: 0;
+    line-height: 1.428;
+    @include color(main-txt-color, color);
+}
+
+.cookie-body {
+    padding: 20px;
+
+    p {
+      line-height: 1.875rem; 
+      margin-bottom: 25px; 
+      @include color(cookie-text-color, color);
+    }
+
+    a {
+        text-decoration: none;
+        @include color(main-txt-color, color);
+
+        &:hover {
+            text-decoration: underline;
+            @include color(cookie-link-hvr, color);
+        }
+    }
+}
+
+.cookie-footer {
+    padding: 19px 20px 20px;
+    border-top: 1px solid #E5E5E5;
+}
+
+.cookie-btn-box {
+    padding: 0 5px;
+}
+
+.cookie-btn-box-change-settings {
+    margin-bottom: 30px;
+}
+
+.cookie-btn {
+    display: block;
+    height: auto;
+    width: 100%;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    @include color(cookie-btn-txt-color, color);
+}
+
+.change-settings {
+    @include color(cookie-change-settings-btn);
+    @include color(cookie-change-settings-btn, border-color);
+
+    &:hover {
+        @include color(change-settings-hvr);
+        @include color(change-settings-hvr-border, border-color);
+    }
+}
+
+.accept-cookies {
+    @include color(web);
+    @include color(web, border-color);
+
+    &:hover {
+        @include color(accept-cookies-hvr);
+        @include color(accept-cookies-hvr-border, border-color);
+    }
+}
+
+//////// FlexBox ////////
+
+#cookie-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.cookie-btn-box {
+  flex: 1 1 100%;
+}

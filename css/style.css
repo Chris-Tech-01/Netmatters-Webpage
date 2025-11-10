@@ -236,7 +236,7 @@ h3 {
   cursor: pointer;
 }
 .header-btn:hover {
-  background-color: #22242e;
+  background-color: #22242E;
 }
 @media (min-width: 768px) {
   .header-btn {
@@ -1405,7 +1405,7 @@ h3 {
 
 .welcome-to {
   background-color: #333645;
-  color: #fff;
+  color: #FFF;
 }
 .welcome-to h2 {
   margin-bottom: 40px;
@@ -1418,7 +1418,7 @@ h3 {
 }
 .welcome-to a {
   text-decoration: none;
-  color: #fff;
+  color: #FFF;
 }
 
 .welcome-to-column {
@@ -1921,7 +1921,7 @@ a.strong-paragraph:hover {
   padding: 20px;
   margin: 0 auto 50px;
   text-align: center;
-  color: #fff;
+  color: #FFF;
   background-color: #333645;
 }
 
@@ -2460,7 +2460,7 @@ footer a:hover {
   z-index: 1;
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  color: #fff;
+  color: #FFF;
   background-color: #333645;
 }
 #sidebar ul {
@@ -2489,7 +2489,7 @@ footer a:hover {
   position: relative;
   transition: transform 0.4s ease;
   z-index: 2;
-  background-color: #fff;
+  background-color: #FFF;
   overflow-x: clip;
 }
 
@@ -2537,7 +2537,7 @@ footer a:hover {
   font-size: 1rem;
   text-decoration: none;
   line-height: 1;
-  color: #fff;
+  color: #FFF;
 }
 
 .sidebar-support {
@@ -2609,7 +2609,7 @@ footer a:hover {
   text-align: center;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  color: #fff;
+  color: #FFF;
 }
 .sidebar-contact-us:hover {
   background-color: hsla(0, 0%, 100%, 0.05);
@@ -2623,7 +2623,7 @@ footer a:hover {
   padding: 19px 0 18px;
   outline: 1px solid rgba(0, 0, 0, 0.25);
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  color: #fff;
+  color: #FFF;
 }
 .sidebar-icon-box small {
   font-size: 0.625rem;
@@ -2679,6 +2679,123 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#cookie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.cookie-app {
+  margin: auto;
+}
+
+.cookie-content {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  background-color: #FFF;
+}
+
+.cookie-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.cookie-title {
+  font-size: 1.625rem;
+  margin: 0;
+  line-height: 1.428;
+  color: #333645;
+}
+
+.cookie-body {
+  padding: 20px;
+}
+.cookie-body p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+  color: #666;
+}
+.cookie-body a {
+  text-decoration: none;
+  color: #333645;
+}
+.cookie-body a:hover {
+  text-decoration: underline;
+  color: #121419;
+}
+
+.cookie-footer {
+  padding: 19px 20px 20px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.cookie-btn-box {
+  padding: 0 5px;
+}
+
+.cookie-btn-box-change-settings {
+  margin-bottom: 30px;
+}
+
+.cookie-btn {
+  display: block;
+  height: auto;
+  width: 100%;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.change-settings {
+  background-color: #999AA2;
+  border-color: #999AA2;
+}
+.change-settings:hover {
+  background-color: #84858F;
+  border-color: #797A85;
+}
+
+.accept-cookies {
+  background-color: #926FB1;
+  border-color: #926FB1;
+}
+.accept-cookies:hover {
+  background-color: #7E57A0;
+  border-color: #735093;
+}
+
+#cookie-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.cookie-btn-box {
+  flex: 1 1 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
