@@ -13,3 +13,7 @@ export {
 export {
     initCarousel
 } from './carousel.js';
+
+export { 
+    cookiePopup
+ } from './cookies.js';

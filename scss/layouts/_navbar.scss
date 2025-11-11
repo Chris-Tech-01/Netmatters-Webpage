@@ -114,13 +114,20 @@
         font-size: 1.2rem;
         padding: 12px 15px 12px 0;
     }
+
+    span {
+        display: inline-block;
+    }
     
     a {
         text-decoration: none;
         @include color(nav-txt, color);
 
         &:hover {
-            text-decoration: underline;
+            
+            span {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -365,4 +372,21 @@
     display: flex;
     flex-direction: column;  
     flex: 0 0 35%;
+}
+
+.nav-dropdown {
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    span {
+        flex: 1;
+    }
+
+    i {
+        flex-shrink: 0;
+    }
 }

@@ -557,11 +557,14 @@ h3 {
   font-size: 1.2rem;
   padding: 12px 15px 12px 0;
 }
+.nav-dropdown span {
+  display: inline-block;
+}
 .nav-dropdown a {
   text-decoration: none;
   color: #FFF;
 }
-.nav-dropdown a:hover {
+.nav-dropdown a:hover span {
   text-decoration: underline;
 }
 .nav-dropdown .container {
@@ -758,6 +761,18 @@ h3 {
   display: flex;
   flex-direction: column;
   flex: 0 0 35%;
+}
+
+.nav-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-dropdown span {
+  flex: 1;
+}
+.nav-dropdown i {
+  flex-shrink: 0;
 }
 
 .banner {
@@ -2697,6 +2712,11 @@ footer a:hover {
 .cookie-app {
   margin: auto;
 }
+@media (min-width: 768px) {
+  .cookie-app {
+    width: 600px;
+  }
+}
 
 .cookie-content {
   position: relative;
@@ -2724,6 +2744,7 @@ footer a:hover {
 }
 .cookie-body p {
   line-height: 1.875rem;
+  margin-top: 0;
   margin-bottom: 25px;
   color: #666;
 }
@@ -2741,12 +2762,19 @@ footer a:hover {
   border-top: 1px solid #E5E5E5;
 }
 
-.cookie-btn-box {
-  padding: 0 5px;
+@media (min-width: 768px) {
+  .cookie-btn-box {
+    padding: 0 15px;
+  }
 }
 
 .cookie-btn-box-change-settings {
   margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .cookie-btn-box-change-settings {
+    margin-bottom: 0;
+  }
 }
 
 .cookie-btn {
@@ -2793,9 +2821,19 @@ footer a:hover {
   flex-wrap: wrap;
   align-items: stretch;
 }
+@media (min-width: 768px) {
+  .cookie-footer {
+    flex-direction: row;
+  }
+}
 
 .cookie-btn-box {
   flex: 1 1 100%;
+}
+@media (min-width: 768px) {
+  .cookie-btn-box {
+    flex: 1 1 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,8 @@ import {
     sidebarToggle,
     stickyHeader,
     logoSlider,
-    initCarousel
+    initCarousel,
+    cookiePopup
 } from './index.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     stickyHeader();
     logoSlider();
     initCarousel();
+    cookiePopup();
 });

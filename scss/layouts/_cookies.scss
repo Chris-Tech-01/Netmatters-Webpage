@@ -19,6 +19,10 @@
 
 .cookie-app {
     margin: auto;
+
+    @include mq(m) {
+        width: 600px;
+    }
 }
 
 .cookie-content {
@@ -47,6 +51,7 @@
 
     p {
       line-height: 1.875rem; 
+      margin-top: 0;
       margin-bottom: 25px; 
       @include color(cookie-text-color, color);
     }
@@ -68,11 +73,18 @@
 }
 
 .cookie-btn-box {
-    padding: 0 5px;
+    
+    @include mq(m) {
+        padding: 0 15px; 
+    }
 }
 
 .cookie-btn-box-change-settings {
     margin-bottom: 30px;
+
+    @include mq(m) {
+        margin-bottom: 0; 
+    }
 }
 
 .cookie-btn {
@@ -122,8 +134,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+
+    @include mq(m) {
+        flex-direction: row;
+    }
 }
 
 .cookie-btn-box {
   flex: 1 1 100%;
+
+    @include mq(m) {
+        flex: 1 1 50%;
+    }
 }
